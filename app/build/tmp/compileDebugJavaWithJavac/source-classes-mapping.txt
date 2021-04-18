@@ -1,4 +1,4 @@
-com/example/actuallyusefulnotes/MainActivity.java
- com.example.actuallyusefulnotes.MainActivity
-com/example/actuallyusefulnotes/BuildConfig.java
- com.example.actuallyusefulnotes.BuildConfig
+com/example/actuallyusefulnotes/Group.java
+ com.example.actuallyusefulnotes.Group
+com/example/actuallyusefulnotes/AUNViewModel.java
+ com.example.actuallyusefulnotes.AUNViewModel
