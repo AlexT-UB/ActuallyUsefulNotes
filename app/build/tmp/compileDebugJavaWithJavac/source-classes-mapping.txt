@@ -1,0 +1,4 @@
+com/example/actuallyusefulnotes/MainActivity.java
+ com.example.actuallyusefulnotes.MainActivity
+com/example/actuallyusefulnotes/BuildConfig.java
+ com.example.actuallyusefulnotes.BuildConfig

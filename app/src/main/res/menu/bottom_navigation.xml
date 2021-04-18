@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:enabled="true"
+        android:icon="@drawable/outline_groups_black_24dp"
+        android:title="Groups"/>
+    <item
+        android:id="@+id/notes"
+        android:enabled="true"
+        android:icon="@drawable/outline_home_black_24dp"
+        android:title="Home"/>
+
+    <item
+        android:id="@+id/groups"
+        android:enabled="true"
+        android:icon="@drawable/outline_description_black_24dp"
+        android:title="Notes"/>
+
+</menu>
