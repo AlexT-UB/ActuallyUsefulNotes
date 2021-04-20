@@ -1,3 +1,5 @@
+com/example/actuallyusefulnotes/User.java
+ com.example.actuallyusefulnotes.User
 com/example/actuallyusefulnotes/Group.java
  com.example.actuallyusefulnotes.Group
 com/example/actuallyusefulnotes/AUNViewModel.java
