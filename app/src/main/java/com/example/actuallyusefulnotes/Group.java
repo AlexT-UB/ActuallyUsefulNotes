@@ -40,7 +40,17 @@ public class Group {;
         userList[legnthArray-1] = "NoUser";
     }
 
-    public List<BasicNote> seeCategory(String category){
+Add    public void addNote(BasicNote newNote){
+        notes.add(newNote);
+    }
+
+    public void deleteNote(int index) throws Exception{
+        if(index > notes.size() - 1)
+            throw new Exception("Index Out Of Range");
+        notes.remove(index);
+    }
+
+    public List<BasicNote> seeNotesFromCategory(String category){
         int lenghtNotes = notes.size() - 1;
         List<BasicNote> categoryList = new ArrayList<BasicNote>();
         for(int x = 0; x < lenghtNotes; x++)
