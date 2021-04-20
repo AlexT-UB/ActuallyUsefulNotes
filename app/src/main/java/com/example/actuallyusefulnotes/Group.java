@@ -18,17 +18,17 @@ public class Group {;
 
     public void addUser(String username) throws Exception{
         int legnthList = userList.length;
-        if(legnthList == 20)
-            throw new Exception("Maximum Number Of Users In Group");
-        else
-            userList[legnthList] = username;
+        for (int x = 0; x < legnthList - 1; x++)
+            if(userList[x].equals("NoUser")) {
+                userList[x] = username;
+                return;
+            }
+        throw new Exception("Maximum Number Of Users In Group Reached");
     }
 
     public void deleteUser(String username) throws Exception{
         int legnthArray = userList.length;
         int index = 0;
-        if(legnthArray == 0)
-            throw new Exception("No Users In Group");
         for (int x = 0; x < legnthArray-1; x++)
             if(userList[x].equals(username)){
                 index = x;
@@ -38,5 +38,38 @@ public class Group {;
         for (int x = index; x <  legnthArray-1; x++)
             userList[x] = userList[x+1];
         userList[legnthArray-1] = "NoUser";
+    }
+
+    public List<BasicNote> seeCategory(String category){
+        int lenghtNotes = notes.size() - 1;
+        List<BasicNote> categoryList = new ArrayList<BasicNote>();
+        for(int x = 0; x < lenghtNotes; x++)
+            if(notes.get(x).getCategory().equals(category))
+                categoryList.add(notes.get(x));
+        return categoryList;
+    }
+
+    public List<BasicNote> getNotes() {
+        return notes;
+    }
+
+    public void setNotes(List<BasicNote> notes) {
+        this.notes = notes;
+    }
+
+    public String getAdmin() {
+        return admin;
+    }
+
+    public void setAdmin(String admin) {
+        this.admin = admin;
+    }
+
+    public String[] getUserList() {
+        return userList;
+    }
+
+    public void setUserList(String[] userList) {
+        this.userList = userList;
     }
 }

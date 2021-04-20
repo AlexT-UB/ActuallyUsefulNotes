@@ -6,4 +6,12 @@ public class Note extends BasicNote{
         super(creador, nom, categoria);
         text = preText;
     }
+
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
 }

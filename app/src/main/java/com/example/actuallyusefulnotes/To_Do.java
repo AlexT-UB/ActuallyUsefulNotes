@@ -13,4 +13,12 @@ public class To_Do extends BasicNote{
             list.put(preList[x], false);
         }
     }
+
+    public Dictionary getList() {
+        return list;
+    }
+
+    public void setList(Dictionary list) {
+        this.list = list;
+    }
 }
