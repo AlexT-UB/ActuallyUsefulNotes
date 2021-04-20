@@ -40,7 +40,7 @@ public class Group {;
         userList[legnthArray-1] = "NoUser";
     }
 
-Add    public void addNote(BasicNote newNote){
+    public void addNote(BasicNote newNote){
         notes.add(newNote);
     }
 

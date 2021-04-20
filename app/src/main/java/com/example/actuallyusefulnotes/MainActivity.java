@@ -20,10 +20,11 @@ public class MainActivity extends AppCompatActivity {
 
         toolBar = findViewById(R.id.topAppBar);
         setSupportActionBar(toolBar);
+        initView();
     }
 
     private void initView(){
-    viewModel = new ViewModelProvider(this).get(viewModel.class);
+        viewModel = new ViewModelProvider(this).get(AUNViewModel.class);
     }
 
     public boolean onCreateOptionMenu(Menu menu) {

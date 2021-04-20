@@ -1,10 +1,20 @@
 com/example/actuallyusefulnotes/BasicNote.java
  com.example.actuallyusefulnotes.BasicNote
+com/example/actuallyusefulnotes/MainActivity.java
+ com.example.actuallyusefulnotes.MainActivity
 com/example/actuallyusefulnotes/User.java
  com.example.actuallyusefulnotes.User
 com/example/actuallyusefulnotes/ImageNote.java
  com.example.actuallyusefulnotes.ImageNote
+com/example/actuallyusefulnotes/Note.java
+ com.example.actuallyusefulnotes.Note
+com/example/actuallyusefulnotes/BuildConfig.java
+ com.example.actuallyusefulnotes.BuildConfig
 com/example/actuallyusefulnotes/Group.java
  com.example.actuallyusefulnotes.Group
+com/example/actuallyusefulnotes/Reminder.java
+ com.example.actuallyusefulnotes.Reminder
+com/example/actuallyusefulnotes/To_Do.java
+ com.example.actuallyusefulnotes.To_Do
 com/example/actuallyusefulnotes/AUNViewModel.java
  com.example.actuallyusefulnotes.AUNViewModel
