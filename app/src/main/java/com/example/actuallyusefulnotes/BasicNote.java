@@ -5,6 +5,7 @@ public class BasicNote {
     String name;
     String category;
     long lastEdited;
+
     protected BasicNote(String creador, String nom, String categoria){
         creator = creador;
         name = nom;

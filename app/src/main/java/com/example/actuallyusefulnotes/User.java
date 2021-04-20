@@ -7,13 +7,13 @@ public class User {
     private String username;
     private String email;
     private String password;
-    private List<Note> errasedNotes;
+    private List<BasicNote> errasedNotes;
 
     public User (String name, String mail, String security){
         username = name;
         email = mail;
         password = security;
-        List<Note> errasedNotes = new ArrayList<Note>();
+        errasedNotes = new ArrayList<BasicNote>();
     }
     
 }
