@@ -1632,6 +1632,7 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable ajustes_24dp
 drawable avd_hide_password
 drawable avd_show_password
 drawable btn_checkbox_checked_mtrl
@@ -1648,6 +1649,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable grupos_24dp
 drawable ic_baseline_add_24
 drawable ic_baseline_search_24
 drawable ic_clock_black_24dp
@@ -1679,6 +1681,7 @@ drawable mtrl_popupmenu_background
 drawable mtrl_popupmenu_background_dark
 drawable mtrl_tabs_default_indicator
 drawable navigation_empty_icon
+drawable notas_24dp
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -1696,16 +1699,22 @@ drawable outline_description_black_24dp
 drawable outline_favorite_black_24dp
 drawable outline_groups_black_24dp
 drawable outline_home_black_24dp
+drawable outline_more_vert_white_24dp
 drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 id ALT
+id AUN
 id BOTTOM_END
 id BOTTOM_START
 id CTRL
 id FUNCTION
 id META
 id NO_DEBUG
+id NotaAudio
+id NotaCalendario
+id NotaFoto
+id NotaTexto
 id SHIFT
 id SHOW_ALL
 id SHOW_PATH
@@ -1767,12 +1776,14 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id addNote
 id alertTitle
 id aligned
 id all
 id always
 id animateToEnd
 id animateToStart
+id appBarLayout
 id app_bar_search
 id asConfigured
 id async
@@ -1869,6 +1880,7 @@ id fixed
 id flip
 id floating
 id forever
+id fragment_container
 id fragment_container_view_tag
 id ghost_view
 id ghost_view_holder
@@ -1908,6 +1920,7 @@ id line3
 id linear
 id listMode
 id list_item
+id listaNotas
 id masked
 id material_clock_display
 id material_clock_face
@@ -1962,12 +1975,14 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
+id nav_ajustes
+id nav_grupos
+id nav_notas
 id navigation_header_container
 id never
 id noScroll
 id none
 id normal
-id notes
 id notification_background
 id notification_main_column
 id notification_main_column_container
@@ -1984,6 +1999,7 @@ id parent_matrix
 id password_toggle
 id path
 id pathRelative
+id pb_volume
 id peekHeight
 id percent
 id pin
@@ -2102,6 +2118,10 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id tv_notifications
+id tv_reply
+id tv_signature
+id tv_sync
 id unchecked
 id uniform
 id unlabeled
@@ -2175,6 +2195,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_add_note
 layout activity_main
 layout custom_dialog
 layout design_bottom_navigation_item
@@ -2192,6 +2213,9 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout fragment_ajustes
+layout fragment_grupos
+layout fragment_notas
 layout material_chip_input_combo
 layout material_clock_display
 layout material_clock_display_divider
@@ -2260,7 +2284,6 @@ layout text_view_with_theme_line_height
 layout text_view_without_line_height
 menu bottom_navigation
 menu main_menu
-menu note
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
@@ -3213,6 +3236,7 @@ styleable View android_theme android_focusable paddingEnd paddingStart theme
 styleable ViewBackgroundHelper android_background backgroundTint backgroundTintMode
 styleable ViewPager2 android_orientation
 styleable ViewStubCompat android_id android_layout android_inflatedId
+xml root_preferences
 xml standalone_badge
 xml standalone_badge_gravity_bottom_end
 xml standalone_badge_gravity_bottom_start

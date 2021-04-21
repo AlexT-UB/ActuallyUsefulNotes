@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/home"
+        android:id="@+id/nav_grupos"
         android:enabled="true"
-        android:icon="@drawable/outline_groups_black_24dp"
-        android:title="Groups"/>
+        android:icon="@drawable/grupos_24dp"
+        android:title="Grupos"/>
     <item
-        android:id="@+id/notes"
+        android:id="@+id/nav_notas"
         android:enabled="true"
-        android:icon="@drawable/outline_home_black_24dp"
-        android:title="Home"/>
+        android:icon="@drawable/notas_24dp"
+        android:title="Notas"/>
 
     <item
-        android:id="@+id/groups"
+        android:id="@+id/nav_ajustes"
         android:enabled="true"
-        android:icon="@drawable/outline_description_black_24dp"
-        android:title="Notes"/>
+        android:icon="@drawable/ajustes_24dp"
+        android:title="Ajustes"/>
 
 </menu>

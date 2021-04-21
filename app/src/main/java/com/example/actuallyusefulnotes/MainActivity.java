@@ -1,17 +1,53 @@
 package com.example.actuallyusefulnotes;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
+
+
+import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModel;
 import androidx.appcompat.widget.Toolbar;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
     private Toolbar toolBar;
     private AUNViewModel viewModel;
+    private RecyclerView recyclerView;
+
+    BottomNavigationView bottomNavigationView;
+    private BottomNavigationView.OnNavigationItemSelectedListener navListener =
+            new BottomNavigationView.OnNavigationItemSelectedListener() {
+                @Override
+                public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                    Fragment selectedFragment = null;
+
+                    switch (item.getItemId()) {
+                        case R.id.nav_grupos:
+                            selectedFragment = new Fragmento_Grupos();
+                            break;
+                        case R.id.nav_notas:
+                            selectedFragment = new Fragmento_Notas();
+                            break;
+                        case R.id.nav_ajustes:
+                            selectedFragment = new Fragmento_Ajustes();
+                            break;
+                    }
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                            selectedFragment).commit();
+                    return true;
+                }
+            };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,18 +55,32 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         toolBar = findViewById(R.id.topAppBar);
+        recyclerView = findViewById(R.id.listaNotas);
+
         setSupportActionBar(toolBar);
-        initView();
+
+        bottomNavigationView = findViewById(R.id.bottom_navigation);
+        bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
+
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                new Fragmento_Notas()).commit();
     }
 
-    private void initView(){
-        viewModel = new ViewModelProvider(this).get(AUNViewModel.class);
-    }
 
     public boolean onCreateOptionMenu(Menu menu) {
-        super.onCreateOptionsMenu(menu);
-        getMenuInflater().inflate(R.menu.main_menu, menu);
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_menu, menu);
+        //super.onCreateOptionsMenu(menu);
+        //getMenuInflater().inflate(R.menu.main_menu, menu);
         return true;
     }
-    
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.addNote) {
+            Intent i = new Intent(this, AddNote.class);
+            startActivity(i);
+            Toast.makeText(this, "JAJAJA", Toast.LENGTH_SHORT).show();
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }

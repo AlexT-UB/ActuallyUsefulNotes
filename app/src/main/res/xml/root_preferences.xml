@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="Cambiar nombre">
+
+        <EditTextPreference
+            android:key="signature"
+            android:title="No establecido"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Cambiar contraseña">
+
+        <EditTextPreference
+            android:key="sync"
+            android:title="No establecido"/>
+
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Notificaciones">
+
+        <SeekBarPreference
+            android:key="volumen_notificaciones"
+            android:title="Volumen"
+            android:defaultValue= "50" />
+
+        <SwitchPreferenceCompat
+            android:key="notificaciones"
+            android:title="Deshabilitar notificaciones"
+            android:summaryOn="No recibirá más notificaciones"
+            android:summaryOff="Recibirá todas las notificaciones"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>

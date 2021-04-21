@@ -46,3 +46,67 @@ public class BasicNote {
     }
 
 }
+
+/*public class BasicNote {
+    private long ID;
+    private String titulo;
+    private String categoria;
+    private String date;
+    private String time;
+
+    protected BasicNote(String titulo, String categoria, String date, String time){
+        this.categoria = categoria;
+        this.time = time;
+        this.date = date;
+        this.titulo = titulo;
+    }
+
+    protected BasicNote(long ID, String titulo, String categoria, String date, String time) {
+        this.ID = ID;
+        this.categoria = categoria;
+        this.time = time;
+        this.date = date;
+        this.titulo = titulo;
+    }
+
+    public long getID() {
+        return ID;
+    }
+
+    public void setID(long ID) {
+        this.ID = ID;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public String getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+}*/
+
