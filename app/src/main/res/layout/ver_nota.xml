@@ -42,57 +42,115 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="388dp"
-        android:layout_height="292dp"
+        android:layout_width="351dp"
+        android:layout_height="270dp"
         android:layout_gravity="center_horizontal"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
         android:layout_marginTop="50dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
         android:background="@color/teal_200"
-        android:text="Contenido"/>
+        android:text="Contenido" />
 
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="355dp"
         android:layout_marginLeft="15dp"
+        android:layout_marginTop="335dp"
         android:text="Tareas"
-        android:textSize="17sp"/>
+        android:textSize="17sp" /><![CDATA[
 
 
-    <CheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="373dp"
-        android:layout_marginLeft="15dp"
-        android:hint="Añadir una tarea"
-        android:visibility="invisible"/>/>
+    />
+
+    ]]>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/eventList"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="365dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:isScrollContainer="true"
+        android:verticalScrollbarPosition="left" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="453dp"
         android:layout_marginLeft="15dp"
+        android:layout_marginTop="433dp"
         android:text="Recordatorios"
-        android:textSize="17sp"/>
+        android:textSize="17sp" />
 
     <EditText
+        android:id="@+id/dateReminder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="343dp"
+        android:layout_marginLeft="343dp"
+        android:layout_marginTop="465dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
         android:ems="10"
-        android:layout_marginTop="473dp"
-        android:layout_marginLeft="15dp"
-        android:hint="Añadir un recordatorio"
-        android:textSize="15sp"
-        android:inputType="date"
-        android:visibility="invisible"/>
+        android:inputType="date" />
 
-    <ImageView
-        android:layout_width="388dp"
+    <EditText
+        android:id="@+id/timeReminder"
+        android:layout_width="68dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="553dp"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:layout_marginStart="270dp"
+        android:layout_marginLeft="270dp"
+        android:layout_marginTop="465dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:ems="10"
+        android:inputType="time" />
+
+    <TextView
+        android:id="@+id/reminderText"
+        android:layout_width="240dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="465dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp" />
+
+    <TextView
+        android:id="@+id/imagesText"
+        android:layout_width="122dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="530dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:text="Imagenes"
+        android:textSize="17dp"
+        app:layout_anchor="@+id/imagesText"
+        app:layout_anchorGravity="top|center" />
+
+    <HorizontalScrollView
+        android:id="@+id/imagesScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="560dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp">
+
+        <LinearLayout
+            android:id="@+id/imagesLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" />
+    </HorizontalScrollView>
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
