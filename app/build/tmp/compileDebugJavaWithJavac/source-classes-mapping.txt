@@ -2,10 +2,10 @@ com/example/actuallyusefulnotes/BasicNote.java
  com.example.actuallyusefulnotes.BasicNote
 com/example/actuallyusefulnotes/Fragmento_Ajustes.java
  com.example.actuallyusefulnotes.Fragmento_Ajustes
-com/example/actuallyusefulnotes/Note.java
- com.example.actuallyusefulnotes.Note
 com/example/actuallyusefulnotes/Fragmento_Notas.java
  com.example.actuallyusefulnotes.Fragmento_Notas
+com/example/actuallyusefulnotes/Note.java
+ com.example.actuallyusefulnotes.Note
 com/example/actuallyusefulnotes/AddNote.java
  com.example.actuallyusefulnotes.AddNote
 com/example/actuallyusefulnotes/Fragmento_Grupos.java
