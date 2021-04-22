@@ -1,6 +1,7 @@
 package com.example.actuallyusefulnotes;
 
 import java.util.Dictionary;
+import java.util.Hashtable;
 
 public class Note {
     private long ID;
@@ -23,6 +24,7 @@ public class Note {
         this.text = text;
         this.reminderText = reminderText;
         this.alarmTime = alarmTime;
+        this.eventList = new Hashtable();
     }
 
     protected Note(long ID, String titulo, String categoria, String date, String time, String author, String text, String reminderText, long alarmTime) {
@@ -35,6 +37,7 @@ public class Note {
         this.text = text;
         this.reminderText = reminderText;
         this.alarmTime = alarmTime;
+        this.eventList = new Hashtable();
     }
 
     public void addEvent(String event){
