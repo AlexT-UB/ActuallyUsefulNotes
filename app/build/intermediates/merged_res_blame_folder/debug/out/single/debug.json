@@ -12,8 +12,16 @@
         "source": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     },
     {
+        "merged": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main_recycler_view.xml.flat",
+        "source": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\src\\main\\res\\layout\\activity_main_recycler_view.xml"
+    },
+    {
         "merged": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_baseline_search_24.png.flat",
         "source": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_baseline_search_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\intermediates\\res\\merged\\debug\\layout_ver_nota_tareas_recycler_view.xml.flat",
+        "source": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\src\\main\\res\\layout\\ver_nota_tareas_recycler_view.xml"
     },
     {
         "merged": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
@@ -206,6 +214,10 @@
     {
         "merged": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\intermediates\\res\\merged\\debug\\layout_ver_notas_imagenes_recycler_view.xml.flat",
+        "source": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\src\\main\\res\\layout\\ver_notas_imagenes_recycler_view.xml"
     },
     {
         "merged": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v24_ic_share.xml.flat",

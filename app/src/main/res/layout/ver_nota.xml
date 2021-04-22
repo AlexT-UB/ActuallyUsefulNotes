@@ -77,7 +77,8 @@
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
         android:isScrollContainer="true"
-        android:verticalScrollbarPosition="left" />
+        android:verticalScrollbarPosition="left"
+        tools:listitem="@layout/ver_nota_tareas_recycler_view" />
 
     <TextView
         android:layout_width="match_parent"
@@ -135,7 +136,7 @@
         app:layout_anchor="@+id/imagesText"
         app:layout_anchorGravity="top|center" />
 
-    <HorizontalScrollView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/imagesScroll"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -143,14 +144,11 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="560dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp">
-
-        <LinearLayout
-            android:id="@+id/imagesLayout"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="horizontal" />
-    </HorizontalScrollView>
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="0dp"
+        android:scrollbarSize="20dp"
+        android:scrollbars="horizontal"
+        tools:listitem="@layout/ver_notas_imagenes_recycler_view" />
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -70,8 +70,11 @@
             android:id="@+id/listaNotas"
             android:layout_width="match_parent"
             android:layout_height="674dp"
-            android:paddingLeft="12dp"
-            android:paddingTop="60dp" />
+            android:paddingLeft="20dp"
+            android:paddingTop="60dp"
+            android:scrollbarSize="20dp"
+            android:scrollbars="vertical"
+            tools:listitem="@layout/activity_main_recycler_view" />
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
