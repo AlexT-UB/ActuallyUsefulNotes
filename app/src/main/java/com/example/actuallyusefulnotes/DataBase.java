@@ -16,6 +16,7 @@ public class DataBase extends SQLiteOpenHelper {
     private static final String KEY_CONTENT = "content";
     private static final String KEY_DATE = "date";
     private static final String KEY_TIME = "time";
+    private static final String KEY_AUTHOR = "author";
 
     DataBase(Context contexto) {
         super(contexto, DATABASE_NAME, null, DATABASE_VERSION);
@@ -28,7 +29,8 @@ public class DataBase extends SQLiteOpenHelper {
                 KEY_TITLE + " TEXT," +
                 KEY_CONTENT + " TEXT," +
                 KEY_DATE + " TEXT," +
-                KEY_TIME + "TEXT" + ")";
+                KEY_TIME + "TEXT," +
+                KEY_AUTHOR + " TEXT" + ")";
         db.execSQL(query);
     }
 

@@ -1,21 +1,13 @@
 package com.example.actuallyusefulnotes;
 
 public class Reminder extends BasicNote{
-    long time;
+    long alarmTime;
     String text;
 
-    public Reminder(String creador, String nom, String categoria, long preTime, String preText){
-        super(creador, nom, categoria);
-        time = preTime;
-        text= preText;
-    }
-
-    public long getTime() {
-        return time;
-    }
-
-    public void setTime(long time) {
-        this.time = time;
+    public Reminder (String titulo, String categoria, String date, String time, String author, String text , long alarmTime){
+        super(titulo, categoria, date, time, author);
+        this.text= text;
+        this.alarmTime = alarmTime;
     }
 
     public String getText() {
@@ -24,5 +16,13 @@ public class Reminder extends BasicNote{
 
     public void setText(String text) {
         this.text = text;
+    }
+
+    public long getAlarmTime() {
+        return alarmTime;
+    }
+
+    public void setAlarmTime(long alarmTime) {
+        this.alarmTime = alarmTime;
     }
 }

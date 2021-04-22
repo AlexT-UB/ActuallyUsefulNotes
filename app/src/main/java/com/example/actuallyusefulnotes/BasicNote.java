@@ -1,72 +1,28 @@
 package com.example.actuallyusefulnotes;
 
 public class BasicNote {
-    String creator;
-    String name;
-    String category;
-    long lastEdited;
-
-    protected BasicNote(String creador, String nom, String categoria){
-        creator = creador;
-        name = nom;
-        category = categoria;
-        lastEdited = System.currentTimeMillis();
-    }
-
-    public String getCreator(){
-        return creator;
-    }
-
-    public void setCreator(String newCreator){
-        creator = newCreator;
-    }
-
-    public String getCategory(){
-        return category;
-    }
-
-    public void setCategory(String newCategory){
-        category = newCategory;
-    }
-
-    public String getName(){
-        return name;
-    }
-
-    public void setName(String newName){
-        name = newName;
-    }
-
-    public long getLastEdited(){
-        return lastEdited;
-    }
-
-    public void setLastEdited(long newLastEdited){
-        lastEdited = newLastEdited;
-    }
-
-}
-
-/*public class BasicNote {
     private long ID;
     private String titulo;
     private String categoria;
     private String date;
     private String time;
+    private String author;
 
-    protected BasicNote(String titulo, String categoria, String date, String time){
+    protected BasicNote(String titulo, String categoria, String date, String time, String author){
         this.categoria = categoria;
         this.time = time;
         this.date = date;
         this.titulo = titulo;
+        this.author = author;
     }
 
-    protected BasicNote(long ID, String titulo, String categoria, String date, String time) {
+    protected BasicNote(long ID, String titulo, String categoria, String date, String time, String author) {
         this.ID = ID;
         this.categoria = categoria;
         this.time = time;
         this.date = date;
         this.titulo = titulo;
+        this.author = author;
     }
 
     public long getID() {
@@ -108,5 +64,13 @@ public class BasicNote {
     public void setTime(String time) {
         this.time = time;
     }
-}*/
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+}
 
