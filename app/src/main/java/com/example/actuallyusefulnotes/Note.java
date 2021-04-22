@@ -25,13 +25,16 @@ public class Note {
         this.alarmTime = alarmTime;
     }
 
-    protected Note(long ID, String titulo, String categoria, String date, String time, String author) {
+    protected Note(long ID, String titulo, String categoria, String date, String time, String author, String text, String reminderText, long alarmTime) {
         this.ID = ID;
         this.categoria = categoria;
         this.time = time;
         this.date = date;
         this.titulo = titulo;
         this.author = author;
+        this.text = text;
+        this.reminderText = reminderText;
+        this.alarmTime = alarmTime;
     }
 
     public void addEvent(String event){
