@@ -25,6 +25,17 @@
         android:layout_below="@id/logo" />
 
     <EditText
+        android:id="@+id/correo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:hint="Correo"
+        android:layout_below="@id/usuario"  />
+
+    <EditText
         android:id="@+id/contraseña"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -33,33 +44,26 @@
         android:layout_marginTop="5dp"
         android:hint="Contraseña"
         android:inputType="textPassword"
-        android:layout_below="@id/usuario" />
-
-    <CheckBox
-        android:id="@+id/cBRecuerdame"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="100dp"
-        android:layout_below="@id/contraseña"
-        android:text="Recuérdame" />
+        android:layout_below="@id/correo" />
 
     <Button
-        android:id="@+id/bt_login"
-        android:layout_width="180dp"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:text="Inicia sesión"
-        android:onClick="cRegistrarse"
-        android:layout_below="@id/cBRecuerdame" />
-
-    <Button
-        android:id="@+id/bt_lay_signin"
+        android:id="@+id/bt_signin"
         android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="5dp"
         android:text="Crear cuenta"
-        android:onClick="cYaTengoCuenta"
-        android:layout_below="@id/bt_login" />
+        android:onClick="cRegistrarse"
+        android:layout_below="@id/contraseña" />
 
-</RelativeLayout>
+    <Button
+        android:id="@+id/bt_lay_login"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text="Ya tengo cuenta"
+        android:onClick="cYaTengoCuenta"
+        android:layout_below="@id/bt_signin" />
+
+</RelativeLayout>>
