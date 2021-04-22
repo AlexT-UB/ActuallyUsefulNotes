@@ -52,8 +52,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.signin);
+    }
 
+    /*
         toolBar = findViewById(R.id.topAppBar);
         recyclerView = findViewById(R.id.listaNotas);
 
@@ -64,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
 
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                 new Fragmento_Notas()).commit();
-    }
+    }*/
 
 
     public boolean onCreateOptionMenu(Menu menu) {

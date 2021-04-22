@@ -7,16 +7,16 @@ public class User {
     private String username;
     private String email;
     private String password;
-    private List<BasicNote> errasedNotes;
+    private List<Note> errasedNotes;
 
     public User (String name, String mail, String security){
         username = name;
         email = mail;
         password = security;
-        errasedNotes = new ArrayList<BasicNote>();
+        errasedNotes = new ArrayList<Note>();
     }
 
-    public void deletedBasicNote(BasicNote deleted){
+    public void deletedNote(Note deleted){
         errasedNotes.add(deleted);
     }
 
@@ -44,11 +44,11 @@ public class User {
         this.password = password;
     }
 
-    public List<BasicNote> getErrasedNotes() {
+    public List<Note> getErrasedNotes() {
         return errasedNotes;
     }
 
-    public void setErrasedNotes(List<BasicNote> errasedNotes) {
+    public void setErrasedNotes(List<Note> errasedNotes) {
         this.errasedNotes = errasedNotes;
     }
 }

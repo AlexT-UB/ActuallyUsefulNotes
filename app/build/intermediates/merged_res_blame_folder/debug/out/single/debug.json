@@ -8,12 +8,12 @@
         "source": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_launcher_background.png"
     },
     {
-        "merged": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
-    },
-    {
         "merged": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main_recycler_view.xml.flat",
         "source": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\src\\main\\res\\layout\\activity_main_recycler_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     },
     {
         "merged": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_baseline_search_24.png.flat",

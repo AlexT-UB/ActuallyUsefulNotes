@@ -8,12 +8,12 @@ import java.util.List;
 public class Group {;
     private String admin;
     private String[] userList;
-    private List<BasicNote> notes;
+    private List<Note> notes;
 
     public Group (String administrator, String[] protoList){
         userList = protoList;
         admin = administrator;
-        notes = new ArrayList<BasicNote>();
+        notes = new ArrayList<Note>();
     }
 
     public void addUser(String username) throws Exception{
@@ -40,7 +40,7 @@ public class Group {;
         userList[legnthArray-1] = "NoUser";
     }
 
-    public void addNote(BasicNote newNote){
+    public void addNote(Note newNote){
         notes.add(newNote);
     }
 
@@ -50,20 +50,20 @@ public class Group {;
         notes.remove(index);
     }
 
-    public List<BasicNote> seeNotesFromCategory(String category){
+    public List<Note> seeNotesFromCategory(String category){
         int lenghtNotes = notes.size() - 1;
-        List<BasicNote> categoryList = new ArrayList<BasicNote>();
+        List<Note> categoryList = new ArrayList<Note>();
         for(int x = 0; x < lenghtNotes; x++)
-            if(notes.get(x).getCategory().equals(category))
+            if(notes.get(x).getCategoria().equals(category))
                 categoryList.add(notes.get(x));
         return categoryList;
     }
 
-    public List<BasicNote> getNotes() {
+    public List<Note> getNotes() {
         return notes;
     }
 
-    public void setNotes(List<BasicNote> notes) {
+    public void setNotes(List<Note> notes) {
         this.notes = notes;
     }
 
