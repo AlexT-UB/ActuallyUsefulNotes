@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 
@@ -53,9 +54,20 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.signin);
+
+        Button bt_signin = findViewById(R.id.bt_signin);
+        Button login = findViewById(R.id.bt_login);
+
+        bt_signin.setOnClickListener((v -> {
+            help();
+        }));
+
     }
 
-    /*
+    public void help(){
+        System.out.println("Still working on it");
+        setContentView(R.layout.activity_main);
+
         toolBar = findViewById(R.id.topAppBar);
         recyclerView = findViewById(R.id.listaNotas);
 
@@ -66,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
 
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                 new Fragmento_Notas()).commit();
-    }*/
+    }
 
 
     public boolean onCreateOptionMenu(Menu menu) {
