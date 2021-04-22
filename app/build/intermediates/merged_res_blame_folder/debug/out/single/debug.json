@@ -32,6 +32,10 @@
         "source": "D:\\GithubCopy\\PIS\\ActuallyUsefulNotes\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_baseline_add_24.png"
     },
     {
+        "merged": "D:\\GithubCopy\\PIS\\ActuallyUsefulNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v24_ic_baseline_check_24.xml.flat",
+        "source": "D:\\GithubCopy\\PIS\\ActuallyUsefulNotes\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_baseline_check_24.xml"
+    },
+    {
         "merged": "D:\\GithubCopy\\PIS\\ActuallyUsefulNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_search_black_24dp.xml.flat",
         "source": "D:\\GithubCopy\\PIS\\ActuallyUsefulNotes\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_search_black_24dp.xml"
     },
@@ -98,6 +102,10 @@
     {
         "merged": "D:\\GithubCopy\\PIS\\ActuallyUsefulNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_launcher_background.png.flat",
         "source": "D:\\GithubCopy\\PIS\\ActuallyUsefulNotes\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "D:\\GithubCopy\\PIS\\ActuallyUsefulNotes\\app\\build\\intermediates\\res\\merged\\debug\\layout_editar_nota.xml.flat",
+        "source": "D:\\GithubCopy\\PIS\\ActuallyUsefulNotes\\app\\src\\main\\res\\layout\\editar_nota.xml"
     },
     {
         "merged": "D:\\GithubCopy\\PIS\\ActuallyUsefulNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v24_ic_create.xml.flat",

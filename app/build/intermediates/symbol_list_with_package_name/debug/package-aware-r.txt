@@ -1651,6 +1651,7 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable grupos_24dp
 drawable ic_baseline_add_24
+drawable ic_baseline_check_24
 drawable ic_baseline_search_24
 drawable ic_clock_black_24dp
 drawable ic_create
@@ -1801,6 +1802,8 @@ id blocking
 id bottom
 id bottom_navigation
 id bounce
+id bt_camara
+id bt_galeria
 id bt_lay_login
 id bt_lay_signin
 id bt_login
@@ -1913,6 +1916,7 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imageView
 id info
 id invisible
 id inward
@@ -2228,6 +2232,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout editar_nota
 layout fragment_ajustes
 layout fragment_grupos
 layout fragment_notas
