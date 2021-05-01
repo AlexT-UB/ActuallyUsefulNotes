@@ -1,6 +1,5 @@
-com/example/actuallyusefulnotes/MainActivity.java
- com.example.actuallyusefulnotes.MainActivity
- com.example.actuallyusefulnotes.MainActivity$1
+com/example/actuallyusefulnotes/Fragmento_Grupos.java
+ com.example.actuallyusefulnotes.Fragmento_Grupos
 com/example/actuallyusefulnotes/Fragmento_Ajustes.java
  com.example.actuallyusefulnotes.Fragmento_Ajustes
 com/example/actuallyusefulnotes/User.java
@@ -17,7 +16,8 @@ com/example/actuallyusefulnotes/AddNote.java
  com.example.actuallyusefulnotes.AddNote
 com/example/actuallyusefulnotes/Group.java
  com.example.actuallyusefulnotes.Group
-com/example/actuallyusefulnotes/Fragmento_Grupos.java
- com.example.actuallyusefulnotes.Fragmento_Grupos
+com/example/actuallyusefulnotes/MainActivity.java
+ com.example.actuallyusefulnotes.MainActivity
+ com.example.actuallyusefulnotes.MainActivity$1
 com/example/actuallyusefulnotes/AUNViewModel.java
  com.example.actuallyusefulnotes.AUNViewModel

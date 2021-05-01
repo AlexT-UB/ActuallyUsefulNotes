@@ -1,4 +1,4 @@
-#Thu Apr 22 21:08:41 CEST 2021
-base.0=C\:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+#Fri Apr 30 12:14:20 CEST 2021
+base.0=D\:\\Descargas\\Actually-Useful-Notes-main\\ActuallyUsefulNotes\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

@@ -53,16 +53,28 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        AUNViewModel model = new ViewModelProvider(this).get(AUNViewModel.class);
         setContentView(R.layout.signin);
 
         Button bt_signin = findViewById(R.id.bt_signin);
         Button login = findViewById(R.id.bt_login);
+        Button go_login = findViewById(R.id.bt_lay_login);
+        Button go_signin = findViewById(R.id.bt_lay_signin);
+
 
         bt_signin.setOnClickListener((v -> {
+
             help();
         }));
 
+        go_login.setOnClickListener((v -> {
+
+            setContentView(R.layout.login);
+        }));
+
+
     }
+
 
     public void help(){
         System.out.println("Still working on it");
@@ -70,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
 
         toolBar = findViewById(R.id.topAppBar);
         recyclerView = findViewById(R.id.listaNotas);
+        Button addNote = findViewById(R.id.addNote);
 
         setSupportActionBar(toolBar);
 
@@ -78,6 +91,11 @@ public class MainActivity extends AppCompatActivity {
 
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                 new Fragmento_Notas()).commit();
+
+        addNote.setOnClickListener((v -> {
+
+           
+        }));
     }
 
 

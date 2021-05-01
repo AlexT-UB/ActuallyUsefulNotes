@@ -1,9 +1,10 @@
 package com.example.actuallyusefulnotes;
 
+import java.io.Serializable;
 import java.util.Dictionary;
 import java.util.Hashtable;
 
-public class Note {
+public class Note implements Serializable {
     private long ID;
     private String titulo;
     private String categoria;
