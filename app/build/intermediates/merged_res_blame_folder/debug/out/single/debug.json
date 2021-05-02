@@ -100,6 +100,10 @@
         "source": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_launcher_background.png"
     },
     {
+        "merged": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/build/intermediates/res/merged/debug/layout_nota_texto.xml.flat",
+        "source": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/src/main/res/layout/nota_texto.xml"
+    },
+    {
         "merged": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_search_black_24dp.png.flat",
         "source": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_search_black_24dp.png"
     },
