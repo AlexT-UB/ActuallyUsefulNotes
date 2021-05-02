@@ -1,23 +1,33 @@
-com/example/actuallyusefulnotes/MainActivity.java
- com.example.actuallyusefulnotes.MainActivity
- com.example.actuallyusefulnotes.MainActivity$1
 com/example/actuallyusefulnotes/Fragmento_Ajustes.java
  com.example.actuallyusefulnotes.Fragmento_Ajustes
-com/example/actuallyusefulnotes/User.java
- com.example.actuallyusefulnotes.User
+com/example/actuallyusefulnotes/NoteDAO.java
+ com.example.actuallyusefulnotes.NoteDAO
+com/example/actuallyusefulnotes/ViewModel/NoteViewModel.java
+ com.example.actuallyusefulnotes.ViewModel.NoteViewModel
 com/example/actuallyusefulnotes/Note.java
  com.example.actuallyusefulnotes.Note
 com/example/actuallyusefulnotes/Fragmento_Notas.java
  com.example.actuallyusefulnotes.Fragmento_Notas
-com/example/actuallyusefulnotes/BuildConfig.java
- com.example.actuallyusefulnotes.BuildConfig
-com/example/actuallyusefulnotes/DataBase.java
- com.example.actuallyusefulnotes.DataBase
-com/example/actuallyusefulnotes/Group.java
- com.example.actuallyusefulnotes.Group
 com/example/actuallyusefulnotes/AddNote.java
  com.example.actuallyusefulnotes.AddNote
 com/example/actuallyusefulnotes/Fragmento_Grupos.java
  com.example.actuallyusefulnotes.Fragmento_Grupos
 com/example/actuallyusefulnotes/AUNViewModel.java
  com.example.actuallyusefulnotes.AUNViewModel
+com/example/actuallyusefulnotes/MainActivity.java
+ com.example.actuallyusefulnotes.MainActivity
+ com.example.actuallyusefulnotes.MainActivity$1
+com/example/actuallyusefulnotes/Group.java
+ com.example.actuallyusefulnotes.Group
+com/example/actuallyusefulnotes/User.java
+ com.example.actuallyusefulnotes.User
+com/example/actuallyusefulnotes/BuildConfig.java
+ com.example.actuallyusefulnotes.BuildConfig
+com/example/actuallyusefulnotes/DataBase.java
+ com.example.actuallyusefulnotes.DataBase
+com/example/actuallyusefulnotes/NoteRepository.java
+ com.example.actuallyusefulnotes.NoteRepository
+ com.example.actuallyusefulnotes.NoteRepository$DeleteAllAsyncTask
+ com.example.actuallyusefulnotes.NoteRepository$DeleteAsyncTask
+ com.example.actuallyusefulnotes.NoteRepository$InsertAsyncTask
+ com.example.actuallyusefulnotes.NoteRepository$UpdateAsysncTask

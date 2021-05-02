@@ -1,5 +1,7 @@
 package com.example.actuallyusefulnotes;
 
+import androidx.room.Entity;
+
 import java.io.Serializable;
 import java.util.Dictionary;
 import java.util.Hashtable;
