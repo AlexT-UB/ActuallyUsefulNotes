@@ -36,3 +36,7 @@ com/example/actuallyusefulnotes/NoteAdapter.java
  com.example.actuallyusefulnotes.NoteAdapter$ViewHolder
  com.example.actuallyusefulnotes.NoteAdapter$ViewHolder$1
  com.example.actuallyusefulnotes.NoteAdapter$onItemClickListner
+com/example/actuallyusefulnotes/NoteDataBase.java
+ com.example.actuallyusefulnotes.NoteDataBase
+ com.example.actuallyusefulnotes.NoteDataBase$1
+ com.example.actuallyusefulnotes.NoteDataBase$PopulateDbAsyncTask

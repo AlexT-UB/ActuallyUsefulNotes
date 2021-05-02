@@ -10,27 +10,29 @@ import java.util.List;
 
 public class NoteRepository {
 
-    private NoteDAO noteDao;
+    private NoteDAO noteDAO;
     private LiveData<List<Note>> allNotes;
 
     public NoteRepository(Application application) {
-
+        NoteDataBase noteDataBase = NoteDataBase.getInstance(application);
+        noteDAO = noteDataBase.noteDAO();
+        allNotes = noteDAO.getAllNotes();
     }
 
     public void insert(Note note) {
-        new InsertAsyncTask(noteDao).execute(note);
+        new InsertAsyncTask(noteDAO).execute(note);
     }
 
     public void update(Note note) {
-        new UpdateAsysncTask(noteDao).execute(note);
+        new UpdateAsysncTask(noteDAO).execute(note);
     }
 
     public void delete(Note note) {
-        new DeleteAsyncTask(noteDao).execute(note);
+        new DeleteAsyncTask(noteDAO).execute(note);
     }
 
     public void deleteAll() {
-        new DeleteAllAsyncTask(noteDao).execute();
+        new DeleteAllAsyncTask(noteDAO).execute();
     }
 
     public LiveData<List<Note>> getAllNotes() {
