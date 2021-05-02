@@ -1653,8 +1653,13 @@ drawable design_snackbar_background
 drawable grupos_24dp
 drawable ic_baseline_add_24
 drawable ic_baseline_check_24
+drawable ic_baseline_delete_24
 drawable ic_baseline_image_24
+drawable ic_baseline_mic_24
+drawable ic_baseline_play_arrow_24
+drawable ic_baseline_save_24
 drawable ic_baseline_search_24
+drawable ic_baseline_stop_24
 drawable ic_circle
 drawable ic_clock_black_24dp
 drawable ic_create
@@ -1857,6 +1862,7 @@ id decelerate
 id decelerateAndComplete
 id decor_content_parent
 id default_activity_button
+id delete_audio
 id deltaRelative
 id dependency_ordering
 id design_bottom_sheet
@@ -1969,6 +1975,7 @@ id material_timepicker_view
 id material_value_index
 id menu
 id message
+id microfono
 id middle
 id mini
 id month_grid
@@ -2033,6 +2040,7 @@ id pb_volume
 id peekHeight
 id percent
 id pin
+id play
 id position
 id postLayout
 id progress_circular
@@ -2049,6 +2057,7 @@ id right_side
 id rounded
 id row_index_key
 id sacar_foto
+id save_audio
 id save_non_transition_alpha
 id save_note
 id save_overlay_view
@@ -2140,6 +2149,7 @@ id timeReminder
 id title
 id titleDividerNoCustom
 id title_template
+id titulo_audio
 id toggle
 id top
 id topAppBar

@@ -1,3 +1,5 @@
+com/example/actuallyusefulnotes/View/AddNotaAudio.java
+ com.example.actuallyusefulnotes.View.AddNotaAudio
 com/example/actuallyusefulnotes/NoteDAO.java
  com.example.actuallyusefulnotes.NoteDAO
 com/example/actuallyusefulnotes/ViewModel/NoteViewModel.java
@@ -19,6 +21,9 @@ com/example/actuallyusefulnotes/ViewModel/AUNViewModel.java
 com/example/actuallyusefulnotes/View/AddNote.java
  com.example.actuallyusefulnotes.View.AddNote
  com.example.actuallyusefulnotes.View.AddNote$1
+com/example/actuallyusefulnotes/View/AddNotaImagen.java
+ com.example.actuallyusefulnotes.View.AddNotaImagen
+ com.example.actuallyusefulnotes.View.AddNotaImagen$1
 com/example/actuallyusefulnotes/NoteRepository.java
  com.example.actuallyusefulnotes.NoteRepository
  com.example.actuallyusefulnotes.NoteRepository$DeleteAllAsyncTask
