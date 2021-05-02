@@ -11,13 +11,18 @@
         android:layout_height="wrap_content"
         android:layout_margin="8dp">
 
-        <TextView
+        <EditText
             android:id="@+id/nota_titulo"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Title"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            android:hint="Titulo" />
 
+        <EditText
+            android:id="@+id/nota_texto_contenido"
+            android:layout_below="@id/nota_titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Contenido"/>
 
 
     </RelativeLayout>
