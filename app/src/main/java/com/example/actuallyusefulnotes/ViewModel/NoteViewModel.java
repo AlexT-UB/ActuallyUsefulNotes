@@ -6,7 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
-import com.example.actuallyusefulnotes.Note;
+import com.example.actuallyusefulnotes.Model.Note;
 import com.example.actuallyusefulnotes.NoteRepository;
 
 import java.util.List;

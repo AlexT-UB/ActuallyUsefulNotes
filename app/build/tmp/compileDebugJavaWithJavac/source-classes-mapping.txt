@@ -1,45 +1,51 @@
-com/example/actuallyusefulnotes/Fragmento_Ajustes.java
- com.example.actuallyusefulnotes.Fragmento_Ajustes
 com/example/actuallyusefulnotes/NoteDAO.java
  com.example.actuallyusefulnotes.NoteDAO
 com/example/actuallyusefulnotes/ViewModel/NoteViewModel.java
  com.example.actuallyusefulnotes.ViewModel.NoteViewModel
-com/example/actuallyusefulnotes/Note.java
- com.example.actuallyusefulnotes.Note
-com/example/actuallyusefulnotes/Fragmento_Notas.java
- com.example.actuallyusefulnotes.Fragmento_Notas
-com/example/actuallyusefulnotes/AddNote.java
- com.example.actuallyusefulnotes.AddNote
- com.example.actuallyusefulnotes.AddNote$1
-com/example/actuallyusefulnotes/Fragmento_Grupos.java
- com.example.actuallyusefulnotes.Fragmento_Grupos
-com/example/actuallyusefulnotes/ElegirTipoNota.java
- com.example.actuallyusefulnotes.ElegirTipoNota
-com/example/actuallyusefulnotes/AUNViewModel.java
- com.example.actuallyusefulnotes.AUNViewModel
-com/example/actuallyusefulnotes/MainActivity.java
- com.example.actuallyusefulnotes.MainActivity
- com.example.actuallyusefulnotes.MainActivity$1
+com/example/actuallyusefulnotes/View/ElegirTipoNota.java
+ com.example.actuallyusefulnotes.View.ElegirTipoNota
+ com.example.actuallyusefulnotes.View.ElegirTipoNota$1
+ com.example.actuallyusefulnotes.View.ElegirTipoNota$2
+ com.example.actuallyusefulnotes.View.ElegirTipoNota$3
+ com.example.actuallyusefulnotes.View.ElegirTipoNota$4
+com/example/actuallyusefulnotes/View/Fragmento_Grupos.java
+ com.example.actuallyusefulnotes.View.Fragmento_Grupos
+com/example/actuallyusefulnotes/Model/User.java
+ com.example.actuallyusefulnotes.Model.User
+com/example/actuallyusefulnotes/View/Fragmento_Notas.java
+ com.example.actuallyusefulnotes.View.Fragmento_Notas
+com/example/actuallyusefulnotes/ViewModel/AUNViewModel.java
+ com.example.actuallyusefulnotes.ViewModel.AUNViewModel
+com/example/actuallyusefulnotes/View/AddNote.java
+ com.example.actuallyusefulnotes.View.AddNote
+ com.example.actuallyusefulnotes.View.AddNote$1
 com/example/actuallyusefulnotes/NoteRepository.java
  com.example.actuallyusefulnotes.NoteRepository
  com.example.actuallyusefulnotes.NoteRepository$DeleteAllAsyncTask
  com.example.actuallyusefulnotes.NoteRepository$DeleteAsyncTask
  com.example.actuallyusefulnotes.NoteRepository$InsertAsyncTask
  com.example.actuallyusefulnotes.NoteRepository$UpdateAsysncTask
-com/example/actuallyusefulnotes/User.java
- com.example.actuallyusefulnotes.User
+com/example/actuallyusefulnotes/Model/Note.java
+ com.example.actuallyusefulnotes.Model.Note
 com/example/actuallyusefulnotes/BuildConfig.java
  com.example.actuallyusefulnotes.BuildConfig
 com/example/actuallyusefulnotes/DataBase.java
  com.example.actuallyusefulnotes.DataBase
-com/example/actuallyusefulnotes/Group.java
- com.example.actuallyusefulnotes.Group
-com/example/actuallyusefulnotes/NoteAdapter.java
- com.example.actuallyusefulnotes.NoteAdapter
- com.example.actuallyusefulnotes.NoteAdapter$ViewHolder
- com.example.actuallyusefulnotes.NoteAdapter$ViewHolder$1
- com.example.actuallyusefulnotes.NoteAdapter$onItemClickListner
+com/example/actuallyusefulnotes/View/Fragmento_Ajustes.java
+ com.example.actuallyusefulnotes.View.Fragmento_Ajustes
+com/example/actuallyusefulnotes/Model/Group.java
+ com.example.actuallyusefulnotes.Model.Group
+com/example/actuallyusefulnotes/View/NoteAdapter.java
+ com.example.actuallyusefulnotes.View.NoteAdapter
+ com.example.actuallyusefulnotes.View.NoteAdapter$ViewHolder
+ com.example.actuallyusefulnotes.View.NoteAdapter$ViewHolder$1
+ com.example.actuallyusefulnotes.View.NoteAdapter$onItemClickListner
+com/example/actuallyusefulnotes/View/AddNotaTexto.java
+ com.example.actuallyusefulnotes.View.AddNotaTexto
 com/example/actuallyusefulnotes/NoteDataBase.java
  com.example.actuallyusefulnotes.NoteDataBase
  com.example.actuallyusefulnotes.NoteDataBase$1
  com.example.actuallyusefulnotes.NoteDataBase$PopulateDbAsyncTask
+com/example/actuallyusefulnotes/View/MainActivity.java
+ com.example.actuallyusefulnotes.View.MainActivity
+ com.example.actuallyusefulnotes.View.MainActivity$1

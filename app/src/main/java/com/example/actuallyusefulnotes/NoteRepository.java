@@ -2,9 +2,10 @@ package com.example.actuallyusefulnotes;
 
 import android.app.Application;
 import android.os.AsyncTask;
-import android.provider.ContactsContract;
 
 import androidx.lifecycle.LiveData;
+
+import com.example.actuallyusefulnotes.Model.Note;
 
 import java.util.List;
 

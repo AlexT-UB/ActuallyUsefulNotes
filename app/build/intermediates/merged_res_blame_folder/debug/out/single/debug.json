@@ -272,6 +272,10 @@
         "source": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/build/generated/res/pngs/debug/drawable-mdpi/ic_search_black_24dp.png"
     },
     {
+        "merged": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/build/intermediates/res/merged/debug/drawable-hdpi_add.png.flat",
+        "source": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/src/main/res/drawable-hdpi/add.png"
+    },
+    {
         "merged": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_round.png.flat",
         "source": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
     },

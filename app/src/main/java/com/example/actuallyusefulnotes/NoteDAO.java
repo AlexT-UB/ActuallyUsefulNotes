@@ -2,6 +2,8 @@ package com.example.actuallyusefulnotes;
 
 import androidx.lifecycle.LiveData;
 
+import com.example.actuallyusefulnotes.Model.Note;
+
 import java.util.List;
 
 public interface NoteDAO {

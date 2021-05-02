@@ -1,4 +1,4 @@
-#Sun May 02 12:30:45 CEST 2021
+#Sun May 02 15:21:03 CEST 2021
 base.0=/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/build/intermediates/dex/debug/mergeDexDebug/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
