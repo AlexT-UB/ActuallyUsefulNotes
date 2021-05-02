@@ -68,6 +68,10 @@
         "source": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/build/generated/res/pngs/debug/drawable-mdpi/ic_baseline_image_24.png"
     },
     {
+        "merged": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/build/intermediates/res/merged/debug/layout_add_nota_texto.xml.flat",
+        "source": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/src/main/res/layout/add_nota_texto.xml"
+    },
+    {
         "merged": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_baseline_image_24.png.flat",
         "source": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_baseline_image_24.png"
     },
@@ -78,10 +82,6 @@
     {
         "merged": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_baseline_save_24.png.flat",
         "source": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/build/generated/res/pngs/debug/drawable-mdpi/ic_baseline_save_24.png"
-    },
-    {
-        "merged": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/build/intermediates/res/merged/debug/layout_add_nota_texto.xml.flat",
-        "source": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/src/main/res/layout/add_nota_texto.xml"
     },
     {
         "merged": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_baseline_save_24.png.flat",
@@ -428,12 +428,12 @@
         "source": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_baseline_add_24.xml"
     },
     {
-        "merged": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_baseline_search_24.png.flat",
-        "source": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_baseline_search_24.png"
-    },
-    {
         "merged": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/build/intermediates/res/merged/debug/layout_add_nota_imagen.xml.flat",
         "source": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/src/main/res/layout/add_nota_imagen.xml"
+    },
+    {
+        "merged": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_baseline_search_24.png.flat",
+        "source": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_baseline_search_24.png"
     },
     {
         "merged": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_baseline_image_24.png.flat",
