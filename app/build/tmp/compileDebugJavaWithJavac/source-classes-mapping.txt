@@ -17,17 +17,17 @@ com/example/actuallyusefulnotes/AUNViewModel.java
 com/example/actuallyusefulnotes/MainActivity.java
  com.example.actuallyusefulnotes.MainActivity
  com.example.actuallyusefulnotes.MainActivity$1
-com/example/actuallyusefulnotes/Group.java
- com.example.actuallyusefulnotes.Group
-com/example/actuallyusefulnotes/User.java
- com.example.actuallyusefulnotes.User
-com/example/actuallyusefulnotes/BuildConfig.java
- com.example.actuallyusefulnotes.BuildConfig
-com/example/actuallyusefulnotes/DataBase.java
- com.example.actuallyusefulnotes.DataBase
 com/example/actuallyusefulnotes/NoteRepository.java
  com.example.actuallyusefulnotes.NoteRepository
  com.example.actuallyusefulnotes.NoteRepository$DeleteAllAsyncTask
  com.example.actuallyusefulnotes.NoteRepository$DeleteAsyncTask
  com.example.actuallyusefulnotes.NoteRepository$InsertAsyncTask
  com.example.actuallyusefulnotes.NoteRepository$UpdateAsysncTask
+com/example/actuallyusefulnotes/User.java
+ com.example.actuallyusefulnotes.User
+com/example/actuallyusefulnotes/BuildConfig.java
+ com.example.actuallyusefulnotes.BuildConfig
+com/example/actuallyusefulnotes/DataBase.java
+ com.example.actuallyusefulnotes.DataBase
+com/example/actuallyusefulnotes/Group.java
+ com.example.actuallyusefulnotes.Group
