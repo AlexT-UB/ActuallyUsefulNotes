@@ -1632,7 +1632,6 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
-drawable add
 drawable ajustes_24dp
 drawable avd_hide_password
 drawable avd_show_password
@@ -2241,8 +2240,10 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
-layout activity_add_note
 layout activity_main
+layout add_nota_audio
+layout add_nota_imagen
+layout add_nota_texto
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -2260,6 +2261,7 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout editar_nota
+layout elegir_tipo_nota
 layout fragment_ajustes
 layout fragment_grupos
 layout fragment_notas
@@ -2306,9 +2308,6 @@ layout mtrl_picker_header_title_text
 layout mtrl_picker_header_toggle
 layout mtrl_picker_text_input_date
 layout mtrl_picker_text_input_date_range
-layout nota_audio
-layout nota_imagen
-layout nota_texto
 layout notification_action
 layout notification_action_tombstone
 layout notification_template_custom_big

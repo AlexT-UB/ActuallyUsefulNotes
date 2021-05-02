@@ -10,14 +10,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.actuallyusefulnotes.R;
 
-public class AddNotaTexto extends AppCompatActivity {
+public class AddNotaTextoActivity extends AppCompatActivity {
 
     EditText titulo;
     EditText contenido;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.nota_texto);
+        setContentView(R.layout.add_nota_texto);
 
         titulo = findViewById(R.id.nota_titulo);
         contenido = findViewById(R.id.nota_texto_contenido);

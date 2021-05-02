@@ -1,15 +1,15 @@
 package com.example.actuallyusefulnotes.View;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import com.example.actuallyusefulnotes.R;
 
-public class ElegirTipoNota extends AppCompatActivity {
+public class ElegirTipoNotaActivity extends AppCompatActivity {
 
     Button texto;
     Button audio;
@@ -18,7 +18,7 @@ public class ElegirTipoNota extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_note);
+        setContentView(R.layout.elegir_tipo_nota);
 
         texto = findViewById(R.id.NotaTexto);
         audio = findViewById(R.id.NotaAudio);
@@ -28,21 +28,21 @@ public class ElegirTipoNota extends AppCompatActivity {
         texto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent notaTexto = new Intent(ElegirTipoNota.this, AddNotaTexto.class);
+                Intent notaTexto = new Intent(ElegirTipoNotaActivity.this, AddNotaTextoActivity.class);
             }
         });
 
         audio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent notaAudio = new Intent(ElegirTipoNotaActivity.this, AddNotaAudioActivity.class);
             }
         });
 
         imagen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent notaImagen = new Intent(ElegirTipoNotaActivity.this, AddNotaImagenActivity.class);
             }
         });
 

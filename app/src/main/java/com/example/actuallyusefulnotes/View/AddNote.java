@@ -22,8 +22,8 @@ public class AddNote extends AppCompatActivity {
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent opciones = new Intent(AddNote.this, ElegirTipoNota.class);
-                startActivity(opciones);
+                Intent intent = new Intent(AddNote.this, ElegirTipoNotaActivity.class);
+                startActivity(intent);
             }
         });
 

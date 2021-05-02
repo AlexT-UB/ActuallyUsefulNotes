@@ -93,7 +93,6 @@ public class MainActivity extends AppCompatActivity {
                 new Fragmento_Notas()).commit();
 
         addNote.setOnClickListener((v -> {
-
            
         }));
     }

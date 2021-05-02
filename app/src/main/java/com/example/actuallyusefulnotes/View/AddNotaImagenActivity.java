@@ -18,7 +18,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.actuallyusefulnotes.R;
 
-public class AddNotaImagen extends AppCompatActivity {
+public class AddNotaImagenActivity extends AppCompatActivity {
 
     private static final int PERMISSION_CODE = 1000;
     private static final int IMAGE_CAPTURE_CODE = 1001;
@@ -31,7 +31,7 @@ public class AddNotaImagen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.nota_imagen);
+        setContentView(R.layout.add_nota_imagen);
 
         imagen = findViewById(R.id.nota_imagen);
         button = findViewById(R.id.sacar_foto);

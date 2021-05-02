@@ -8,7 +8,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -17,7 +16,7 @@ import com.example.actuallyusefulnotes.R;
 import java.io.File;
 import java.io.IOException;
 
-public class AddNotaAudio extends AppCompatActivity {
+public class AddNotaAudioActivity extends AppCompatActivity {
     EditText titulo;
     MediaRecorder mediaRecorder;
 
@@ -28,7 +27,7 @@ public class AddNotaAudio extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.nota_audio);
+        setContentView(R.layout.add_nota_audio);
 
         titulo = findViewById(R.id.titulo_audio);
 
