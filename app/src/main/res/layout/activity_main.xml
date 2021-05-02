@@ -39,7 +39,7 @@
             android:layout_gravity="bottom|right"
             android:layout_marginRight="25dp"
             android:layout_marginBottom="50dp"
-            android:icon="@drawable/ic_baseline_add_24"
+            android:icon="@drawable/add"
             android:visibility="visible"
             app:backgroundTint="#03A9F4"
             app:iconPadding="60dp"
@@ -73,8 +73,7 @@
             android:paddingLeft="20dp"
             android:paddingTop="60dp"
             android:scrollbarSize="20dp"
-            android:scrollbars="vertical"
-            tools:listitem="@layout/activity_main_recycler_view" />
+            android:scrollbars="vertical" />
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 

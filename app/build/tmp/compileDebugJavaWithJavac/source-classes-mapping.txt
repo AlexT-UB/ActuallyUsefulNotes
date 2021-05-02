@@ -10,8 +10,11 @@ com/example/actuallyusefulnotes/Fragmento_Notas.java
  com.example.actuallyusefulnotes.Fragmento_Notas
 com/example/actuallyusefulnotes/AddNote.java
  com.example.actuallyusefulnotes.AddNote
+ com.example.actuallyusefulnotes.AddNote$1
 com/example/actuallyusefulnotes/Fragmento_Grupos.java
  com.example.actuallyusefulnotes.Fragmento_Grupos
+com/example/actuallyusefulnotes/ElegirTipoNota.java
+ com.example.actuallyusefulnotes.ElegirTipoNota
 com/example/actuallyusefulnotes/AUNViewModel.java
  com.example.actuallyusefulnotes.AUNViewModel
 com/example/actuallyusefulnotes/MainActivity.java
