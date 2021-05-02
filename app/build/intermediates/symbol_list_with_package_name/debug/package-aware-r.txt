@@ -1653,6 +1653,7 @@ drawable design_snackbar_background
 drawable grupos_24dp
 drawable ic_baseline_add_24
 drawable ic_baseline_check_24
+drawable ic_baseline_image_24
 drawable ic_baseline_search_24
 drawable ic_circle
 drawable ic_clock_black_24dp
@@ -2009,6 +2010,7 @@ id never
 id noScroll
 id none
 id normal
+id nota_imagen
 id nota_texto_contenido
 id nota_titulo
 id notification_background
@@ -2046,6 +2048,7 @@ id right_icon
 id right_side
 id rounded
 id row_index_key
+id sacar_foto
 id save_non_transition_alpha
 id save_note
 id save_overlay_view
@@ -2293,6 +2296,8 @@ layout mtrl_picker_header_title_text
 layout mtrl_picker_header_toggle
 layout mtrl_picker_text_input_date
 layout mtrl_picker_text_input_date_range
+layout nota_audio
+layout nota_imagen
 layout nota_texto
 layout notification_action
 layout notification_action_tombstone

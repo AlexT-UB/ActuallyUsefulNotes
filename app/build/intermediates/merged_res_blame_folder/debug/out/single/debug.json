@@ -4,6 +4,10 @@
         "source": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/src/main/res/layout/fragment_ajustes.xml"
     },
     {
+        "merged": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/build/intermediates/res/merged/debug/drawable-ldpi_ic_baseline_image_24.png.flat",
+        "source": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/build/generated/res/pngs/debug/drawable-ldpi/ic_baseline_image_24.png"
+    },
+    {
         "merged": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_ic_baseline_search_24.xml.flat",
         "source": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_baseline_search_24.xml"
     },
@@ -40,6 +44,10 @@
         "source": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
+        "merged": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/build/intermediates/res/merged/debug/drawable-hdpi-v21_ic_save.xml.flat",
+        "source": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/build/generated/res/pngs/debug/drawable-hdpi-v21/ic_save.xml"
+    },
+    {
         "merged": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/build/intermediates/res/merged/debug/drawable-v24_logo1.png.flat",
         "source": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/src/main/res/drawable-v24/logo1.png"
     },
@@ -72,8 +80,28 @@
         "source": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/build/generated/res/pngs/debug/drawable-anydpi-v24/ic_circle.xml"
     },
     {
+        "merged": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_baseline_image_24.png.flat",
+        "source": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_baseline_image_24.png"
+    },
+    {
+        "merged": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_baseline_image_24.png.flat",
+        "source": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/build/generated/res/pngs/debug/drawable-hdpi/ic_baseline_image_24.png"
+    },
+    {
+        "merged": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_save.png.flat",
+        "source": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/build/generated/res/pngs/debug/drawable-hdpi/ic_save.png"
+    },
+    {
+        "merged": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_baseline_image_24.png.flat",
+        "source": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/build/generated/res/pngs/debug/drawable-mdpi/ic_baseline_image_24.png"
+    },
+    {
         "merged": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/build/intermediates/res/merged/debug/drawable-hdpi_outline_delete_black_24dp.png.flat",
         "source": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/src/main/res/drawable-hdpi/outline_delete_black_24dp.png"
+    },
+    {
+        "merged": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_baseline_image_24.png.flat",
+        "source": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_baseline_image_24.png"
     },
     {
         "merged": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/build/intermediates/res/merged/debug/layout_fragment_notas.xml.flat",
@@ -118,6 +146,10 @@
     {
         "merged": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/build/intermediates/res/merged/debug/menu_editar_nota_menu.xml.flat",
         "source": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/src/main/res/menu/editar_nota_menu.xml"
+    },
+    {
+        "merged": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_ic_baseline_image_24.xml.flat",
+        "source": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_baseline_image_24.xml"
     },
     {
         "merged": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/build/intermediates/res/merged/debug/drawable-hdpi_outline_home_black_24dp.png.flat",
@@ -172,6 +204,10 @@
         "source": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_baseline_add_24.png"
     },
     {
+        "merged": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/build/intermediates/res/merged/debug/layout_nota_imagen.xml.flat",
+        "source": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/src/main/res/layout/nota_imagen.xml"
+    },
+    {
         "merged": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher_round.png.flat",
         "source": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
     },
@@ -224,6 +260,10 @@
         "source": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/build/generated/res/pngs/debug/drawable-ldpi/ic_search_black_24dp.png"
     },
     {
+        "merged": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/build/intermediates/res/merged/debug/menu_note_add.xml.flat",
+        "source": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/src/main/res/menu/note_add.xml"
+    },
+    {
         "merged": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/build/intermediates/res/merged/debug/drawable-hdpi_outline_groups_black_24dp.png.flat",
         "source": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/src/main/res/drawable-hdpi/outline_groups_black_24dp.png"
     },
@@ -240,6 +280,10 @@
         "source": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
     },
     {
+        "merged": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/build/intermediates/res/merged/debug/layout_nota_audio.xml.flat",
+        "source": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/src/main/res/layout/nota_audio.xml"
+    },
+    {
         "merged": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/build/intermediates/res/merged/debug/drawable-hdpi_outline_description_black_24dp.png.flat",
         "source": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/src/main/res/drawable-hdpi/outline_description_black_24dp.png"
     },
@@ -250,6 +294,10 @@
     {
         "merged": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_baseline_search_24.png.flat",
         "source": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_baseline_search_24.png"
+    },
+    {
+        "merged": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_baseline_image_24.png.flat",
+        "source": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_baseline_image_24.png"
     },
     {
         "merged": "/Users/maria/AndroidStudioProjects/ActuallyUsefulNotes/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_launcher_background.png.flat",
