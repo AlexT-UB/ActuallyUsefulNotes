@@ -40,7 +40,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="Signature: "
+            android:text="Nombre de usuario: "
             android:textColor="@android:color/black" />
 
         <TextView
@@ -48,23 +48,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="Default reply:"
+            android:text="Cambiar contraseña"
             android:textColor="@android:color/black" />
 
-        <TextView
-            android:id="@+id/tv_sync"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:text="Sync: "
-            android:textColor="@android:color/black" />
 
         <TextView
             android:id="@+id/tv_notifications"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="Notifications:"
+            android:text="Volumen de notificaciones:"
             android:textColor="@android:color/black" />
 
         <ProgressBar

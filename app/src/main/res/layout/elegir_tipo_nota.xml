@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.ElegirTipoNotaActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#0D73C5"
+        android:icon="@drawable/ic_baseline_search_24"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/AUN"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="15dp"
+            android:text="ActuallyUsefulNotes"
+            android:textColor="@color/white"
+            android:textSize="25dp" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <Button
+        android:id="@+id/NotaTexto"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:text="TEXTO"
+        android:textSize="30dp"
+        app:backgroundTint="#EA9922"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
+
+    <Button
+        android:id="@+id/NotaAudio"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:text="AUDIO"
+        android:textSize="30dp"
+        app:backgroundTint="#DA6464"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NotaTexto" />
+
+    <Button
+        android:id="@+id/NotaFoto"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:text="IMAGEN"
+        android:textSize="30dp"
+        app:backgroundTint="#A351B1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NotaAudio" />
+
+    <Button
+        android:id="@+id/NotaCalendario"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:text="CALENDARIO"
+        android:textSize="30dp"
+        app:backgroundTint="#7154A5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NotaFoto" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageButton
+        android:id="@+id/microfono"
+        android:layout_marginTop="100dp"
+        android:layout_width="415dp"
+        android:layout_height="550dp"
+        android:background="@color/white"
+        app:srcCompat="@drawable/ic_baseline_mic_24"
+        tools:ignore="VectorDrawableCompat" />
+
+    <ImageButton
+        android:id="@+id/play"
+        android:background="@color/purple_200"
+        android:layout_marginTop="650dp"
+        android:layout_width="207dp"
+        android:layout_height="75dp"
+        app:srcCompat="@drawable/ic_baseline_play_arrow_24"
+        tools:ignore="VectorDrawableCompat" />
+
+    <ImageButton
+        android:id="@+id/stop"
+        android:background="@color/purple_200"
+        android:layout_marginTop="650dp"
+        android:layout_marginLeft="207dp"
+        android:layout_width="207dp"
+        android:layout_height="75dp"
+        app:srcCompat="@drawable/ic_baseline_stop_24"
+        tools:ignore="VectorDrawableCompat" />
+
+    <ImageButton
+        android:id="@+id/save_audio"
+        android:layout_marginTop="10dp"
+        android:layout_width="207dp"
+        android:layout_height="40dp"
+        android:background="@color/teal_700"
+        app:srcCompat="@drawable/ic_baseline_save_24"
+        tools:ignore="VectorDrawableCompat" />
+
+    <ImageButton
+        android:id="@+id/delete_audio"
+        android:background="@color/design_default_color_error"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="207dp"
+        android:layout_width="207dp"
+        android:layout_height="40dp"
+        app:srcCompat="@drawable/ic_baseline_delete_24"
+        tools:ignore="VectorDrawableCompat" />
+
+    <EditText
+        android:id="@+id/titulo_audio"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Titulo"/>
+
+
+</RelativeLayout>

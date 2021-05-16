@@ -1652,7 +1652,13 @@ drawable design_snackbar_background
 drawable grupos_24dp
 drawable ic_baseline_add_24
 drawable ic_baseline_check_24
+drawable ic_baseline_delete_24
+drawable ic_baseline_image_24
+drawable ic_baseline_mic_24
+drawable ic_baseline_play_arrow_24
+drawable ic_baseline_save_24
 drawable ic_baseline_search_24
+drawable ic_baseline_stop_24
 drawable ic_circle
 drawable ic_clock_black_24dp
 drawable ic_create
@@ -1664,6 +1670,7 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_save
 drawable ic_search_black_24dp
 drawable ic_share
 drawable logo1
@@ -1821,7 +1828,6 @@ id center_vertical
 id chain
 id chains
 id checkBox
-id checkBox_events_verNotas
 id checkbox
 id checked
 id chip
@@ -1855,6 +1861,7 @@ id decelerate
 id decelerateAndComplete
 id decor_content_parent
 id default_activity_button
+id delete_audio
 id deltaRelative
 id dependency_ordering
 id design_bottom_sheet
@@ -1923,7 +1930,6 @@ id ignore
 id ignoreRequest
 id image
 id imageView
-id imageView2
 id imagesScroll
 id imagesText
 id info
@@ -1968,6 +1974,7 @@ id material_timepicker_view
 id material_value_index
 id menu
 id message
+id microfono
 id middle
 id mini
 id month_grid
@@ -2009,6 +2016,9 @@ id never
 id noScroll
 id none
 id normal
+id nota_imagen
+id nota_texto_contenido
+id nota_titulo
 id notification_background
 id notification_main_column
 id notification_main_column_container
@@ -2029,6 +2039,7 @@ id pb_volume
 id peekHeight
 id percent
 id pin
+id play
 id position
 id postLayout
 id progress_circular
@@ -2044,7 +2055,10 @@ id right_icon
 id right_side
 id rounded
 id row_index_key
+id sacar_foto
+id save_audio
 id save_non_transition_alpha
+id save_note
 id save_overlay_view
 id sawtooth
 id scale
@@ -2114,13 +2128,11 @@ id test_radiobutton_android_button_tint
 id test_radiobutton_app_button_tint
 id text
 id text2
-id textBox_events_verNotas
 id textEnd
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
-id textView
 id textView2
 id text_input_end_icon
 id text_input_error_icon
@@ -2136,6 +2148,7 @@ id timeReminder
 id title
 id titleDividerNoCustom
 id title_template
+id titulo_audio
 id toggle
 id top
 id topAppBar
@@ -2227,9 +2240,10 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
-layout activity_add_note
 layout activity_main
-layout activity_main_recycler_view
+layout add_nota_audio
+layout add_nota_imagen
+layout add_nota_texto
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -2247,6 +2261,7 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout editar_nota
+layout elegir_tipo_nota
 layout fragment_ajustes
 layout fragment_grupos
 layout fragment_notas
@@ -2319,11 +2334,10 @@ layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
 layout ver_nota
-layout ver_nota_tareas_recycler_view
-layout ver_notas_imagenes_recycler_view
 menu bottom_navigation
 menu editar_nota_menu
 menu main_menu
+menu note_add
 menu ver_nota_menu
 mipmap ic_launcher
 mipmap ic_launcher_round

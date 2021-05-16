@@ -4,13 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".View.MainActivity">
 
     <FrameLayout
         android:id="@+id/fragment_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/bottom_navigation"/>
+        android:layout_above="@id/bottom_navigation">
+
+    </FrameLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
@@ -40,11 +42,9 @@
             android:layout_marginRight="25dp"
             android:layout_marginBottom="50dp"
             android:icon="@drawable/ic_baseline_add_24"
-            android:visibility="visible"
             app:backgroundTint="#03A9F4"
             app:iconPadding="60dp"
-            app:iconTint="#FFFFFF"
-            tools:visibility="visible" />
+             />
 
         <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
@@ -73,8 +73,7 @@
             android:paddingLeft="20dp"
             android:paddingTop="60dp"
             android:scrollbarSize="20dp"
-            android:scrollbars="vertical"
-            tools:listitem="@layout/activity_main_recycler_view" />
+            android:scrollbars="vertical" />
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
