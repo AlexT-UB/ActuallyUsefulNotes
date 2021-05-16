@@ -54,30 +54,46 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         AUNViewModel model = new ViewModelProvider(this).get(AUNViewModel.class);
+        sign_up();
+
+    }
+
+    public void sign_up(){
         setContentView(R.layout.signin);
 
         Button bt_signin = findViewById(R.id.bt_signin);
-        Button login = findViewById(R.id.bt_login);
         Button go_login = findViewById(R.id.bt_lay_login);
-        Button go_signin = findViewById(R.id.bt_lay_signin);
 
 
         bt_signin.setOnClickListener((v -> {
 
-            help();
+            main_screen();
         }));
 
         go_login.setOnClickListener((v -> {
 
-            setContentView(R.layout.login);
+            log_in();
         }));
-
-
     }
 
+    public void log_in(){
+        setContentView(R.layout.login);
 
-    public void help(){
-        System.out.println("Still working on it");
+        Button bt_login = findViewById(R.id.bt_login);
+        Button go_signup = findViewById(R.id.bt_lay_signup);
+
+        bt_login.setOnClickListener((v -> {
+
+            main_screen();
+        }));
+
+        go_signup.setOnClickListener((v -> {
+
+            sign_up();
+        }));
+    }
+
+    public void main_screen(){
         setContentView(R.layout.activity_main);
 
         toolBar = findViewById(R.id.topAppBar);
@@ -93,7 +109,10 @@ public class MainActivity extends AppCompatActivity {
                 new Fragmento_Notas()).commit();
 
         addNote.setOnClickListener((v -> {
-           
+            System.out.println("HERE");
+            setContentView(R.layout.editar_nota);
+            //Intent i = new Intent(this, AddNote.class);
+            //startActivity(i);
         }));
     }
 
@@ -108,6 +127,7 @@ public class MainActivity extends AppCompatActivity {
 
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.addNote) {
+            System.out.println("HERE");
             Intent i = new Intent(this, AddNote.class);
             startActivity(i);
             Toast.makeText(this, "JAJAJA", Toast.LENGTH_SHORT).show();

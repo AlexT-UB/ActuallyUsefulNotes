@@ -1724,10 +1724,6 @@ id CTRL
 id FUNCTION
 id META
 id NO_DEBUG
-id NotaAudio
-id NotaCalendario
-id NotaFoto
-id NotaTexto
 id SHIFT
 id SHOW_ALL
 id SHOW_PATH
@@ -1796,7 +1792,6 @@ id all
 id always
 id animateToEnd
 id animateToStart
-id appBarLayout
 id app_bar_search
 id asConfigured
 id async
@@ -1815,7 +1810,7 @@ id bounce
 id bt_camara
 id bt_galeria
 id bt_lay_login
-id bt_lay_signin
+id bt_lay_signup
 id bt_login
 id bt_signin
 id buttonPanel
@@ -1828,6 +1823,7 @@ id center_vertical
 id chain
 id chains
 id checkBox
+id checkBox_events_verNotas
 id checkbox
 id checked
 id chip
@@ -1930,6 +1926,7 @@ id ignore
 id ignoreRequest
 id image
 id imageView
+id imageView2
 id imagesScroll
 id imagesText
 id info
@@ -2128,11 +2125,13 @@ id test_radiobutton_android_button_tint
 id test_radiobutton_app_button_tint
 id text
 id text2
+id textBox_events_verNotas
 id textEnd
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textView
 id textView2
 id text_input_end_icon
 id text_input_error_icon
@@ -2165,7 +2164,6 @@ id triangle
 id tv_notifications
 id tv_reply
 id tv_signature
-id tv_sync
 id unchecked
 id uniform
 id unlabeled
@@ -2241,6 +2239,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
+layout activity_main_recycler_view
 layout add_nota_audio
 layout add_nota_imagen
 layout add_nota_texto
@@ -2261,7 +2260,6 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout editar_nota
-layout elegir_tipo_nota
 layout fragment_ajustes
 layout fragment_grupos
 layout fragment_notas
@@ -2334,6 +2332,8 @@ layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
 layout ver_nota
+layout ver_nota_tareas_recycler_view
+layout ver_notas_imagenes_recycler_view
 menu bottom_navigation
 menu editar_nota_menu
 menu main_menu

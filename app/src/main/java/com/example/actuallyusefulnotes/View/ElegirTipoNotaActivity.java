@@ -18,9 +18,9 @@ public class ElegirTipoNotaActivity extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.elegir_tipo_nota);
+        setContentView(R.layout.editar_nota);
 
-        texto = findViewById(R.id.NotaTexto);
+        /*texto = findViewById(R.id.NotaTexto);
         audio = findViewById(R.id.NotaAudio);
         imagen = findViewById(R.id.NotaFoto);
         calendario = findViewById(R.id.NotaCalendario);
@@ -51,6 +51,6 @@ public class ElegirTipoNotaActivity extends AppCompatActivity {
             public void onClick(View v) {
 
             }
-        });
+        });*/
     }
 }

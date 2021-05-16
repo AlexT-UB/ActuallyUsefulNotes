@@ -1,9 +1,5 @@
 com/example/actuallyusefulnotes/View/ElegirTipoNotaActivity.java
  com.example.actuallyusefulnotes.View.ElegirTipoNotaActivity
- com.example.actuallyusefulnotes.View.ElegirTipoNotaActivity$1
- com.example.actuallyusefulnotes.View.ElegirTipoNotaActivity$2
- com.example.actuallyusefulnotes.View.ElegirTipoNotaActivity$3
- com.example.actuallyusefulnotes.View.ElegirTipoNotaActivity$4
 com/example/actuallyusefulnotes/NoteDAO.java
  com.example.actuallyusefulnotes.NoteDAO
 com/example/actuallyusefulnotes/View/AddNotaTextoActivity.java

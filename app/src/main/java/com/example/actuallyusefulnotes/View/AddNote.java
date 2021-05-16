@@ -15,7 +15,7 @@ public class AddNote extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.editar_nota);
 
         floatingActionButton = findViewById(R.id.addNote);
 
