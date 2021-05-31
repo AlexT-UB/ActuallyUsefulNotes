@@ -36,16 +36,20 @@ public class MainActivity extends AppCompatActivity {
                     switch (item.getItemId()) {
                         case R.id.nav_grupos:
                             selectedFragment = new Fragmento_Grupos();
+                            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                                    selectedFragment, "GRUPOS").commit();
                             break;
                         case R.id.nav_notas:
                             selectedFragment = new Fragmento_Notas();
+                            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                                    selectedFragment, "NOTAS").commit();
                             break;
                         case R.id.nav_ajustes:
                             selectedFragment = new Fragmento_Ajustes();
+                            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                                    selectedFragment, "AJUSTES").commit();
                             break;
                     }
-                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                            selectedFragment).commit();
                     return true;
                 }
             };
@@ -54,43 +58,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         AUNViewModel model = new ViewModelProvider(this).get(AUNViewModel.class);
-        sign_up();
+        main_screen();
 
-    }
-
-    public void sign_up(){
-        setContentView(R.layout.signin);
-
-        Button bt_signin = findViewById(R.id.bt_signin);
-        Button go_login = findViewById(R.id.bt_lay_login);
-
-
-        bt_signin.setOnClickListener((v -> {
-
-            main_screen();
-        }));
-
-        go_login.setOnClickListener((v -> {
-
-            log_in();
-        }));
-    }
-
-    public void log_in(){
-        setContentView(R.layout.login);
-
-        Button bt_login = findViewById(R.id.bt_login);
-        Button go_signup = findViewById(R.id.bt_lay_signup);
-
-        bt_login.setOnClickListener((v -> {
-
-            main_screen();
-        }));
-
-        go_signup.setOnClickListener((v -> {
-
-            sign_up();
-        }));
     }
 
     public void main_screen(){
@@ -109,10 +78,13 @@ public class MainActivity extends AppCompatActivity {
                 new Fragmento_Notas()).commit();
 
         addNote.setOnClickListener((v -> {
-            System.out.println("HERE");
-            setContentView(R.layout.editar_nota);
-            //Intent i = new Intent(this, AddNote.class);
-            //startActivity(i);
+            if(getSupportFragmentManager().findFragmentByTag("NOTAS") != null && getSupportFragmentManager().findFragmentByTag("NOTAS").isVisible()){
+                Intent i = new Intent(MainActivity.this, AddNote.class);
+                startActivity(i);
+            } else if(getSupportFragmentManager().findFragmentByTag("GRUPOS") != null && getSupportFragmentManager().findFragmentByTag("GRUPOS").isVisible()){
+                Intent i = new Intent(MainActivity.this, AddGroup.class);
+                startActivity(i);
+            }
         }));
     }
 
@@ -127,11 +99,12 @@ public class MainActivity extends AppCompatActivity {
 
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.addNote) {
-            System.out.println("HERE");
-            Intent i = new Intent(this, AddNote.class);
+            System.out.println("THERE");
+            Intent i = new Intent(MainActivity.this, AddNote.class);
             startActivity(i);
             Toast.makeText(this, "JAJAJA", Toast.LENGTH_SHORT).show();
         }
         return super.onOptionsItemSelected(item);
+        //return false;
     }
 }

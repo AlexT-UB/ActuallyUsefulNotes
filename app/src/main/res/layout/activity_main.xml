@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/New_Button"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".View.MainActivity">
@@ -12,6 +13,14 @@
         android:layout_height="match_parent"
         android:layout_above="@id/bottom_navigation">
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listaNotas"
+            android:layout_width="match_parent"
+            android:layout_height="674dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="60dp"
+            android:scrollbarSize="20dp"
+            android:scrollbars="vertical" />
     </FrameLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -20,7 +29,7 @@
         android:layout_height="56dp"
         android:layout_alignParentBottom="true"
         android:background="?android:attr/windowBackground"
-        app:menu="@menu/bottom_navigation"/>
+        app:menu="@menu/bottom_navigation" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/topAppBar"
@@ -42,9 +51,9 @@
             android:layout_marginRight="25dp"
             android:layout_marginBottom="50dp"
             android:icon="@drawable/ic_baseline_add_24"
-            app:backgroundTint="#03A9F4"
-            app:iconPadding="60dp"
-             />
+            app:backgroundTint="@color/design_default_color_secondary"
+            app:iconPadding="0dp"
+            app:iconTint="@color/white" />
 
         <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
@@ -60,20 +69,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:paddingTop="15dp"
-                android:textColor="@color/white"
                 android:text="ActuallyUsefulNotes"
+                android:textColor="@color/white"
                 android:textSize="25dp" />
 
         </com.google.android.material.appbar.AppBarLayout>
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/listaNotas"
-            android:layout_width="match_parent"
-            android:layout_height="674dp"
-            android:paddingLeft="20dp"
-            android:paddingTop="60dp"
-            android:scrollbarSize="20dp"
-            android:scrollbars="vertical" />
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 

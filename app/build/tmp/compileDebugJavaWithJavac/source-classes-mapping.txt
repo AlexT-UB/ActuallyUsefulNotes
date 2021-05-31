@@ -1,7 +1,11 @@
+com/example/actuallyusefulnotes/View/Start_Up.java
+ com.example.actuallyusefulnotes.View.Start_Up
 com/example/actuallyusefulnotes/View/ElegirTipoNotaActivity.java
  com.example.actuallyusefulnotes.View.ElegirTipoNotaActivity
 com/example/actuallyusefulnotes/NoteDAO.java
  com.example.actuallyusefulnotes.NoteDAO
+com/example/actuallyusefulnotes/View/AddGroup.java
+ com.example.actuallyusefulnotes.View.AddGroup
 com/example/actuallyusefulnotes/View/AddNotaTextoActivity.java
  com.example.actuallyusefulnotes.View.AddNotaTextoActivity
 com/example/actuallyusefulnotes/ViewModel/NoteViewModel.java
@@ -21,7 +25,6 @@ com/example/actuallyusefulnotes/View/AddNotaImagenActivity.java
  com.example.actuallyusefulnotes.View.AddNotaImagenActivity$1
 com/example/actuallyusefulnotes/View/AddNote.java
  com.example.actuallyusefulnotes.View.AddNote
- com.example.actuallyusefulnotes.View.AddNote$1
 com/example/actuallyusefulnotes/NoteRepository.java
  com.example.actuallyusefulnotes.NoteRepository
  com.example.actuallyusefulnotes.NoteRepository$DeleteAllAsyncTask

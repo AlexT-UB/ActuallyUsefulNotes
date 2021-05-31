@@ -24,7 +24,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.ActuallyUsefulNotes" >
         <activity android:name="com.example.actuallyusefulnotes.View.AddNote" />
-        <activity android:name="com.example.actuallyusefulnotes.View.MainActivity" >
+        <activity android:name="com.example.actuallyusefulnotes.View.AddGroup" />
+        <activity android:name="com.example.actuallyusefulnotes.View.MainActivity" />
+        <activity android:name="com.example.actuallyusefulnotes.View.Start_Up" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

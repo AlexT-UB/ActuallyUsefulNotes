@@ -32,7 +32,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floating_action_button"
+        android:id="@+id/bt_Ok"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center"
@@ -41,7 +41,7 @@
         android:contentDescription="TODO" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/text_Contenido"
         android:layout_width="351dp"
         android:layout_height="270dp"
         android:layout_gravity="center_horizontal"

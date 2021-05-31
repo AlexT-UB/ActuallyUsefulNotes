@@ -15,10 +15,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ActuallyUsefulNotes">
         <activity android:name=".View.AddNote"></activity>
-        <activity android:name=".View.MainActivity">
+        <activity android:name=".View.AddGroup"></activity>
+        <activity android:name=".View.MainActivity"></activity>
+        <activity android:name=".View.Start_Up">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

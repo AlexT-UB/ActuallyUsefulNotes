@@ -6,94 +6,81 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:layout_width="165dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Categoría:"
-        android:textSize="25sp">
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="5dp"
+        android:text="Nota"
+        android:textColor="@color/design_default_color_secondary_variant"
+        android:textSize="30sp"
+        android:textStyle="bold">
 
     </TextView>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/menu"
-
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="150dp"
-        android:hint="@string/app_name">
-
-        <AutoCompleteTextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="25sp"
-            android:layout_marginTop="2dp"
-            android:inputType="none"
-            />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floating_action_button"
+        android:id="@+id/bt_Ok"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center"
         android:layout_margin="16dp"
+        android:contentDescription="TODO"
         android:onClick="cGuardar"
-        android:src="@drawable/ic_baseline_check_24"
-        android:contentDescription="TODO" />
+        android:src="@drawable/ic_baseline_check_24" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/text_Contenido"
         android:layout_width="388dp"
         android:layout_height="292dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="50dp"
         android:background="@color/teal_200"
-        android:text="Contenido"/>
+        android:text="Contenido" />
 
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="355dp"
         android:layout_marginLeft="15dp"
+        android:layout_marginTop="355dp"
         android:text="Tareas"
-        android:textSize="17sp"/>
+        android:textSize="17sp" />
 
 
     <CheckBox
         android:id="@+id/checkBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="373dp"
         android:layout_marginLeft="15dp"
+        android:layout_marginTop="373dp"
         android:hint="Añadir una tarea"
-        android:visibility="visible"/>/>
+        android:visibility="visible" />/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="453dp"
         android:layout_marginLeft="15dp"
+        android:layout_marginTop="453dp"
         android:text="Recordatorios"
-        android:textSize="17sp"/>
+        android:textSize="17sp" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:layout_marginTop="473dp"
         android:layout_marginLeft="15dp"
+        android:layout_marginTop="473dp"
+        android:ems="10"
         android:hint="Añadir un recordatorio"
-        android:textSize="15sp"
         android:inputType="date"
-        android:visibility="visible"/>
+        android:textSize="15sp"
+        android:visibility="visible" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="63dp"
         android:layout_height="46dp"
-        android:layout_marginTop="523dp"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="523dp"
         app:layout_anchor="@+id/imageView"
         app:layout_anchorGravity="top|center"
         tools:srcCompat="@tools:sample/avatars" />
@@ -115,5 +102,13 @@
         android:layout_marginTop="583dp"
         android:onClick="cGaleria"
         app:srcCompat="@android:drawable/ic_menu_gallery" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="85dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="310dp"
+        android:layout_marginLeft="310dp"
+        app:srcCompat="@drawable/logo1" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

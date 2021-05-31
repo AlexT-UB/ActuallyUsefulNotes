@@ -136,16 +136,16 @@
         "source": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_baseline_search_24.png"
     },
     {
-        "merged": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_baseline_image_24.png.flat",
-        "source": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_baseline_image_24.png"
+        "merged": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
     },
     {
         "merged": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v24_ic_baseline_check_24.xml.flat",
         "source": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_baseline_check_24.xml"
     },
     {
-        "merged": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_baseline_image_24.png.flat",
+        "source": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_baseline_image_24.png"
     },
     {
         "merged": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_baseline_mic_24.xml.flat",
@@ -218,6 +218,10 @@
     {
         "merged": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v21_ic_save.xml.flat",
         "source": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi-v21\\ic_save.xml"
+    },
+    {
+        "merged": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\intermediates\\res\\merged\\debug\\layout_editar_group.xml.flat",
+        "source": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\src\\main\\res\\layout\\editar_group.xml"
     },
     {
         "merged": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_launcher_background.png.flat",

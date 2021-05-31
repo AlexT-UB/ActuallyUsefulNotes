@@ -11,15 +11,14 @@ import com.example.actuallyusefulnotes.R;
 
 public class ElegirTipoNotaActivity extends AppCompatActivity {
 
-    Button texto;
-    Button audio;
-    Button imagen;
-    Button calendario;
-
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.editar_nota);
-
+        Button bt_Ok = findViewById(R.id.bt_Ok);
+        bt_Ok.setOnClickListener((v -> {
+            Intent intent = new Intent(ElegirTipoNotaActivity.this, MainActivity.class);
+            startActivity(intent);
+        }));
         /*texto = findViewById(R.id.NotaTexto);
         audio = findViewById(R.id.NotaAudio);
         imagen = findViewById(R.id.NotaFoto);
