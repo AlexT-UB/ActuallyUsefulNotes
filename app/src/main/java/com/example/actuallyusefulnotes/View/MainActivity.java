@@ -5,26 +5,44 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
 import androidx.fragment.app.Fragment;
 import androidx.appcompat.widget.Toolbar;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
+import com.example.actuallyusefulnotes.Model.Note;
 import com.example.actuallyusefulnotes.ViewModel.AUNViewModel;
 import com.example.actuallyusefulnotes.R;
+import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
+import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.Query;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private Toolbar toolBar;
     private AUNViewModel viewModel;
     private RecyclerView recyclerView;
+
+    FirebaseFirestore db;
+    FirestoreRecyclerAdapter<Note, noteHolder> adapter;
+
+
 
     BottomNavigationView bottomNavigationView;
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =
@@ -56,17 +74,51 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
-        AUNViewModel model = new ViewModelProvider(this).get(AUNViewModel.class);
+        setContentView(R.layout.activity_main);
         main_screen();
+
+
+        db = FirebaseFirestore.getInstance();
+        Query query = db.collection("collection");
+        AUNViewModel model = new ViewModelProvider(this).get(AUNViewModel.class);
+        getNotes();
+        FirestoreRecyclerOptions<Note> allNotes = new FirestoreRecyclerOptions.Builder<Note>()
+                .setQuery(query, Note.class)
+                .build();
+        adapter = new FirestoreRecyclerAdapter<Note, noteHolder>(allNotes) {
+            @NonNull
+            @Override
+            public noteHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_main, parent, false);
+                return new noteHolder(view);
+            }
+
+            @Override
+            protected void onBindViewHolder(@NonNull noteHolder holder, int position, @NonNull Note model) {
+                holder.title.setText(model.getTitulo());
+                holder.view.setOnClickListener((v) ->{
+                    Intent i = new Intent(v.getContext(), Note.class);
+                    v.getContext().startActivity(i);
+                } );
+            }
+        };
+        Fragment selectedFragment = null;
+        selectedFragment = new Fragmento_Notas();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                selectedFragment, "NOTAS").commit();
+        recyclerView = findViewById(R.id.listaNotas);
+        recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
+        recyclerView.setAdapter(adapter);
+
 
     }
 
     public void main_screen(){
-        setContentView(R.layout.activity_main);
+
 
         toolBar = findViewById(R.id.topAppBar);
-        recyclerView = findViewById(R.id.listaNotas);
         Button addNote = findViewById(R.id.addNote);
 
         setSupportActionBar(toolBar);
@@ -97,14 +149,34 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == R.id.addNote) {
-            System.out.println("THERE");
-            Intent i = new Intent(MainActivity.this, AddNote.class);
-            startActivity(i);
-            Toast.makeText(this, "JAJAJA", Toast.LENGTH_SHORT).show();
+    private void getNotes() {
+
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        return false;
+    }
+
+    public class noteHolder extends RecyclerView.ViewHolder {
+        TextView title;
+        View view;
+
+        public noteHolder(@NonNull View itemView) {
+            super(itemView);
+            title = itemView.findViewById(R.id.nota_titulo);
+            view = itemView;
         }
-        return super.onOptionsItemSelected(item);
-        //return false;
+    }
+
+    protected void onStart() {
+        super.onStart();
+        adapter.startListening();
+    }
+
+    protected void onStop() {
+        super.onStop();
+        if (adapter != null)
+            adapter.stopListening();
     }
 }

@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">ActuallyUsefulNotes</string>
+    <string name="nota">Nota</string>
+    <string name="TODO">TODO</string>
+    <string name="escriba_su_nota">Escriba su nota</string>
+    <string name="Título">titulo</string>
 </resources>

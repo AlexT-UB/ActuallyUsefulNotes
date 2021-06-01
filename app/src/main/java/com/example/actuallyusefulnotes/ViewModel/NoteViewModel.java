@@ -14,7 +14,7 @@ import java.util.List;
 public class NoteViewModel extends AndroidViewModel {
 
     private NoteRepository noteRepository;
-    private LiveData<List<Note>> allNotes;
+    private List<Note> allNotes;
 
     public NoteViewModel(@NonNull Application application) {
         super(application);
@@ -38,7 +38,7 @@ public class NoteViewModel extends AndroidViewModel {
         noteRepository.deleteAll();
     }
 
-    public LiveData<List<Note>> getAllNotes() {
+    public List<Note> getAllNotes() {
         return allNotes;
     }
 }

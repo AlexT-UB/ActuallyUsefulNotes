@@ -2,15 +2,18 @@ package com.example.actuallyusefulnotes;
 
 import android.content.Context;
 import android.os.AsyncTask;
-import android.text.NoCopySpan;
 
 import androidx.annotation.NonNull;
+import androidx.room.Database;
 import androidx.room.DatabaseConfiguration;
 import androidx.room.InvalidationTracker;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 import androidx.sqlite.db.SupportSQLiteOpenHelper;
+
+import com.example.actuallyusefulnotes.Model.Note;
+
 
 public abstract class NoteDataBase extends RoomDatabase {
 
@@ -20,7 +23,7 @@ public abstract class NoteDataBase extends RoomDatabase {
     public static synchronized NoteDataBase getInstance (Context context) {
         if (instance == null) {
             instance = Room.databaseBuilder(context, NoteDataBase.class, "NoteDataBase")
-                    .fallbackToDestructiveMigration().addCallback(roomCallback).build();
+                    .build();
         }
         return instance;
     }

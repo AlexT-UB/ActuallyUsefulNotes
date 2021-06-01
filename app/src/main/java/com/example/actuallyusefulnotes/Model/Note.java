@@ -3,8 +3,11 @@ package com.example.actuallyusefulnotes.Model;
 import androidx.room.Entity;
 
 import java.io.Serializable;
-import java.util.Dictionary;
+import java.util.Date;
+import java.util.HashMap;
 import java.util.Hashtable;
+import java.util.Map;
+
 
 public class Note implements Serializable {
     private long ID;
@@ -16,7 +19,7 @@ public class Note implements Serializable {
     private String text;
     private String reminderText;
     private long alarmTime;
-    private Dictionary eventList;
+    private Map<String, Date> eventList;
 
     protected Note(String titulo, String categoria, String date, String time, String author, String text, String reminderText, long alarmTime) {
         this.categoria = categoria;
@@ -27,7 +30,7 @@ public class Note implements Serializable {
         this.text = text;
         this.reminderText = reminderText;
         this.alarmTime = alarmTime;
-        this.eventList = new Hashtable();
+        this.eventList = new HashMap<String, Date>();
     }
 
     protected Note(long ID, String titulo, String categoria, String date, String time, String author, String text, String reminderText, long alarmTime) {
@@ -43,8 +46,12 @@ public class Note implements Serializable {
         this.eventList = new Hashtable();
     }
 
+    public Note(){
+    }
+
     public void addEvent(String event){
-        this.eventList.put(event, false);
+        Date date = new Date();
+        this.eventList.put(event, date);
     }
 
     public void deleteEvent(String event){
@@ -111,11 +118,11 @@ public class Note implements Serializable {
         this.reminderText = reminderText;
     }
 
-    public Dictionary getEventList() {
+    public Map<String, Date> getEventList() {
         return eventList;
     }
 
-    public void setEventList(Dictionary eventList) {
+    public void setEventList(Map<String, Date> eventList) {
         this.eventList = eventList;
     }
 
@@ -134,5 +141,6 @@ public class Note implements Serializable {
     public long getAlarmTime() {
         return alarmTime;
     }
+
 }
 

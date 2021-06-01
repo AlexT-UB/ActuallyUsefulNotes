@@ -1,9 +1,11 @@
 package com.example.actuallyusefulnotes.View;
 
+import android.content.Intent;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView.ViewHolder;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
@@ -16,8 +18,12 @@ import java.util.List;
 
 public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.ViewHolder> {
 
-    List<Note> notes = new ArrayList<>();
+    List<String> titles;
     private onItemClickListner listner;
+
+    public NoteAdapter(List<String> title){
+        titles = title;
+    }
 
     @NonNull
     @Override
@@ -26,51 +32,48 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.ViewHolder> {
         return new ViewHolder(itemView);
     }
 
+
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
-        viewHolder.bind(i);
+        viewHolder.title.setText(titles.get(i));
+        viewHolder.view.setOnClickListener((v) ->{
+            Intent in = new Intent(v.getContext(), Note.class);
+            v.getContext().startActivity(in);
+        } );
     }
 
     @Override
     public int getItemCount() {
-        return notes.size();
+        return titles.size();
     }
 
-    public void setNotes(List<Note> notes) {
-        this.notes = notes;
+    public void setTitle(List<String> title) {
+        this.titles = title;
         notifyDataSetChanged();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         TextView title;
+        View view;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             title = itemView.findViewById(R.id.nota_titulo);
-
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    int position = getAdapterPosition();
-                    if (listner != null && position != RecyclerView.NO_POSITION) {
-                        listner.onItemClick(notes.get(position));
-                    }
-                }
-            });
+            view = itemView;
         }
 
         public void bind(int position) {
-            title.setText(notes.get(position).getTitulo());
+            title.setText(titles.get(position));
         }
     }
 
-    public Note getNoteAt(int position) {
-        return notes.get(position);
+    public String getTitleAt(int position) {
+        return titles.get(position);
     }
 
     public interface onItemClickListner {
-        void onItemClick(Note note);
+        void onItemClick(String string);
     }
 
     public void setOnItemClickListner(onItemClickListner listner) {

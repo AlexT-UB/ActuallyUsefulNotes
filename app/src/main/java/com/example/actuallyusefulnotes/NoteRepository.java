@@ -12,7 +12,7 @@ import java.util.List;
 public class NoteRepository {
 
     private NoteDAO noteDAO;
-    private LiveData<List<Note>> allNotes;
+    private List<Note> allNotes;
 
     public NoteRepository(Application application) {
         NoteDataBase noteDataBase = NoteDataBase.getInstance(application);
@@ -36,7 +36,7 @@ public class NoteRepository {
         new DeleteAllAsyncTask(noteDAO).execute();
     }
 
-    public LiveData<List<Note>> getAllNotes() {
+    public List<Note> getAllNotes() {
         return allNotes;
     }
 
