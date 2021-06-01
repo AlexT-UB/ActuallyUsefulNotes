@@ -36,8 +36,6 @@ com/example/actuallyusefulnotes/Model/Note.java
  com.example.actuallyusefulnotes.Model.Note
 com/example/actuallyusefulnotes/BuildConfig.java
  com.example.actuallyusefulnotes.BuildConfig
-com/example/actuallyusefulnotes/DataBase.java
- com.example.actuallyusefulnotes.DataBase
 com/example/actuallyusefulnotes/View/Fragmento_Ajustes.java
  com.example.actuallyusefulnotes.View.Fragmento_Ajustes
 com/example/actuallyusefulnotes/Model/Group.java
