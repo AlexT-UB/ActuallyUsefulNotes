@@ -4,14 +4,26 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Group {;
+    private String title;
     private String admin;
     private String[] userList;
     private List<Note> notes;
 
-    public Group (String administrator, String[] protoList){
+
+
+    public Group (String administrator, String[] protoList, String title){
         userList = protoList;
         admin = administrator;
         notes = new ArrayList<Note>();
+        title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public void addUser(String username) throws Exception{

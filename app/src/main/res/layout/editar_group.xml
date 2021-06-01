@@ -5,49 +5,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
+    <EditText
         android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
         android:layout_marginLeft="35dp"
         android:layout_marginTop="5dp"
-        android:text="Group"
+        android:hint="Group"
+        android:singleLine="true"
         android:textColor="@color/design_default_color_secondary"
         android:textSize="30sp"
         android:textStyle="bold">
 
-    </TextView>
+    </EditText>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/bt_Ok"
+        android:id="@+id/bt_Ok2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center"
         android:layout_margin="16dp"
         android:onClick="cGuardar"
         android:src="@drawable/ic_baseline_check_24"
-        android:contentDescription="TODO" /><![CDATA[
-
-
-
-
-
-
-
-    />
-
-
-
-
-
-
-
-
-
-
-
-    ]]>
+        android:contentDescription="TODO" />
 
     <ImageButton
         android:id="@+id/bt_camara"

@@ -6,113 +6,29 @@
     android:layout_height="match_parent">
 
     <EditText
-        android:id="@+id/title"
+        android:id="@+id/editTextGroupName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="0dp"
-        android:hint="@string/nota"
-        android:textColor="@color/design_default_color_secondary_variant"
-        android:textSize="30sp"
-        android:textStyle="bold">
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="New Group" />
 
-    </EditText>
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="66dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="340dp"
+        android:layout_marginLeft="340dp"
+        app:srcCompat="@drawable/logo1" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/bt_Ok"
+        android:id="@+id/fab_Ok_Groups"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|center"
-        android:layout_margin="16dp"
-        android:contentDescription="@string/TODO"
-        android:onClick="saveNote"
-        android:src="@drawable/ic_baseline_check_24" />
-
-
-
-    <EditText
-        android:id="@+id/text_Contenido"
-        android:layout_width="388dp"
-        android:layout_height="292dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="50dp"
-        android:background="@color/teal_200"
-        android:gravity="top"
-        android:hint="@string/escriba_su_nota" />
-
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="355dp"
-        android:text="Tareas"
-        android:textSize="17sp" />
-
-
-    <CheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="373dp"
-        android:hint="Añadir una tarea"
-        android:visibility="visible" />/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="453dp"
-        android:text="Recordatorios"
-        android:textSize="17sp" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="473dp"
-        android:ems="10"
-        android:hint="Añadir un recordatorio"
-        android:inputType="date"
-        android:textSize="15sp"
-        android:visibility="visible" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="63dp"
-        android:layout_height="46dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="523dp"
-        app:layout_anchor="@+id/imageView"
-        app:layout_anchorGravity="top|center"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <ImageButton
-        android:id="@+id/bt_camara"
-        android:layout_width="155dp"
-        android:layout_height="118dp"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="583dp"
-        android:onClick="cCamara"
-        app:srcCompat="@android:drawable/ic_menu_camera" />
-
-    <ImageButton
-        android:id="@+id/bt_galeria"
-        android:layout_width="155dp"
-        android:layout_height="118dp"
-        android:layout_marginLeft="230dp"
-        android:layout_marginTop="583dp"
-        android:onClick="cGaleria"
-        app:srcCompat="@android:drawable/ic_menu_gallery" />
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="85dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="310dp"
-        android:layout_marginLeft="310dp"
-        app:srcCompat="@drawable/logo1" />
+        android:layout_marginStart="180dp"
+        android:layout_marginLeft="180dp"
+        android:layout_marginTop="600dp"
+        android:src="@drawable/ic_baseline_check_24"
+        app:fabSize="normal" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
