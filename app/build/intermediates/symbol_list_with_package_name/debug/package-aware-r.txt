@@ -1861,7 +1861,6 @@ id bt_lay_login
 id bt_lay_signup
 id bt_login
 id bt_signin
-id button
 id buttonPanel
 id cBRecuerdame
 id cache_measures
@@ -1933,6 +1932,7 @@ id dropdown_menu
 id easeIn
 id easeInOut
 id easeOut
+id editTextGroupName
 id edit_query
 id elastic
 id end
@@ -1944,6 +1944,7 @@ id eventList
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
+id fab_Ok_Groups
 id fade
 id fill
 id fill_horizontal
@@ -1979,9 +1980,8 @@ id ignoreRequest
 id image
 id imageView
 id imageView2
-id imageView3
 id imageView4
-id imageView5
+id imageView7
 id imagesScroll
 id imagesText
 id info
@@ -2191,7 +2191,6 @@ id textSpacerNoTitle
 id textStart
 id textTop
 id textView
-id textView2
 id text_Contenido
 id text_input_end_icon
 id text_input_error_icon
@@ -2321,7 +2320,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
-layout editar_group
+layout editar_grupo
 layout editar_nota
 layout fragment_ajustes
 layout fragment_grupos
