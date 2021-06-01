@@ -34,7 +34,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity {
     private Toolbar toolBar;
     private AUNViewModel viewModel;
     private RecyclerView recyclerView;
@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
     BottomNavigationView bottomNavigationView;
+
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =
             new BottomNavigationView.OnNavigationItemSelectedListener() {
                 @Override
@@ -53,33 +54,71 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
                     switch (item.getItemId()) {
                         case R.id.nav_grupos:
-                            selectedFragment = new Fragmento_Grupos();
-                            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                                    selectedFragment, "GRUPOS").commit();
+                            onGroup();
                             break;
                         case R.id.nav_notas:
-                            selectedFragment = new Fragmento_Notas();
-                            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                                    selectedFragment, "NOTAS").commit();
+                            onNote();
                             break;
                         case R.id.nav_ajustes:
-                            selectedFragment = new Fragmento_Ajustes();
-                            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                                    selectedFragment, "AJUSTES").commit();
+                            onSettings();
                             break;
                     }
                     return true;
                 }
             };
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
-        main_screen();
+        toolBar = findViewById(R.id.topAppBar);
+        Button addNote = findViewById(R.id.addNote);
 
+        setSupportActionBar(toolBar);
 
+        bottomNavigationView = findViewById(R.id.bottom_navigation);
+        bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
+
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                new Fragmento_Notas()).commit();
+
+        /*addNote.setOnClickListener((v -> {
+            if(getSupportFragmentManager().findFragmentByTag("NOTAS") != null && getSupportFragmentManager().findFragmentByTag("NOTAS").isVisible()){
+                Intent i = new Intent(MainActivity.this, AddNote.class);
+                startActivity(i);
+            } else if(getSupportFragmentManager().findFragmentByTag("GRUPOS") != null && getSupportFragmentManager().findFragmentByTag("GRUPOS").isVisible()){
+                Intent i = new Intent(MainActivity.this, AddGroup.class);
+                startActivity(i);
+            }
+        }));*/
+
+    }
+
+    public void onGroup(){
+        System.out.println("GROUPS");
+        Button addGroup = findViewById(R.id.addNote);
+        addGroup.setOnClickListener((v -> {
+            Intent i = new Intent(MainActivity.this, AddGroup.class);
+            startActivity(i);
+        }));
+        recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
+        recyclerView.setAdapter(adapter);
+    }
+
+    public void onNote(){
+
+        System.out.println("NOTES");
+        Button addNote = findViewById(R.id.addNote);
+        addNote.setOnClickListener((v -> {
+            Intent i = new Intent(MainActivity.this, AddNote.class);
+            startActivity(i);
+        }));
+
+        Fragment selectedFragment = new Fragmento_Notas();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                selectedFragment, "NOTAS").commit();
         db = FirebaseFirestore.getInstance();
         Query query = db.collection("collection");
         AUNViewModel model = new ViewModelProvider(this).get(AUNViewModel.class);
@@ -104,59 +143,20 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 } );
             }
         };
-        Fragment selectedFragment = null;
-        selectedFragment = new Fragmento_Notas();
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                selectedFragment, "NOTAS").commit();
         recyclerView = findViewById(R.id.listaNotas);
         recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
         recyclerView.setAdapter(adapter);
-
-
     }
 
-    public void main_screen(){
+    public void onSettings(){
 
-
-        toolBar = findViewById(R.id.topAppBar);
-        Button addNote = findViewById(R.id.addNote);
-
-        setSupportActionBar(toolBar);
-
-        bottomNavigationView = findViewById(R.id.bottom_navigation);
-        bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
-
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                new Fragmento_Notas()).commit();
-
-        addNote.setOnClickListener((v -> {
-            if(getSupportFragmentManager().findFragmentByTag("NOTAS") != null && getSupportFragmentManager().findFragmentByTag("NOTAS").isVisible()){
-                Intent i = new Intent(MainActivity.this, AddNote.class);
-                startActivity(i);
-            } else if(getSupportFragmentManager().findFragmentByTag("GRUPOS") != null && getSupportFragmentManager().findFragmentByTag("GRUPOS").isVisible()){
-                Intent i = new Intent(MainActivity.this, AddGroup.class);
-                startActivity(i);
-            }
-        }));
-    }
-
-
-    public boolean onCreateOptionMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.main_menu, menu);
-        //super.onCreateOptionsMenu(menu);
-        //getMenuInflater().inflate(R.menu.main_menu, menu);
-        return true;
     }
 
     private void getNotes() {
 
     }
 
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        return false;
-    }
+
 
     public class noteHolder extends RecyclerView.ViewHolder {
         TextView title;
@@ -164,13 +164,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         public noteHolder(@NonNull View itemView) {
             super(itemView);
-            title = itemView.findViewById(R.id.nota_titulo);
+            title = itemView.findViewById(R.id.textBox_events_verNotas);
             view = itemView;
         }
     }
 
     protected void onStart() {
         super.onStart();
+        onNote();
         adapter.startListening();
     }
 

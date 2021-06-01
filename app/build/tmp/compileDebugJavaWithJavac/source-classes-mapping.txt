@@ -25,6 +25,7 @@ com/example/actuallyusefulnotes/View/AddNotaImagenActivity.java
  com.example.actuallyusefulnotes.View.AddNotaImagenActivity$1
 com/example/actuallyusefulnotes/View/AddNote.java
  com.example.actuallyusefulnotes.View.AddNote
+ com.example.actuallyusefulnotes.View.AddNote$1
 com/example/actuallyusefulnotes/NoteRepository.java
  com.example.actuallyusefulnotes.NoteRepository
  com.example.actuallyusefulnotes.NoteRepository$DeleteAllAsyncTask
@@ -44,7 +45,6 @@ com/example/actuallyusefulnotes/Model/Group.java
 com/example/actuallyusefulnotes/View/NoteAdapter.java
  com.example.actuallyusefulnotes.View.NoteAdapter
  com.example.actuallyusefulnotes.View.NoteAdapter$ViewHolder
- com.example.actuallyusefulnotes.View.NoteAdapter$ViewHolder$1
  com.example.actuallyusefulnotes.View.NoteAdapter$onItemClickListner
 com/example/actuallyusefulnotes/NoteDataBase.java
  com.example.actuallyusefulnotes.NoteDataBase
@@ -53,3 +53,5 @@ com/example/actuallyusefulnotes/NoteDataBase.java
 com/example/actuallyusefulnotes/View/MainActivity.java
  com.example.actuallyusefulnotes.View.MainActivity
  com.example.actuallyusefulnotes.View.MainActivity$1
+ com.example.actuallyusefulnotes.View.MainActivity$2
+ com.example.actuallyusefulnotes.View.MainActivity$noteHolder

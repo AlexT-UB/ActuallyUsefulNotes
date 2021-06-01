@@ -6,75 +6,134 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="16"
-8-->C:\Users\Test\AndroidStudioProjects\ActuallyUsefulNotes\app\src\main\AndroidManifest.xml
+8-->C:\Users\Alex\AndroidStudioProjects\ActuallyUsefulNotes\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="30" />
-9-->C:\Users\Test\AndroidStudioProjects\ActuallyUsefulNotes\app\src\main\AndroidManifest.xml
+9-->C:\Users\Alex\AndroidStudioProjects\ActuallyUsefulNotes\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.CAMERA" />
-11-->C:\Users\Test\AndroidStudioProjects\ActuallyUsefulNotes\app\src\main\AndroidManifest.xml:5:5-65
-11-->C:\Users\Test\AndroidStudioProjects\ActuallyUsefulNotes\app\src\main\AndroidManifest.xml:5:22-62
+11-->C:\Users\Alex\AndroidStudioProjects\ActuallyUsefulNotes\app\src\main\AndroidManifest.xml:5:5-65
+11-->C:\Users\Alex\AndroidStudioProjects\ActuallyUsefulNotes\app\src\main\AndroidManifest.xml:5:22-62
 12    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-12-->C:\Users\Test\AndroidStudioProjects\ActuallyUsefulNotes\app\src\main\AndroidManifest.xml:6:5-81
-12-->C:\Users\Test\AndroidStudioProjects\ActuallyUsefulNotes\app\src\main\AndroidManifest.xml:6:22-78
+12-->C:\Users\Alex\AndroidStudioProjects\ActuallyUsefulNotes\app\src\main\AndroidManifest.xml:6:5-81
+12-->C:\Users\Alex\AndroidStudioProjects\ActuallyUsefulNotes\app\src\main\AndroidManifest.xml:6:22-78
 13    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-13-->C:\Users\Test\AndroidStudioProjects\ActuallyUsefulNotes\app\src\main\AndroidManifest.xml:7:5-71
-13-->C:\Users\Test\AndroidStudioProjects\ActuallyUsefulNotes\app\src\main\AndroidManifest.xml:7:22-68
+13-->C:\Users\Alex\AndroidStudioProjects\ActuallyUsefulNotes\app\src\main\AndroidManifest.xml:7:5-71
+13-->C:\Users\Alex\AndroidStudioProjects\ActuallyUsefulNotes\app\src\main\AndroidManifest.xml:7:22-68
 14    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-14-->C:\Users\Test\AndroidStudioProjects\ActuallyUsefulNotes\app\src\main\AndroidManifest.xml:8:5-80
-14-->C:\Users\Test\AndroidStudioProjects\ActuallyUsefulNotes\app\src\main\AndroidManifest.xml:8:22-77
-15
-16    <application
-16-->C:\Users\Test\AndroidStudioProjects\ActuallyUsefulNotes\app\src\main\AndroidManifest.xml:10:5-26:19
-17        android:allowBackup="true"
-17-->C:\Users\Test\AndroidStudioProjects\ActuallyUsefulNotes\app\src\main\AndroidManifest.xml:11:9-35
-18        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-18-->[androidx.core:core:1.3.1] C:\Users\Test\.gradle\caches\transforms-2\files-2.1\b234a824af7fd98a5c54fc0522824a91\core-1.3.1\AndroidManifest.xml:24:18-86
-19        android:debuggable="true"
-20        android:icon="@mipmap/ic_launcher"
-20-->C:\Users\Test\AndroidStudioProjects\ActuallyUsefulNotes\app\src\main\AndroidManifest.xml:12:9-43
-21        android:label="@string/app_name"
-21-->C:\Users\Test\AndroidStudioProjects\ActuallyUsefulNotes\app\src\main\AndroidManifest.xml:13:9-41
-22        android:roundIcon="@mipmap/ic_launcher_round"
-22-->C:\Users\Test\AndroidStudioProjects\ActuallyUsefulNotes\app\src\main\AndroidManifest.xml:14:9-54
-23        android:supportsRtl="true"
-23-->C:\Users\Test\AndroidStudioProjects\ActuallyUsefulNotes\app\src\main\AndroidManifest.xml:15:9-35
-24        android:testOnly="true"
-25        android:theme="@style/Theme.ActuallyUsefulNotes" >
-25-->C:\Users\Test\AndroidStudioProjects\ActuallyUsefulNotes\app\src\main\AndroidManifest.xml:16:9-57
-26        <activity android:name="com.example.actuallyusefulnotes.View.AddNote" />
-26-->C:\Users\Test\AndroidStudioProjects\ActuallyUsefulNotes\app\src\main\AndroidManifest.xml:17:9-59
-26-->C:\Users\Test\AndroidStudioProjects\ActuallyUsefulNotes\app\src\main\AndroidManifest.xml:17:19-47
-27        <activity android:name="com.example.actuallyusefulnotes.View.AddGroup" />
-27-->C:\Users\Test\AndroidStudioProjects\ActuallyUsefulNotes\app\src\main\AndroidManifest.xml:18:9-60
-27-->C:\Users\Test\AndroidStudioProjects\ActuallyUsefulNotes\app\src\main\AndroidManifest.xml:18:19-48
-28        <activity android:name="com.example.actuallyusefulnotes.View.MainActivity" />
-28-->C:\Users\Test\AndroidStudioProjects\ActuallyUsefulNotes\app\src\main\AndroidManifest.xml:19:9-64
-28-->C:\Users\Test\AndroidStudioProjects\ActuallyUsefulNotes\app\src\main\AndroidManifest.xml:19:19-52
-29        <activity android:name="com.example.actuallyusefulnotes.View.Start_Up" >
-29-->C:\Users\Test\AndroidStudioProjects\ActuallyUsefulNotes\app\src\main\AndroidManifest.xml:20:9-25:20
-29-->C:\Users\Test\AndroidStudioProjects\ActuallyUsefulNotes\app\src\main\AndroidManifest.xml:20:19-48
-30            <intent-filter>
-30-->C:\Users\Test\AndroidStudioProjects\ActuallyUsefulNotes\app\src\main\AndroidManifest.xml:21:13-24:29
-31                <action android:name="android.intent.action.MAIN" />
-31-->C:\Users\Test\AndroidStudioProjects\ActuallyUsefulNotes\app\src\main\AndroidManifest.xml:22:17-69
-31-->C:\Users\Test\AndroidStudioProjects\ActuallyUsefulNotes\app\src\main\AndroidManifest.xml:22:25-66
-32
-33                <category android:name="android.intent.category.LAUNCHER" />
-33-->C:\Users\Test\AndroidStudioProjects\ActuallyUsefulNotes\app\src\main\AndroidManifest.xml:23:17-77
-33-->C:\Users\Test\AndroidStudioProjects\ActuallyUsefulNotes\app\src\main\AndroidManifest.xml:23:27-74
-34            </intent-filter>
-35        </activity>
+14-->C:\Users\Alex\AndroidStudioProjects\ActuallyUsefulNotes\app\src\main\AndroidManifest.xml:8:5-80
+14-->C:\Users\Alex\AndroidStudioProjects\ActuallyUsefulNotes\app\src\main\AndroidManifest.xml:8:22-77
+15    <uses-permission android:name="android.permission.INTERNET" /> <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+15-->[com.firebaseui:firebase-ui-firestore:7.1.1] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\56442513c5fd6ae866dbc3458ffe07a5\jetified-firebase-ui-firestore-7.1.1\AndroidManifest.xml:11:5-67
+15-->[com.firebaseui:firebase-ui-firestore:7.1.1] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\56442513c5fd6ae866dbc3458ffe07a5\jetified-firebase-ui-firestore-7.1.1\AndroidManifest.xml:11:22-64
+16    <!-- <uses-sdk android:minSdkVersion="14"/> -->
+17    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+17-->[com.google.firebase:firebase-database:19.7.0] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\3cf58654778df50d85369237d62ec6a7\jetified-firebase-database-19.7.0\AndroidManifest.xml:25:5-79
+17-->[com.google.firebase:firebase-database:19.7.0] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\3cf58654778df50d85369237d62ec6a7\jetified-firebase-database-19.7.0\AndroidManifest.xml:25:22-76
+18
+19    <application
+19-->C:\Users\Alex\AndroidStudioProjects\ActuallyUsefulNotes\app\src\main\AndroidManifest.xml:10:5-26:19
+20        android:name="androidx.multidex.MultiDexApplication"
+21        android:allowBackup="true"
+21-->C:\Users\Alex\AndroidStudioProjects\ActuallyUsefulNotes\app\src\main\AndroidManifest.xml:11:9-35
+22        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+22-->[androidx.core:core:1.3.1] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\80b01578e851524ed716c02053b39ed0\core-1.3.1\AndroidManifest.xml:24:18-86
+23        android:debuggable="true"
+24        android:icon="@mipmap/ic_launcher"
+24-->C:\Users\Alex\AndroidStudioProjects\ActuallyUsefulNotes\app\src\main\AndroidManifest.xml:12:9-43
+25        android:label="@string/app_name"
+25-->C:\Users\Alex\AndroidStudioProjects\ActuallyUsefulNotes\app\src\main\AndroidManifest.xml:13:9-41
+26        android:roundIcon="@mipmap/ic_launcher_round"
+26-->C:\Users\Alex\AndroidStudioProjects\ActuallyUsefulNotes\app\src\main\AndroidManifest.xml:14:9-54
+27        android:supportsRtl="true"
+27-->C:\Users\Alex\AndroidStudioProjects\ActuallyUsefulNotes\app\src\main\AndroidManifest.xml:15:9-35
+28        android:testOnly="true"
+29        android:theme="@style/Theme.ActuallyUsefulNotes" >
+29-->C:\Users\Alex\AndroidStudioProjects\ActuallyUsefulNotes\app\src\main\AndroidManifest.xml:16:9-57
+30        <activity android:name="com.example.actuallyusefulnotes.View.AddNote" />
+30-->C:\Users\Alex\AndroidStudioProjects\ActuallyUsefulNotes\app\src\main\AndroidManifest.xml:17:9-59
+30-->C:\Users\Alex\AndroidStudioProjects\ActuallyUsefulNotes\app\src\main\AndroidManifest.xml:17:19-47
+31        <activity android:name="com.example.actuallyusefulnotes.View.AddGroup" />
+31-->C:\Users\Alex\AndroidStudioProjects\ActuallyUsefulNotes\app\src\main\AndroidManifest.xml:18:9-60
+31-->C:\Users\Alex\AndroidStudioProjects\ActuallyUsefulNotes\app\src\main\AndroidManifest.xml:18:19-48
+32        <activity android:name="com.example.actuallyusefulnotes.View.MainActivity" />
+32-->C:\Users\Alex\AndroidStudioProjects\ActuallyUsefulNotes\app\src\main\AndroidManifest.xml:19:9-64
+32-->C:\Users\Alex\AndroidStudioProjects\ActuallyUsefulNotes\app\src\main\AndroidManifest.xml:19:19-52
+33        <activity android:name="com.example.actuallyusefulnotes.View.Start_Up" >
+33-->C:\Users\Alex\AndroidStudioProjects\ActuallyUsefulNotes\app\src\main\AndroidManifest.xml:20:9-25:20
+33-->C:\Users\Alex\AndroidStudioProjects\ActuallyUsefulNotes\app\src\main\AndroidManifest.xml:20:19-48
+34            <intent-filter>
+34-->C:\Users\Alex\AndroidStudioProjects\ActuallyUsefulNotes\app\src\main\AndroidManifest.xml:21:13-24:29
+35                <action android:name="android.intent.action.MAIN" />
+35-->C:\Users\Alex\AndroidStudioProjects\ActuallyUsefulNotes\app\src\main\AndroidManifest.xml:22:17-69
+35-->C:\Users\Alex\AndroidStudioProjects\ActuallyUsefulNotes\app\src\main\AndroidManifest.xml:22:25-66
 36
-37        <provider
-37-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Test\.gradle\caches\transforms-2\files-2.1\cc1b78387f68e50f131a6131e4d6d2b5\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
-38            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-38-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Test\.gradle\caches\transforms-2\files-2.1\cc1b78387f68e50f131a6131e4d6d2b5\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79
-39            android:authorities="com.example.actuallyusefulnotes.lifecycle-process"
-39-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Test\.gradle\caches\transforms-2\files-2.1\cc1b78387f68e50f131a6131e4d6d2b5\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:27:13-69
-40            android:exported="false"
-40-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Test\.gradle\caches\transforms-2\files-2.1\cc1b78387f68e50f131a6131e4d6d2b5\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:28:13-37
-41            android:multiprocess="true" />
-41-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Test\.gradle\caches\transforms-2\files-2.1\cc1b78387f68e50f131a6131e4d6d2b5\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:29:13-40
-42    </application>
-43
-44</manifest>
+37                <category android:name="android.intent.category.LAUNCHER" />
+37-->C:\Users\Alex\AndroidStudioProjects\ActuallyUsefulNotes\app\src\main\AndroidManifest.xml:23:17-77
+37-->C:\Users\Alex\AndroidStudioProjects\ActuallyUsefulNotes\app\src\main\AndroidManifest.xml:23:27-74
+38            </intent-filter>
+39        </activity>
+40
+41        <service
+41-->[com.google.firebase:firebase-database:19.7.0] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\3cf58654778df50d85369237d62ec6a7\jetified-firebase-database-19.7.0\AndroidManifest.xml:29:9-35:19
+42            android:name="com.google.firebase.components.ComponentDiscoveryService"
+42-->[com.google.firebase:firebase-database:19.7.0] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\3cf58654778df50d85369237d62ec6a7\jetified-firebase-database-19.7.0\AndroidManifest.xml:30:13-84
+43            android:directBootAware="true"
+43-->[com.google.firebase:firebase-common:20.0.0] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\a975c482550dfc3ac79b3b0c4eabcd05\jetified-firebase-common-20.0.0\AndroidManifest.xml:35:13-43
+44            android:exported="false" >
+44-->[com.google.firebase:firebase-database:19.7.0] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\3cf58654778df50d85369237d62ec6a7\jetified-firebase-database-19.7.0\AndroidManifest.xml:31:13-37
+45            <meta-data
+45-->[com.google.firebase:firebase-database:19.7.0] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\3cf58654778df50d85369237d62ec6a7\jetified-firebase-database-19.7.0\AndroidManifest.xml:32:13-34:85
+46                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+46-->[com.google.firebase:firebase-database:19.7.0] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\3cf58654778df50d85369237d62ec6a7\jetified-firebase-database-19.7.0\AndroidManifest.xml:33:17-109
+47                android:value="com.google.firebase.components.ComponentRegistrar" />
+47-->[com.google.firebase:firebase-database:19.7.0] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\3cf58654778df50d85369237d62ec6a7\jetified-firebase-database-19.7.0\AndroidManifest.xml:34:17-82
+48            <meta-data
+48-->[com.google.firebase:firebase-firestore:23.0.0] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\7ec5780c3ece6b5b5a1f97d849baf1bd\jetified-firebase-firestore-23.0.0\AndroidManifest.xml:20:13-22:85
+49                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+49-->[com.google.firebase:firebase-firestore:23.0.0] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\7ec5780c3ece6b5b5a1f97d849baf1bd\jetified-firebase-firestore-23.0.0\AndroidManifest.xml:21:17-111
+50                android:value="com.google.firebase.components.ComponentRegistrar" />
+50-->[com.google.firebase:firebase-firestore:23.0.0] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\7ec5780c3ece6b5b5a1f97d849baf1bd\jetified-firebase-firestore-23.0.0\AndroidManifest.xml:22:17-82
+51        </service>
+52
+53        <activity
+53-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\41926189f6437c4802da3bc03b371d30\jetified-play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
+54            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+54-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\41926189f6437c4802da3bc03b371d30\jetified-play-services-base-17.0.0\AndroidManifest.xml:24:13-79
+55            android:exported="false"
+55-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\41926189f6437c4802da3bc03b371d30\jetified-play-services-base-17.0.0\AndroidManifest.xml:25:13-37
+56            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+56-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\41926189f6437c4802da3bc03b371d30\jetified-play-services-base-17.0.0\AndroidManifest.xml:26:13-72
+57
+58        <provider
+58-->[com.google.firebase:firebase-common:20.0.0] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\a975c482550dfc3ac79b3b0c4eabcd05\jetified-firebase-common-20.0.0\AndroidManifest.xml:26:9-31:39
+59            android:name="com.google.firebase.provider.FirebaseInitProvider"
+59-->[com.google.firebase:firebase-common:20.0.0] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\a975c482550dfc3ac79b3b0c4eabcd05\jetified-firebase-common-20.0.0\AndroidManifest.xml:27:13-77
+60            android:authorities="com.example.actuallyusefulnotes.firebaseinitprovider"
+60-->[com.google.firebase:firebase-common:20.0.0] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\a975c482550dfc3ac79b3b0c4eabcd05\jetified-firebase-common-20.0.0\AndroidManifest.xml:28:13-72
+61            android:directBootAware="true"
+61-->[com.google.firebase:firebase-common:20.0.0] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\a975c482550dfc3ac79b3b0c4eabcd05\jetified-firebase-common-20.0.0\AndroidManifest.xml:29:13-43
+62            android:exported="false"
+62-->[com.google.firebase:firebase-common:20.0.0] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\a975c482550dfc3ac79b3b0c4eabcd05\jetified-firebase-common-20.0.0\AndroidManifest.xml:30:13-37
+63            android:initOrder="100" />
+63-->[com.google.firebase:firebase-common:20.0.0] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\a975c482550dfc3ac79b3b0c4eabcd05\jetified-firebase-common-20.0.0\AndroidManifest.xml:31:13-36
+64
+65        <meta-data
+65-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\a3d12d1fc89a97f738d5feb33bafe6f6\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+66            android:name="com.google.android.gms.version"
+66-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\a3d12d1fc89a97f738d5feb33bafe6f6\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+67            android:value="@integer/google_play_services_version" />
+67-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\a3d12d1fc89a97f738d5feb33bafe6f6\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+68
+69        <provider
+69-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\f11514eeb4b62c711b59a518896cffda\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
+70            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+70-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\f11514eeb4b62c711b59a518896cffda\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79
+71            android:authorities="com.example.actuallyusefulnotes.lifecycle-process"
+71-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\f11514eeb4b62c711b59a518896cffda\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:27:13-69
+72            android:exported="false"
+72-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\f11514eeb4b62c711b59a518896cffda\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:28:13-37
+73            android:multiprocess="true" />
+73-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Alex\.gradle\caches\transforms-2\files-2.1\f11514eeb4b62c711b59a518896cffda\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:29:13-40
+74    </application>
+75
+76</manifest>
