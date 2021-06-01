@@ -26,12 +26,12 @@ public class AddGroup extends AppCompatActivity {
         FloatingActionButton bt_Ok = findViewById(R.id.bt_Ok);
         db = FirebaseFirestore.getInstance();
 
-        setContentView(R.layout.editar_group);
+        setContentView(R.layout.editar_grupo);
 
         groupTitle = findViewById(R.id.text);
 
 
-        FloatingActionButton save = findViewById(R.id.bt_Ok2);
+        FloatingActionButton save = findViewById(R.id.fab_Ok_Groups);
         save.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -51,7 +51,7 @@ public class AddGroup extends AppCompatActivity {
 
                 documentReference.set(group);
                 Toast.makeText(AddGroup.this, "Guardado", Toast.LENGTH_SHORT).show();
-                return;
+                finish();
             }
         });
     }
