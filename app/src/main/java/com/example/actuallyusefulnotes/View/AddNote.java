@@ -11,7 +11,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.actuallyusefulnotes.Model.Note;
-import com.example.actuallyusefulnotes.NoteDataBase;
 import com.example.actuallyusefulnotes.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.FirebaseDatabase;
