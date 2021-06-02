@@ -52,7 +52,7 @@ public class AddNote extends AppCompatActivity {
 
                 documentReference.set(note);
                 Toast.makeText(AddNote.this, "Guardado", Toast.LENGTH_SHORT).show();
-                return;
+                finish();
             }
         });
     }

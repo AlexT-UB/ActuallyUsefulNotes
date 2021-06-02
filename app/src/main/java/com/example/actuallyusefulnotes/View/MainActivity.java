@@ -12,6 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,6 +24,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
+import com.example.actuallyusefulnotes.Model.Group;
 import com.example.actuallyusefulnotes.Model.Note;
 import com.example.actuallyusefulnotes.ViewModel.AUNViewModel;
 import com.example.actuallyusefulnotes.R;
@@ -33,6 +35,9 @@ import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private Toolbar toolBar;
@@ -73,38 +78,38 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
-        toolBar = findViewById(R.id.topAppBar);
-        Button addNote = findViewById(R.id.addNote);
 
-        setSupportActionBar(toolBar);
-
-        bottomNavigationView = findViewById(R.id.bottom_navigation);
-        bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
-
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                new Fragmento_Notas()).commit();
-
-        /*addNote.setOnClickListener((v -> {
-            if(getSupportFragmentManager().findFragmentByTag("NOTAS") != null && getSupportFragmentManager().findFragmentByTag("NOTAS").isVisible()){
-                Intent i = new Intent(MainActivity.this, AddNote.class);
-                startActivity(i);
-            } else if(getSupportFragmentManager().findFragmentByTag("GRUPOS") != null && getSupportFragmentManager().findFragmentByTag("GRUPOS").isVisible()){
-                Intent i = new Intent(MainActivity.this, AddGroup.class);
-                startActivity(i);
-            }
-        }));*/
+        System.out.println("GROUPS");
+        ListView simpleList = (ListView) findViewById(R.id.simpleListView);
+        String[] protolist = new String[0];
+        ArrayList<Group> example = new ArrayList<Group>();
+        example.add(new Group("First", "First Title", protolist));
+        example.add(new Group("Second", "Second Title", protolist));
+        example.add(new Group("Third", "Third Title", protolist));
+        example.add(new Group("Fourth", "Fourth Title", protolist));
+        GroupAdapter myAdapter = new GroupAdapter(this,R.layout.group_list,example);
+        simpleList.setAdapter(myAdapter);
+        System.out.println(example.get(0).getTitle());
 
     }
 
     public void onGroup(){
         System.out.println("GROUPS");
+        ListView simpleList = (ListView) findViewById(R.id.simpleListView);
+        String[] protolist = new String[0];
+        ArrayList<Group> example = new ArrayList<Group>();
+        example.add(new Group("First", "First Title", protolist));
+        example.add(new Group("Second", "Second Title", protolist));
+        example.add(new Group("Third", "Third Title", protolist));
+        example.add(new Group("Fourth", "Fourth Title", protolist));
+        GroupAdapter myAdapter = new GroupAdapter(this,R.layout.group_list,example);
+        simpleList.setAdapter(myAdapter);
+        System.out.println(example.get(0).getTitle());
         Button addGroup = findViewById(R.id.addNote);
         addGroup.setOnClickListener((v -> {
             Intent i = new Intent(MainActivity.this, AddGroup.class);
             startActivity(i);
         }));
-        recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
-        recyclerView.setAdapter(adapter);
     }
 
     public void onNote(){

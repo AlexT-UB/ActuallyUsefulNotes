@@ -18,8 +18,7 @@ public class AddGroup extends AppCompatActivity {
         setContentView(R.layout.editar_grupo);
         FloatingActionButton bt_Ok = findViewById(R.id.fab_Ok_Groups);
         bt_Ok.setOnClickListener((v -> {
-            Intent intent = new Intent(AddGroup.this, MainActivity.class);
-            startActivity(intent);
+            finish();
         }));
     }
 }
