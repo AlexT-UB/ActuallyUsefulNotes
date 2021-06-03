@@ -1775,6 +1775,8 @@ id SHOW_PROGRESS
 id SYM
 id TOP_END
 id TOP_START
+id TextAdmin
+id TextTitle
 id accelerate
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
@@ -1902,6 +1904,7 @@ id customPanel
 id cut
 id dark
 id dateReminder
+id date_note
 id date_picker_actions
 id decelerate
 id decelerateAndComplete
@@ -1955,7 +1958,6 @@ id fixed
 id flip
 id floating
 id forever
-id fragment_container
 id fragment_container_view_tag
 id ghost_view
 id ghost_view_holder
@@ -2003,7 +2005,6 @@ id line3
 id linear
 id listMode
 id list_item
-id listaNotas
 id logo
 id masked
 id material_clock_display
@@ -2073,6 +2074,7 @@ id normal
 id nota_imagen
 id nota_texto_contenido
 id nota_titulo
+id note_list
 id notification_background
 id notification_main_column
 id notification_main_column_container
@@ -2140,6 +2142,7 @@ id shortcut
 id showCustom
 id showHome
 id showTitle
+id simpleListView
 id sin
 id skipCollapsed
 id slide
@@ -2190,7 +2193,6 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
-id textView
 id text_Contenido
 id text_input_end_icon
 id text_input_error_icon
@@ -2205,6 +2207,7 @@ id time
 id timeReminder
 id title
 id titleDividerNoCustom
+id title_note
 id title_template
 id titulo_audio
 id toggle
@@ -2325,6 +2328,7 @@ layout editar_nota
 layout fragment_ajustes
 layout fragment_grupos
 layout fragment_notas
+layout group_list
 layout login
 layout material_chip_input_combo
 layout material_clock_display
@@ -2368,6 +2372,7 @@ layout mtrl_picker_header_title_text
 layout mtrl_picker_header_toggle
 layout mtrl_picker_text_input_date
 layout mtrl_picker_text_input_date_range
+layout note_list
 layout notification_action
 layout notification_action_tombstone
 layout notification_media_action

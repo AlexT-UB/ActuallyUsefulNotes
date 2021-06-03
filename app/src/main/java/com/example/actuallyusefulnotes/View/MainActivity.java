@@ -12,6 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -37,6 +38,9 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
     private Toolbar toolBar;
     private AUNViewModel viewModel;
@@ -56,7 +60,6 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                     Fragment selectedFragment = null;
-
                     switch (item.getItemId()) {
                         case R.id.nav_grupos:
                             onGroup();
@@ -80,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
 
         setContentView(R.layout.activity_main);
+        onGroup();
         toolBar = findViewById(R.id.topAppBar);
         Button addNote = findViewById(R.id.addNote);
 
@@ -87,120 +91,68 @@ public class MainActivity extends AppCompatActivity {
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
-
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                new Fragmento_Notas()).commit();
-
-        /*addNote.setOnClickListener((v -> {
-            if(getSupportFragmentManager().findFragmentByTag("NOTAS") != null && getSupportFragmentManager().findFragmentByTag("NOTAS").isVisible()){
-                Intent i = new Intent(MainActivity.this, AddNote.class);
-                startActivity(i);
-            } else if(getSupportFragmentManager().findFragmentByTag("GRUPOS") != null && getSupportFragmentManager().findFragmentByTag("GRUPOS").isVisible()){
-                Intent i = new Intent(MainActivity.this, AddGroup.class);
-                startActivity(i);
-            }
-        }));*/
-
     }
 
     public void onGroup(){
         System.out.println("GROUPS");
-
-        Fragment selectedFragment = new Fragmento_Grupos();
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                selectedFragment, "GRUPOS").commit();
-        db = FirebaseFirestore.getInstance();
-        Query query = db.collection("groups").orderBy("title", Query.Direction.DESCENDING);
-        FirestoreRecyclerOptions<Group> allNotes = new FirestoreRecyclerOptions.Builder<Group>()
-                .setQuery(query, Group.class)
-                .build();
-        adapterGroup = new FirestoreRecyclerAdapter<Group, groupHolder>(allNotes) {
-            @NonNull
-            @Override
-            public groupHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_main_recycler_view, parent, false);
-                return new groupHolder(view);
-            }
-
-            @Override
-            protected void onBindViewHolder(@NonNull groupHolder holder, int position, @NonNull Group model) {
-                holder.title.setText(model.getTitle());
-                holder.view.setOnClickListener((v) ->{
-                    Intent i = new Intent(v.getContext(), Group.class);
-                    v.getContext().startActivity(i);
-                } );
-            }
-        };
-
-        recyclerView = findViewById(R.id.listaNotas);
-        recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
-        recyclerView.setAdapter(adapterGroup);
         Button addGroup = findViewById(R.id.addNote);
+        addGroup.setVisibility(View.VISIBLE);
         addGroup.setOnClickListener((v -> {
             Intent i = new Intent(MainActivity.this, AddGroup.class);
             startActivity(i);
         }));
+        ListView simpleList = (ListView) findViewById(R.id.simpleListView);
+        ArrayList<Group> groups = getGroups();
+        GroupAdapter myAdapter = new GroupAdapter(this, R.layout.group_list, groups);
+        simpleList.setAdapter(myAdapter);
+        System.out.println(groups.get(0).getTitle());
     }
 
     public void onNote(){
-
         System.out.println("NOTES");
-
-
-        Fragment selectedFragment = new Fragmento_Notas();
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                selectedFragment, "NOTAS").commit();
-        db = FirebaseFirestore.getInstance();
-        Query query = db.collection("notes").orderBy("title", Query.Direction.DESCENDING);
-        FirestoreRecyclerOptions<Note> allNotes = new FirestoreRecyclerOptions.Builder<Note>()
-                .setQuery(query, Note.class)
-                .build();
-        adapter = new FirestoreRecyclerAdapter<Note, noteHolder>(allNotes) {
-            @NonNull
-            @Override
-            public noteHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_main_recycler_view, parent, false);
-                return new noteHolder(view);
-            }
-
-            @Override
-            protected void onBindViewHolder(@NonNull noteHolder holder, int position, @NonNull Note model) {
-                holder.title.setText(model.getTitulo());
-                holder.view.setOnClickListener((v) ->{
-                    Intent i = new Intent(v.getContext(), Note.class);
-                    v.getContext().startActivity(i);
-                } );
-            }
-        };
-        recyclerView = findViewById(R.id.listaNotas);
-        recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
-        recyclerView.setAdapter(adapter);
-
-        Button addNote = findViewById(R.id.addNote);
-        addNote.setOnClickListener((v -> {
+        ListView simpleList = (ListView) findViewById(R.id.simpleListView);
+        ArrayList<Note> notes = getNotes();
+        NoteAdapter myAdapter = new NoteAdapter(this, R.layout.note_list, notes);
+        simpleList.setAdapter(myAdapter);
+        Button addnote = findViewById(R.id.addNote);
+        addnote.setVisibility(View.VISIBLE);
+        addnote.setOnClickListener((v -> {
             Intent i = new Intent(MainActivity.this, AddNote.class);
             startActivity(i);
         }));
+        Fragment selectedFragment = new Fragmento_Notas();
+        /*getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                selectedFragment, "NOTAS").commit();*
+        /*
+        recyclerView = findViewById(R.id.listaNotas);
+        recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
+        recyclerView.setAdapter(adapter);*/
     }
 
     public void onSettings(){
-
+        System.out.println("SETTINGS");
+        Button addnote = findViewById(R.id.addNote);
+        addnote.setVisibility(View.GONE);
     }
 
-    private void getNotes() {
-
+    private ArrayList<Note> getNotes() {
+        String[] protolist = new String[0];
+        ArrayList<Note> groupList = new ArrayList<Note>();
+        groupList.add(new Note("First", "A", "12/2/2021", "12:00:00", "First Author", "TEXT HERE", 0));
+        groupList.add(new Note("Second", "B", "12/2/2021", "12:00:00", "Second Author", "TEXT HERE", 0));
+        groupList.add(new Note("Third", "C", "12/2/2021", "12:00:00", "Third Author", "TEXT HERE", 0));
+        groupList.add(new Note("Fourth", "D", "12/2/2021", "12:00:00", "Fourth Author", "TEXT HERE", 0));
+        return groupList;
     }
 
-
-    public class groupHolder extends RecyclerView.ViewHolder {
-        TextView title;
-        View view;
-
-        public groupHolder(@NonNull View itemView) {
-            super(itemView);
-            title = itemView.findViewById(R.id.textBox_events_verNotas);
-            view = itemView;
-        }
+    private ArrayList<Group> getGroups() {
+        String[] protolist = new String[0];
+        ArrayList<Group> groupList = new ArrayList<Group>();
+        groupList.add(new Group("First", "First Title", protolist));
+        groupList.add(new Group("Second", "Second Title", protolist));
+        groupList.add(new Group("Third", "Third Title", protolist));
+        groupList.add(new Group("Fourth", "Fourth Title", protolist));
+        return groupList;
     }
 
     public class noteHolder extends RecyclerView.ViewHolder {
@@ -216,12 +168,32 @@ public class MainActivity extends AppCompatActivity {
 
     protected void onStart() {
         super.onStart();
-
         FirebaseUser user = auth.getCurrentUser();
         if (user == null)
             signUp();
-        onNote();
-        onGroup();
+        db = FirebaseFirestore.getInstance();
+        Query query = db.collection("notes").orderBy("title", Query.Direction.DESCENDING);
+        FirestoreRecyclerOptions<Note> allNotes = new FirestoreRecyclerOptions.Builder<Note>()
+                .setQuery(query, Note.class)
+                .build();
+        adapter = new FirestoreRecyclerAdapter<Note, noteHolder>(allNotes) {
+            @NonNull
+            @Override
+            public noteHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_main, parent, false);
+                return new noteHolder(view);
+            }
+
+            @Override
+            protected void onBindViewHolder(@NonNull noteHolder holder, int position, @NonNull Note model) {
+                holder.title.setText(model.getTitulo());
+                holder.view.setOnClickListener((v) -> {
+                    Intent i = new Intent(v.getContext(), Note.class);
+                    v.getContext().startActivity(i);
+                });
+            }
+        };
+        getGroups();
         adapter.startListening();
         adapterGroup.startListening();
     }

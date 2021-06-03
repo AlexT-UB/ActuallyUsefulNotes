@@ -4,26 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Group {;
-    private String title;
     private String admin;
+    private String title;
     private String[] userList;
     private List<Note> notes;
 
-
-
-    public Group (String administrator, String[] protoList, String title){
-        userList = protoList;
-        admin = administrator;
-        notes = new ArrayList<Note>();
-        title = title;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
+    public Group (String admin, String title, String[] userList){
+        this.userList = userList;
         this.title = title;
+        this.admin = admin;
+        notes = new ArrayList<Note>();
     }
 
     public void addUser(String username) throws Exception{
@@ -67,6 +57,14 @@ public class Group {;
             if(notes.get(x).getCategoria().equals(category))
                 categoryList.add(notes.get(x));
         return categoryList;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public List<Note> getNotes() {
