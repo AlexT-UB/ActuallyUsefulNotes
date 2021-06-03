@@ -31,6 +31,8 @@ import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
@@ -43,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
     FirebaseFirestore db;
     FirestoreRecyclerAdapter<Note, noteHolder> adapter;
     FirestoreRecyclerAdapter<Group, groupHolder> adapterGroup;
+    FirebaseAuth auth;
 
 
 
@@ -73,6 +76,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        auth = FirebaseAuth.getInstance();
 
         setContentView(R.layout.activity_main);
         toolBar = findViewById(R.id.topAppBar);
@@ -211,10 +216,18 @@ public class MainActivity extends AppCompatActivity {
 
     protected void onStart() {
         super.onStart();
+
+        FirebaseUser user = auth.getCurrentUser();
+        if (user == null)
+            signUp();
         onNote();
         onGroup();
         adapter.startListening();
         adapterGroup.startListening();
+    }
+
+    protected void signUp() {
+        Intent i = new Intent(MainActivity.this, Start_Up.class);
     }
 
     protected void onStop() {

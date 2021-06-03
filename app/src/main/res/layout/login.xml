@@ -14,7 +14,7 @@
         app:srcCompat="@drawable/logo1" />
 
     <EditText
-        android:id="@+id/usuario"
+        android:id="@+id/usuario_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -25,7 +25,7 @@
         android:layout_below="@id/logo" />
 
     <EditText
-        android:id="@+id/contraseña"
+        android:id="@+id/contraseña_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -33,14 +33,14 @@
         android:layout_marginTop="5dp"
         android:hint="Contraseña"
         android:inputType="textPassword"
-        android:layout_below="@id/usuario" />
+        android:layout_below="@id/usuario_login" />
 
     <CheckBox
         android:id="@+id/cBRecuerdame"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="100dp"
-        android:layout_below="@id/contraseña"
+        android:layout_below="@id/contraseña_login"
         android:text="Recuérdame" />
 
     <Button
@@ -49,7 +49,6 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:text="Inicia sesión"
-        android:onClick="cRegistrarse"
         android:layout_below="@id/cBRecuerdame" />
 
     <Button
@@ -59,7 +58,6 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="5dp"
         android:text="Crear cuenta"
-        android:onClick="cYaTengoCuenta"
         android:layout_below="@id/bt_login" />
 
 </RelativeLayout>
