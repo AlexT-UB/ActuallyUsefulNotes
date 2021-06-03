@@ -7,17 +7,20 @@
     <TextView
         android:id="@+id/TextTitle"
         android:layout_width="300dp"
-        android:layout_height="25dp"
+        android:layout_height="40dp"
         android:layout_gravity="center"
         android:text="Title"
-        android:textColor="#000" />
+        android:textColor="@color/design_default_color_secondary_variant"
+        android:textSize="25sp" />
 
     <TextView
         android:id="@+id/TextAdmin"
         android:layout_width="fill_parent"
-        android:layout_height="25dp"
-        android:layout_marginStart="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="30dp"
         android:layout_marginLeft="40dp"
         android:layout_weight="1"
-        android:text="Admin" />
+        android:text="Admin"
+        android:textColor="@color/design_default_color_secondary_variant"
+        android:textSize="17sp" />
 </LinearLayout>

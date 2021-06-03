@@ -20,12 +20,12 @@
         "source": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\src\\main\\res\\layout\\add_nota_audio.xml"
     },
     {
-        "merged": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_outline_delete_black_24dp.png.flat",
-        "source": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\src\\main\\res\\drawable-hdpi\\outline_delete_black_24dp.png"
-    },
-    {
         "merged": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_outline_description_black_24dp.png.flat",
         "source": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\src\\main\\res\\drawable-hdpi\\outline_description_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_outline_delete_black_24dp.png.flat",
+        "source": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\src\\main\\res\\drawable-hdpi\\outline_delete_black_24dp.png"
     },
     {
         "merged": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_baseline_image_24.png.flat",
@@ -282,6 +282,10 @@
     {
         "merged": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_grupos.xml.flat",
         "source": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\src\\main\\res\\layout\\fragment_grupos.xml"
+    },
+    {
+        "merged": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\intermediates\\res\\merged\\debug\\layout_group_list.xml.flat",
+        "source": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\src\\main\\res\\layout\\group_list.xml"
     },
     {
         "merged": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_notas_24dp.png.flat",

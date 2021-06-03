@@ -32,6 +32,8 @@ com/example/actuallyusefulnotes/NoteRepository.java
  com.example.actuallyusefulnotes.NoteRepository$DeleteAsyncTask
  com.example.actuallyusefulnotes.NoteRepository$InsertAsyncTask
  com.example.actuallyusefulnotes.NoteRepository$UpdateAsysncTask
+com/example/actuallyusefulnotes/View/GroupAdapter.java
+ com.example.actuallyusefulnotes.View.GroupAdapter
 com/example/actuallyusefulnotes/Model/Note.java
  com.example.actuallyusefulnotes.Model.Note
 com/example/actuallyusefulnotes/BuildConfig.java

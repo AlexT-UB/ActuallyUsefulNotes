@@ -56,7 +56,6 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                     Fragment selectedFragment = null;
-
                     switch (item.getItemId()) {
                         case R.id.nav_grupos:
                             onGroup();
@@ -79,7 +78,6 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
 
-        System.out.println("GROUPS");
         ListView simpleList = (ListView) findViewById(R.id.simpleListView);
         String[] protolist = new String[0];
         ArrayList<Group> example = new ArrayList<Group>();
@@ -87,14 +85,26 @@ public class MainActivity extends AppCompatActivity {
         example.add(new Group("Second", "Second Title", protolist));
         example.add(new Group("Third", "Third Title", protolist));
         example.add(new Group("Fourth", "Fourth Title", protolist));
-        GroupAdapter myAdapter = new GroupAdapter(this,R.layout.group_list,example);
+        GroupAdapter myAdapter = new GroupAdapter(this, R.layout.group_list, example);
         simpleList.setAdapter(myAdapter);
         System.out.println(example.get(0).getTitle());
+        toolBar = findViewById(R.id.topAppBar);
+        Button addNote = findViewById(R.id.addNote);
 
+        setSupportActionBar(toolBar);
+
+        bottomNavigationView = findViewById(R.id.bottom_navigation);
+        bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
     }
 
     public void onGroup(){
         System.out.println("GROUPS");
+        Button addGroup = findViewById(R.id.addNote);
+        addGroup.setVisibility(View.VISIBLE);
+        addGroup.setOnClickListener((v -> {
+            Intent i = new Intent(MainActivity.this, AddGroup.class);
+            startActivity(i);
+        }));
         ListView simpleList = (ListView) findViewById(R.id.simpleListView);
         String[] protolist = new String[0];
         ArrayList<Group> example = new ArrayList<Group>();
@@ -102,28 +112,32 @@ public class MainActivity extends AppCompatActivity {
         example.add(new Group("Second", "Second Title", protolist));
         example.add(new Group("Third", "Third Title", protolist));
         example.add(new Group("Fourth", "Fourth Title", protolist));
-        GroupAdapter myAdapter = new GroupAdapter(this,R.layout.group_list,example);
+        GroupAdapter myAdapter = new GroupAdapter(this, R.layout.group_list, example);
         simpleList.setAdapter(myAdapter);
         System.out.println(example.get(0).getTitle());
-        Button addGroup = findViewById(R.id.addNote);
-        addGroup.setOnClickListener((v -> {
-            Intent i = new Intent(MainActivity.this, AddGroup.class);
-            startActivity(i);
-        }));
     }
 
     public void onNote(){
-
         System.out.println("NOTES");
-        Button addNote = findViewById(R.id.addNote);
-        addNote.setOnClickListener((v -> {
+        ListView simpleList = (ListView) findViewById(R.id.simpleListView);
+        String[] protolist = new String[0];
+        ArrayList<Group> example = new ArrayList<Group>();
+        example.add(new Group("First", "First Title", protolist));
+        example.add(new Group("Second", "Second Title", protolist));
+        example.add(new Group("Third", "Third Title", protolist));
+        example.add(new Group("Fourth", "Fourth Title", protolist));
+        GroupAdapter myAdapter = new GroupAdapter(this, R.layout.group_list, example);
+        simpleList.setAdapter(myAdapter);
+        System.out.println(example.get(0).getTitle());
+        Button addnote = findViewById(R.id.addNote);
+        addnote.setVisibility(View.VISIBLE);
+        addnote.setOnClickListener((v -> {
             Intent i = new Intent(MainActivity.this, AddNote.class);
             startActivity(i);
         }));
-
         Fragment selectedFragment = new Fragmento_Notas();
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                selectedFragment, "NOTAS").commit();
+        /*getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                selectedFragment, "NOTAS").commit();*/
         db = FirebaseFirestore.getInstance();
         Query query = db.collection("collection");
         AUNViewModel model = new ViewModelProvider(this).get(AUNViewModel.class);
@@ -148,13 +162,16 @@ public class MainActivity extends AppCompatActivity {
                 } );
             }
         };
+        /*
         recyclerView = findViewById(R.id.listaNotas);
         recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
-        recyclerView.setAdapter(adapter);
+        recyclerView.setAdapter(adapter);*/
     }
 
     public void onSettings(){
-
+        System.out.println("SETTINGS");
+        Button addnote = findViewById(R.id.addNote);
+        addnote.setVisibility(View.GONE);
     }
 
     private void getNotes() {
