@@ -17,23 +17,21 @@ public class Note implements Serializable {
     private String time;
     private String author;
     private String text;
-    private String reminderText;
     private long alarmTime;
     private Map<String, Date> eventList;
 
-    protected Note(String titulo, String categoria, String date, String time, String author, String text, String reminderText, long alarmTime) {
+    public Note(String titulo, String categoria, String date, String time, String author, String text, long alarmTime) {
         this.categoria = categoria;
         this.time = time;
         this.date = date;
         this.titulo = titulo;
         this.author = author;
         this.text = text;
-        this.reminderText = reminderText;
         this.alarmTime = alarmTime;
         this.eventList = new HashMap<String, Date>();
     }
 
-    protected Note(long ID, String titulo, String categoria, String date, String time, String author, String text, String reminderText, long alarmTime) {
+    public Note(long ID, String titulo, String categoria, String date, String time, String author, String text, long alarmTime) {
         this.ID = ID;
         this.categoria = categoria;
         this.time = time;
@@ -41,7 +39,6 @@ public class Note implements Serializable {
         this.titulo = titulo;
         this.author = author;
         this.text = text;
-        this.reminderText = reminderText;
         this.alarmTime = alarmTime;
         this.eventList = new Hashtable();
     }
@@ -108,14 +105,6 @@ public class Note implements Serializable {
 
     public void setAuthor(String author) {
         this.author = author;
-    }
-
-    public String getReminderText() {
-        return reminderText;
-    }
-
-    public void setReminderText(String reminderText) {
-        this.reminderText = reminderText;
     }
 
     public Map<String, Date> getEventList() {

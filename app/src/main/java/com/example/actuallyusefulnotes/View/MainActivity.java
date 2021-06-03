@@ -77,17 +77,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
-
-        ListView simpleList = (ListView) findViewById(R.id.simpleListView);
-        String[] protolist = new String[0];
-        ArrayList<Group> example = new ArrayList<Group>();
-        example.add(new Group("First", "First Title", protolist));
-        example.add(new Group("Second", "Second Title", protolist));
-        example.add(new Group("Third", "Third Title", protolist));
-        example.add(new Group("Fourth", "Fourth Title", protolist));
-        GroupAdapter myAdapter = new GroupAdapter(this, R.layout.group_list, example);
-        simpleList.setAdapter(myAdapter);
-        System.out.println(example.get(0).getTitle());
+        onGroup();
         toolBar = findViewById(R.id.topAppBar);
         Button addNote = findViewById(R.id.addNote);
 
@@ -106,29 +96,18 @@ public class MainActivity extends AppCompatActivity {
             startActivity(i);
         }));
         ListView simpleList = (ListView) findViewById(R.id.simpleListView);
-        String[] protolist = new String[0];
-        ArrayList<Group> example = new ArrayList<Group>();
-        example.add(new Group("First", "First Title", protolist));
-        example.add(new Group("Second", "Second Title", protolist));
-        example.add(new Group("Third", "Third Title", protolist));
-        example.add(new Group("Fourth", "Fourth Title", protolist));
-        GroupAdapter myAdapter = new GroupAdapter(this, R.layout.group_list, example);
+        ArrayList<Group> groups = getGroups();
+        GroupAdapter myAdapter = new GroupAdapter(this, R.layout.group_list, groups);
         simpleList.setAdapter(myAdapter);
-        System.out.println(example.get(0).getTitle());
+        System.out.println(groups.get(0).getTitle());
     }
 
     public void onNote(){
         System.out.println("NOTES");
         ListView simpleList = (ListView) findViewById(R.id.simpleListView);
-        String[] protolist = new String[0];
-        ArrayList<Group> example = new ArrayList<Group>();
-        example.add(new Group("First", "First Title", protolist));
-        example.add(new Group("Second", "Second Title", protolist));
-        example.add(new Group("Third", "Third Title", protolist));
-        example.add(new Group("Fourth", "Fourth Title", protolist));
-        GroupAdapter myAdapter = new GroupAdapter(this, R.layout.group_list, example);
+        ArrayList<Note> notes = getNotes();
+        NoteAdapter myAdapter = new NoteAdapter(this, R.layout.note_list, notes);
         simpleList.setAdapter(myAdapter);
-        System.out.println(example.get(0).getTitle());
         Button addnote = findViewById(R.id.addNote);
         addnote.setVisibility(View.VISIBLE);
         addnote.setOnClickListener((v -> {
@@ -137,7 +116,52 @@ public class MainActivity extends AppCompatActivity {
         }));
         Fragment selectedFragment = new Fragmento_Notas();
         /*getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                selectedFragment, "NOTAS").commit();*/
+                selectedFragment, "NOTAS").commit();*
+        /*
+        recyclerView = findViewById(R.id.listaNotas);
+        recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
+        recyclerView.setAdapter(adapter);*/
+    }
+
+    public void onSettings(){
+        System.out.println("SETTINGS");
+        Button addnote = findViewById(R.id.addNote);
+        addnote.setVisibility(View.GONE);
+    }
+
+    private ArrayList<Note> getNotes() {
+        String[] protolist = new String[0];
+        ArrayList<Note> groupList = new ArrayList<Note>();
+        groupList.add(new Note("First", "A", "12/2/2021", "12:00:00", "First Author", "TEXT HERE", 0));
+        groupList.add(new Note("Second", "B", "12/2/2021", "12:00:00", "Second Author", "TEXT HERE", 0));
+        groupList.add(new Note("Third", "C", "12/2/2021", "12:00:00", "Third Author", "TEXT HERE", 0));
+        groupList.add(new Note("Fourth", "D", "12/2/2021", "12:00:00", "Fourth Author", "TEXT HERE", 0));
+        return groupList;
+    }
+
+    private ArrayList<Group> getGroups() {
+        String[] protolist = new String[0];
+        ArrayList<Group> groupList = new ArrayList<Group>();
+        groupList.add(new Group("First", "First Title", protolist));
+        groupList.add(new Group("Second", "Second Title", protolist));
+        groupList.add(new Group("Third", "Third Title", protolist));
+        groupList.add(new Group("Fourth", "Fourth Title", protolist));
+        return groupList;
+    }
+
+    public class noteHolder extends RecyclerView.ViewHolder {
+        TextView title;
+        View view;
+
+        public noteHolder(@NonNull View itemView) {
+            super(itemView);
+            title = itemView.findViewById(R.id.textBox_events_verNotas);
+            view = itemView;
+        }
+    }
+
+    protected void onStart() {
+        super.onStart();
         db = FirebaseFirestore.getInstance();
         Query query = db.collection("collection");
         AUNViewModel model = new ViewModelProvider(this).get(AUNViewModel.class);
@@ -156,43 +180,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             protected void onBindViewHolder(@NonNull noteHolder holder, int position, @NonNull Note model) {
                 holder.title.setText(model.getTitulo());
-                holder.view.setOnClickListener((v) ->{
+                holder.view.setOnClickListener((v) -> {
                     Intent i = new Intent(v.getContext(), Note.class);
                     v.getContext().startActivity(i);
-                } );
+                });
             }
         };
-        /*
-        recyclerView = findViewById(R.id.listaNotas);
-        recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
-        recyclerView.setAdapter(adapter);*/
-    }
-
-    public void onSettings(){
-        System.out.println("SETTINGS");
-        Button addnote = findViewById(R.id.addNote);
-        addnote.setVisibility(View.GONE);
-    }
-
-    private void getNotes() {
-
-    }
-
-
-
-    public class noteHolder extends RecyclerView.ViewHolder {
-        TextView title;
-        View view;
-
-        public noteHolder(@NonNull View itemView) {
-            super(itemView);
-            title = itemView.findViewById(R.id.textBox_events_verNotas);
-            view = itemView;
-        }
-    }
-
-    protected void onStart() {
-        super.onStart();
         onNote();
         adapter.startListening();
     }
