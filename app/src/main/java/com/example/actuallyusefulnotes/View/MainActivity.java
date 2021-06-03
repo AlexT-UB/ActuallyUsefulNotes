@@ -165,7 +165,6 @@ public class MainActivity extends AppCompatActivity {
         db = FirebaseFirestore.getInstance();
         Query query = db.collection("collection");
         AUNViewModel model = new ViewModelProvider(this).get(AUNViewModel.class);
-        getNotes();
         FirestoreRecyclerOptions<Note> allNotes = new FirestoreRecyclerOptions.Builder<Note>()
                 .setQuery(query, Note.class)
                 .build();
@@ -186,7 +185,7 @@ public class MainActivity extends AppCompatActivity {
                 });
             }
         };
-        onNote();
+        getGroups();
         adapter.startListening();
     }
 
