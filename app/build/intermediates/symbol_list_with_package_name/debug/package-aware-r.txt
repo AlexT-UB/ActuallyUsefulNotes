@@ -1891,6 +1891,8 @@ id bt_lay_signup
 id bt_login
 id bt_signin
 id buttonPanel
+id button_delete_group
+id button_delete_note
 id cBRecuerdame
 id cache_measures
 id cancel_action

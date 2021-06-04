@@ -9,6 +9,7 @@ public class Group implements Serializable {
     private String title;
     private String[] userList;
     private String date_created;
+    private String adminUID;
 
     public Group (String admin, String title, String[] userList){
         this.userList = userList;
@@ -72,5 +73,13 @@ public class Group implements Serializable {
 
     public void setDate_created(String date_created) {
         this.date_created = date_created;
+    }
+
+    public String getAdminUID() {
+        return adminUID;
+    }
+
+    public void setAdminUID(String adminUID) {
+        this.adminUID = adminUID;
     }
 }

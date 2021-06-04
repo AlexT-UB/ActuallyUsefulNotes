@@ -49,12 +49,11 @@ public class AddGroup extends AppCompatActivity {
                 final Group group = new Group();
 
                 group.setTitle(groupTitle.getText().toString());
-                //group.setAdmin(admin);
-                //group.setDate_created(Calendar.getInstance().getTime().toString());
-                //DocumentReference documentReference = db.collection("Groups").document(group.getAdmin()+group.getDate_created());
+                group.setAdminUID(admin);
+                group.setDate_created(Calendar.getInstance().getTime().toString());
                 group.setAdmin(user.getDisplayName());
 
-                DocumentReference documentReference = db.collection("Groups").document();
+                DocumentReference documentReference = db.collection("Groups").document(group.getAdminUID()+"_"+ group.getDate_created());
 
                 documentReference.set(group);
                 Toast.makeText(AddGroup.this, "Guardado", Toast.LENGTH_SHORT).show();

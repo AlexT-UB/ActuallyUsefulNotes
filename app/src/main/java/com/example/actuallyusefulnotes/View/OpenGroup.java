@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.actuallyusefulnotes.Model.Group;
@@ -28,8 +29,14 @@ public class OpenGroup extends AppCompatActivity {
         FloatingActionButton bt_Ok = findViewById(R.id.fab_Ok_Groups);
         bt_Ok.setOnClickListener((v -> {
             group.setTitle(text.getText().toString());
-            DocumentReference documentReference = db.collection("Groups").document(group.getAdmin()+group.getDate_created());
+            DocumentReference documentReference = db.collection("Groups").document(group.getAdminUID() +"_"+ group.getDate_created());
             documentReference.set(group);
+            finish();
+        }));
+        ImageButton bt_delete = findViewById(R.id.button_delete_group);
+        bt_delete.setOnClickListener((v -> {
+            DocumentReference documentReference = db.collection("Groups").document(group.getAdminUID() +"_"+ group.getDate_created());
+            documentReference.delete();
             finish();
         }));
     }

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.actuallyusefulnotes.Model.Note;
@@ -36,6 +37,12 @@ public class OpenNote extends AppCompatActivity {
             note.setText(text.getText().toString());
             DocumentReference documentReference = db.collection("notes").document(UID).collection("myNotes").document(UID+"_"+ note.getDate());
             documentReference.set(note);
+            finish();
+        }));
+        ImageButton bt_delete = findViewById(R.id.button_delete_note);
+        bt_delete.setOnClickListener((v -> {
+            DocumentReference documentReference = db.collection("notes").document(UID).collection("myNotes").document(UID+"_"+ note.getDate());
+            documentReference.delete();
             finish();
         }));
     }

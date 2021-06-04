@@ -11,6 +11,8 @@ com/example/actuallyusefulnotes/View/AddNotaTextoActivity.java
  com.example.actuallyusefulnotes.View.AddNotaTextoActivity
 com/example/actuallyusefulnotes/View/Settings.java
  com.example.actuallyusefulnotes.View.Settings
+ com.example.actuallyusefulnotes.View.Settings$1
+ com.example.actuallyusefulnotes.View.Settings$2
 com/example/actuallyusefulnotes/ViewModel/NoteViewModel.java
  com.example.actuallyusefulnotes.ViewModel.NoteViewModel
 com/example/actuallyusefulnotes/View/AddNotaAudioActivity.java
