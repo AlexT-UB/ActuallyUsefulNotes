@@ -20,20 +20,20 @@
         "source": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\src\\main\\res\\layout\\add_nota_audio.xml"
     },
     {
-        "merged": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_outline_description_black_24dp.png.flat",
-        "source": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\src\\main\\res\\drawable-hdpi\\outline_description_black_24dp.png"
-    },
-    {
         "merged": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_outline_delete_black_24dp.png.flat",
         "source": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\src\\main\\res\\drawable-hdpi\\outline_delete_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_baseline_image_24.png.flat",
-        "source": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_baseline_image_24.png"
+        "merged": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_outline_description_black_24dp.png.flat",
+        "source": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\src\\main\\res\\drawable-hdpi\\outline_description_black_24dp.png"
     },
     {
         "merged": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_baseline_mic_24.png.flat",
         "source": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_baseline_mic_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_baseline_image_24.png.flat",
+        "source": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_baseline_image_24.png"
     },
     {
         "merged": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
@@ -180,10 +180,6 @@
         "source": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_baseline_delete_24.xml"
     },
     {
-        "merged": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_ajustes.xml.flat",
-        "source": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\src\\main\\res\\layout\\fragment_ajustes.xml"
-    },
-    {
         "merged": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_search_black_24dp.xml.flat",
         "source": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_search_black_24dp.xml"
     },
@@ -240,12 +236,12 @@
         "source": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_baseline_stop_24.png"
     },
     {
-        "merged": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
-    },
-    {
         "merged": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main_recycler_view.xml.flat",
         "source": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\src\\main\\res\\layout\\activity_main_recycler_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     },
     {
         "merged": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_baseline_search_24.png.flat",
@@ -278,10 +274,6 @@
     {
         "merged": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_search_black_24dp.png.flat",
         "source": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_search_black_24dp.png"
-    },
-    {
-        "merged": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_grupos.xml.flat",
-        "source": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\src\\main\\res\\layout\\fragment_grupos.xml"
     },
     {
         "merged": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\intermediates\\res\\merged\\debug\\layout_group_list.xml.flat",
@@ -370,6 +362,10 @@
     {
         "merged": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_outline_home_black_24dp.png.flat",
         "source": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\src\\main\\res\\drawable-hdpi\\outline_home_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\intermediates\\res\\merged\\debug\\layout_layout_settings.xml.flat",
+        "source": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\src\\main\\res\\layout\\layout_settings.xml"
     },
     {
         "merged": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
@@ -474,10 +470,6 @@
     {
         "merged": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_baseline_add_24.png.flat",
         "source": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_add_24.png"
-    },
-    {
-        "merged": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_notas.xml.flat",
-        "source": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\src\\main\\res\\layout\\fragment_notas.xml"
     },
     {
         "merged": "C:\\Users\\Test\\AndroidStudioProjects\\ActuallyUsefulNotes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_search_black_24dp.png.flat",

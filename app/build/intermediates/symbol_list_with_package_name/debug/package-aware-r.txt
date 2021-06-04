@@ -989,6 +989,10 @@ color bright_foreground_inverse_material_dark
 color bright_foreground_inverse_material_light
 color bright_foreground_material_dark
 color bright_foreground_material_light
+color browser_actions_bg_grey
+color browser_actions_divider_color
+color browser_actions_text_color
+color browser_actions_title_color
 color button_material_dark
 color button_material_light
 color cardview_dark_background
@@ -1254,6 +1258,8 @@ dimen abc_text_size_title_material
 dimen abc_text_size_title_material_toolbar
 dimen action_bar_size
 dimen appcompat_dialog_background_inset
+dimen browser_actions_context_menu_max_width
+dimen browser_actions_context_menu_min_padding
 dimen cardview_compat_inset_shadow
 dimen cardview_default_elevation
 dimen cardview_default_radius
@@ -1856,6 +1862,11 @@ id blocking
 id bottom
 id bottom_navigation
 id bounce
+id browser_actions_header_text
+id browser_actions_menu_item_icon
+id browser_actions_menu_item_text
+id browser_actions_menu_items
+id browser_actions_menu_view
 id bt_Ok
 id bt_camara
 id bt_galeria
@@ -1895,6 +1906,7 @@ id content
 id contentPanel
 id contiguous
 id contraseña
+id contraseña_login
 id coordinator
 id correo
 id cos
@@ -2091,7 +2103,6 @@ id parent_matrix
 id password_toggle
 id path
 id pathRelative
-id pb_volume
 id peekHeight
 id percent
 id pin
@@ -2103,7 +2114,6 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
-id recycler
 id reminderText
 id reverseSawtooth
 id right
@@ -2223,15 +2233,14 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
-id tv_notifications
-id tv_reply
-id tv_signature
+id txt_settings
 id unchecked
 id uniform
 id unlabeled
 id up
 id useLogo
 id usuario
+id usuario_login
 id view_offset_helper
 id visible
 id visible_removing_fragment_view_tag
@@ -2307,6 +2316,8 @@ layout activity_main_recycler_view
 layout add_nota_audio
 layout add_nota_imagen
 layout add_nota_texto
+layout browser_actions_context_menu_page
+layout browser_actions_context_menu_row
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -2325,10 +2336,8 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout editar_grupo
 layout editar_nota
-layout fragment_ajustes
-layout fragment_grupos
-layout fragment_notas
 layout group_list
+layout layout_settings
 layout login
 layout material_chip_input_combo
 layout material_clock_display

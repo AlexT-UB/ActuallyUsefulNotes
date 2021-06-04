@@ -16,6 +16,7 @@
         android:theme="@style/Theme.ActuallyUsefulNotes">
         <activity android:name=".View.AddNote"></activity>
         <activity android:name=".View.AddGroup"></activity>
+        <activity android:name=".View.Settings"></activity>
         <activity android:name=".View.MainActivity"></activity>
         <activity android:name=".View.Start_Up">
             <intent-filter>

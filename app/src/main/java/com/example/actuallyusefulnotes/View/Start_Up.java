@@ -24,6 +24,8 @@ import com.google.firebase.auth.EmailAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import static java.sql.Types.NULL;
+
 public class Start_Up extends AppCompatActivity {
     EditText usertext, emailtext, passtext, emaillogin, passlogin;
     FirebaseAuth auth;
@@ -74,39 +76,29 @@ public class Start_Up extends AppCompatActivity {
 
         if (user.isEmpty() || email.isEmpty() || pass.isEmpty()){
             Toast.makeText(Start_Up.this, "Todos los campos son necesarios.", Toast.LENGTH_SHORT).show();
-            bt_signin.setOnClickListener((v -> {
+        } else {
 
-                Intent intent = new Intent(Start_Up.this, Start_Up.class);
-                startActivity(intent);
-            }));
+
+            auth.createUserWithEmailAndPassword(email, pass)
+                    .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (task.isSuccessful()) {
+                                Log.d("TAG", "Success");
+                                FirebaseUser user = auth.getCurrentUser();
+                                Toast.makeText(Start_Up.this, "Authentication successful.", Toast.LENGTH_SHORT).show();
+                                bt_signin.setOnClickListener((v -> {
+                                    Intent intent = new Intent(Start_Up.this, MainActivity.class);
+                                    startActivity(intent);
+                                }));
+
+                            } else {
+                                Log.w("Failed register", "failure", task.getException());
+                                Toast.makeText(Start_Up.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    });
         }
-
-
-        auth.createUserWithEmailAndPassword(email, pass)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()){
-                            Log.d("TAG", "Success");
-                            FirebaseUser user = auth.getCurrentUser();
-                            Toast.makeText(Start_Up.this, "Authentication successful.", Toast.LENGTH_SHORT).show();
-
-                            bt_signin.setOnClickListener((v -> {
-                                Intent intent = new Intent(Start_Up.this, MainActivity.class);
-                                startActivity(intent);
-                            }));
-
-                        }
-                        else{
-                            Log.w("Failed register", "failure", task.getException());
-                            Toast.makeText(Start_Up.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
-                            bt_signin.setOnClickListener((v -> {
-
-                                sign_up();
-                            }));
-                        }
-                    }
-                });
         go_login.setOnClickListener((v -> {
 
             pre_log_in();
@@ -134,33 +126,30 @@ public class Start_Up extends AppCompatActivity {
         String email = emaillogin.getText().toString();
         String password = passlogin.getText().toString();
 
+        if(!email.isEmpty() && !password.isEmpty()) {
 
-        auth.signInWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            // Sign in success, update UI with the signed-in user's information
-                            Log.d("Log in", "signInWithEmail:success");
-                            FirebaseUser user = auth.getCurrentUser();
-                            bt_login.setOnClickListener((v -> {
-                                Intent intent = new Intent(Start_Up.this, MainActivity.class);
-                                startActivity(intent);
-                            }));
-                        } else {
-                            // If sign in fails, display a message to the user.
-                            Log.w("Log in", "signInWithEmail:failure", task.getException());
-                            Toast.makeText(Start_Up.this, "Authentication failed.",
-                                    Toast.LENGTH_SHORT).show();
-                            bt_login.setOnClickListener((v -> {
-
-                                log_in();
-                            }));
+            auth.signInWithEmailAndPassword(email, password)
+                    .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (task.isSuccessful()) {
+                                // Sign in success, update UI with the signed-in user's information
+                                Log.d("Log in", "signInWithEmail:success");
+                                FirebaseUser user = auth.getCurrentUser();
+                                bt_login.setOnClickListener((v -> {
+                                    Intent intent = new Intent(Start_Up.this, MainActivity.class);
+                                    startActivity(intent);
+                                }));
+                            } else {
+                                // If sign in fails, display a message to the user.
+                                Log.w("Log in", "signInWithEmail:failure", task.getException());
+                                Toast.makeText(Start_Up.this, "Authentication failed.",
+                                        Toast.LENGTH_SHORT).show();
+                            }
                         }
-                    }
-                });
+                    });
 
-
+        }
 
     }
 }

@@ -1,5 +1,7 @@
 com/example/actuallyusefulnotes/View/Start_Up.java
  com.example.actuallyusefulnotes.View.Start_Up
+ com.example.actuallyusefulnotes.View.Start_Up$1
+ com.example.actuallyusefulnotes.View.Start_Up$2
 com/example/actuallyusefulnotes/View/ElegirTipoNotaActivity.java
  com.example.actuallyusefulnotes.View.ElegirTipoNotaActivity
 com/example/actuallyusefulnotes/NoteDAO.java
@@ -8,16 +10,14 @@ com/example/actuallyusefulnotes/View/AddGroup.java
  com.example.actuallyusefulnotes.View.AddGroup
 com/example/actuallyusefulnotes/View/AddNotaTextoActivity.java
  com.example.actuallyusefulnotes.View.AddNotaTextoActivity
+com/example/actuallyusefulnotes/View/Settings.java
+ com.example.actuallyusefulnotes.View.Settings
 com/example/actuallyusefulnotes/ViewModel/NoteViewModel.java
  com.example.actuallyusefulnotes.ViewModel.NoteViewModel
 com/example/actuallyusefulnotes/View/AddNotaAudioActivity.java
  com.example.actuallyusefulnotes.View.AddNotaAudioActivity
-com/example/actuallyusefulnotes/View/Fragmento_Grupos.java
- com.example.actuallyusefulnotes.View.Fragmento_Grupos
 com/example/actuallyusefulnotes/Model/User.java
  com.example.actuallyusefulnotes.Model.User
-com/example/actuallyusefulnotes/View/Fragmento_Notas.java
- com.example.actuallyusefulnotes.View.Fragmento_Notas
 com/example/actuallyusefulnotes/ViewModel/AUNViewModel.java
  com.example.actuallyusefulnotes.ViewModel.AUNViewModel
 com/example/actuallyusefulnotes/View/AddNotaImagenActivity.java
@@ -26,6 +26,8 @@ com/example/actuallyusefulnotes/View/AddNotaImagenActivity.java
 com/example/actuallyusefulnotes/View/AddNote.java
  com.example.actuallyusefulnotes.View.AddNote
  com.example.actuallyusefulnotes.View.AddNote$1
+com/example/actuallyusefulnotes/View/SettingsAdapter.java
+ com.example.actuallyusefulnotes.View.SettingsAdapter
 com/example/actuallyusefulnotes/NoteRepository.java
  com.example.actuallyusefulnotes.NoteRepository
  com.example.actuallyusefulnotes.NoteRepository$DeleteAllAsyncTask
@@ -38,8 +40,6 @@ com/example/actuallyusefulnotes/Model/Note.java
  com.example.actuallyusefulnotes.Model.Note
 com/example/actuallyusefulnotes/BuildConfig.java
  com.example.actuallyusefulnotes.BuildConfig
-com/example/actuallyusefulnotes/View/Fragmento_Ajustes.java
- com.example.actuallyusefulnotes.View.Fragmento_Ajustes
 com/example/actuallyusefulnotes/Model/Group.java
  com.example.actuallyusefulnotes.Model.Group
 com/example/actuallyusefulnotes/View/NoteAdapter.java
@@ -52,4 +52,5 @@ com/example/actuallyusefulnotes/View/MainActivity.java
  com.example.actuallyusefulnotes.View.MainActivity
  com.example.actuallyusefulnotes.View.MainActivity$1
  com.example.actuallyusefulnotes.View.MainActivity$2
+ com.example.actuallyusefulnotes.View.MainActivity$3
  com.example.actuallyusefulnotes.View.MainActivity$noteHolder
