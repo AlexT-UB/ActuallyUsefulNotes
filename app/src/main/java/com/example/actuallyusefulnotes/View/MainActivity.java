@@ -3,6 +3,7 @@ package com.example.actuallyusefulnotes.View;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -36,6 +37,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -80,7 +83,6 @@ public class MainActivity extends AppCompatActivity {
         System.out.println("CREATED MAIN");
         setContentView(R.layout.activity_main);
         System.out.println("IN MAIN");
-        onGroup();
         toolBar = findViewById(R.id.topAppBar);
         Button addNote = findViewById(R.id.addNote);
 
@@ -124,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void displayGroups(Context con) {
-        ArrayList<Group> groupList = new ArrayList<Group>();
+        ArrayList<Group> groupList = new ArrayList<>();
         CollectionReference collectionReference = db.collection("Groups");
 
         collectionReference.get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
@@ -154,7 +156,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void displayNotes(Context con) {
-        ArrayList<Note> noteList = new ArrayList<Note>();
+        ArrayList<Note> noteList = new ArrayList<>();
         CollectionReference collectionReference = db.collection("notes");
         collectionReference.get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
             @Override
@@ -238,8 +240,7 @@ public class MainActivity extends AppCompatActivity {
                 });
             }
         };*/
-        Context con = this;
-        displayGroups(con);
+        onGroup();
         //adapter.startListening();
     }
 
