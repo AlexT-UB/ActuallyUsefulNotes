@@ -18,6 +18,8 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.util.Calendar;
+
 public class AddGroup extends AppCompatActivity {
     FirebaseFirestore db;
     FirebaseUser user;
@@ -25,6 +27,7 @@ public class AddGroup extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        String admin = getIntent().getStringExtra("ADMIN");
         setContentView(R.layout.editar_grupo);
 
         db = FirebaseFirestore.getInstance();
@@ -46,6 +49,9 @@ public class AddGroup extends AppCompatActivity {
                 final Group group = new Group();
 
                 group.setTitle(groupTitle.getText().toString());
+                //group.setAdmin(admin);
+                //group.setDate_created(Calendar.getInstance().getTime().toString());
+                //DocumentReference documentReference = db.collection("Groups").document(group.getAdmin()+group.getDate_created());
                 group.setAdmin(user.getDisplayName());
 
                 DocumentReference documentReference = db.collection("Groups").document();

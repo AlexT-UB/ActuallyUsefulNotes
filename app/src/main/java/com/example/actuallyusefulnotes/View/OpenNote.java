@@ -10,53 +10,33 @@ import android.widget.TextView;
 import com.example.actuallyusefulnotes.Model.Note;
 import com.example.actuallyusefulnotes.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class OpenNote extends AppCompatActivity {
 
+    FirebaseFirestore db;
     Note note;
+    String UID;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        db = FirebaseFirestore.getInstance();
         note = (Note)getIntent().getSerializableExtra("Note");
+        UID = getIntent().getStringExtra("UID");
         setContentView(R.layout.editar_nota);
-        TextView text = findViewById(R.id.title);
-        text.setText(note.getTitulo());
-        text = findViewById(R.id.text_Contenido);
+        TextView title = findViewById(R.id.title);
+        title.setText(note.getTitulo());
+        TextView text = findViewById(R.id.text_Contenido);
         text.setText(note.getText());
         FloatingActionButton bt_Ok = findViewById(R.id.bt_Ok);
+        TextView finalTitle = title;
+        TextView finalText = text;
         bt_Ok.setOnClickListener((v -> {
+            note.setTitulo(title.getText().toString());
+            note.setText(text.getText().toString());
+            DocumentReference documentReference = db.collection("notes").document(UID).collection("myNotes").document(UID+"_"+ note.getDate());
+            documentReference.set(note);
             finish();
         }));
-        /*texto = findViewById(R.id.NotaTexto);
-        audio = findViewById(R.id.NotaAudio);
-        imagen = findViewById(R.id.NotaFoto);
-        calendario = findViewById(R.id.NotaCalendario);
-
-        texto.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent notaTexto = new Intent(ElegirTipoNotaActivity.this, AddNotaTextoActivity.class);
-            }
-        });
-
-        audio.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent notaAudio = new Intent(ElegirTipoNotaActivity.this, AddNotaAudioActivity.class);
-            }
-        });
-
-        imagen.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent notaImagen = new Intent(ElegirTipoNotaActivity.this, AddNotaImagenActivity.class);
-            }
-        });
-
-        calendario.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });*/
     }
 }

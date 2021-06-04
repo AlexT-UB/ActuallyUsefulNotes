@@ -8,6 +8,7 @@ public class Group implements Serializable {
     private String admin;
     private String title;
     private String[] userList;
+    private String date_created;
 
     public Group (String admin, String title, String[] userList){
         this.userList = userList;
@@ -63,5 +64,13 @@ public class Group implements Serializable {
 
     public void setUserList(String[] userList) {
         this.userList = userList;
+    }
+
+    public String getDate_created() {
+        return date_created;
+    }
+
+    public void setDate_created(String date_created) {
+        this.date_created = date_created;
     }
 }
