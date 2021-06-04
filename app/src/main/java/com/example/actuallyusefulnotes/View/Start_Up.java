@@ -14,7 +14,6 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.actuallyusefulnotes.ViewModel.AUNViewModel;
 import com.example.actuallyusefulnotes.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -35,7 +34,6 @@ public class Start_Up extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         auth = FirebaseAuth.getInstance();
-        AUNViewModel model = new ViewModelProvider(this).get(AUNViewModel.class);
         setContentView(R.layout.signin);
 
         Button bt_signin = findViewById(R.id.bt_signin);
@@ -71,14 +69,9 @@ public class Start_Up extends AppCompatActivity {
         String email = emailtext.getText().toString();
         String pass = passtext.getText().toString();
 
-        System.out.println("email" + email);
-        System.out.println("pass" + pass);
-
         if (username.isEmpty() || email.isEmpty() || pass.isEmpty()) {
             Toast.makeText(Start_Up.this, "Todos los campos son necesarios.", Toast.LENGTH_SHORT).show();
         } else {
-
-
             auth.createUserWithEmailAndPassword(email, pass)
                     .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                         @Override
@@ -92,7 +85,6 @@ public class Start_Up extends AppCompatActivity {
                                 Toast.makeText(Start_Up.this, "Authentication successful.", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(Start_Up.this, MainActivity.class);
                                 startActivity(intent);
-
                             } else {
                                 Log.w("Failed register", "failure", task.getException());
                                 Toast.makeText(Start_Up.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
@@ -101,7 +93,6 @@ public class Start_Up extends AppCompatActivity {
                     });
         }
         go_login.setOnClickListener((v -> {
-
             pre_log_in();
         }));
     }

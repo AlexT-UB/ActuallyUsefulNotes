@@ -23,7 +23,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.actuallyusefulnotes.Model.Group;
 import com.example.actuallyusefulnotes.Model.Note;
-import com.example.actuallyusefulnotes.ViewModel.AUNViewModel;
 import com.example.actuallyusefulnotes.R;
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
@@ -47,10 +46,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private Toolbar toolBar;
-    private AUNViewModel viewModel;
     private RecyclerView recyclerView;
-
-    FirestoreRecyclerAdapter<Note, noteHolder> adapter;
     FirebaseFirestore db;
     FirebaseUser user;
     FirebaseAuth auth;
@@ -82,11 +78,8 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        System.out.println("EVERYTHING IS FINE");
         super.onCreate(savedInstanceState);
-        System.out.println("CREATED MAIN");
         setContentView(R.layout.activity_main);
-        System.out.println("IN MAIN");
         toolBar = findViewById(R.id.topAppBar);
         Button addNote = findViewById(R.id.addNote);
 
@@ -107,7 +100,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onSettings(){
-        System.out.println("SETTINGS");
         ListView simpleList = (ListView) findViewById(R.id.simpleListView);
         ArrayList<String> SettingList= new ArrayList<>();
         SettingList.add("Modifica Nomre De Usuario");
@@ -139,12 +131,9 @@ public class MainActivity extends AppCompatActivity {
                 if (!queryDocumentSnapshots.isEmpty()){
                     for(QueryDocumentSnapshot groups: queryDocumentSnapshots){
                         Group group = groups.toObject(Group.class);
-                        System.out.println(groups.toObject(Group.class).getTitle());
                         groupList.add(group);
                     }
-                    System.out.println(groupList.get(0).getTitle());
                 }
-                System.out.println("ON TOP");
                 ListView simpleList = (ListView) findViewById(R.id.simpleListView);
                 simpleList.setVisibility(View.VISIBLE);
                 GroupAdapter myAdapter = new GroupAdapter(con, R.layout.group_list, groupList);
@@ -163,7 +152,6 @@ public class MainActivity extends AppCompatActivity {
                         Intent i = new Intent(MainActivity.this, OpenGroup.class);
                         i.putExtra("Group", groupList.get(position));
                         i.putExtra("UID", user.getUid());
-                        System.out.println(groupList.get(position).getAdmin());
                         startActivity(i);
                         onGroup();
                     }
@@ -174,7 +162,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void displayNotes(Context con) {
-        System.out.println("NOTE");
         ArrayList<Note> noteList = new ArrayList<>();
         CollectionReference collectionReference = db.collection("notes").document(user.getUid()).collection("myNotes");
         collectionReference.get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
@@ -183,7 +170,6 @@ public class MainActivity extends AppCompatActivity {
                 if (!queryDocumentSnapshots.isEmpty()){
                     for(QueryDocumentSnapshot notes: queryDocumentSnapshots){
                         Note note = notes.toObject(Note.class);
-                        System.out.println("Titulo de la nota Firebase" + note.getTitulo());
                         noteList.add(note);
                     }
                 }
@@ -204,7 +190,6 @@ public class MainActivity extends AppCompatActivity {
                         Intent i = new Intent(MainActivity.this, OpenNote.class);
                         i.putExtra("Note", noteList.get(position));
                         i.putExtra("UID", user.getUid());
-                        System.out.println(noteList.get(position).getID());
                         startActivity(i);
                         onNote();
                     }
@@ -214,43 +199,12 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public class noteHolder extends RecyclerView.ViewHolder {
-        TextView title;
-        View view;
-
-        public noteHolder(@NonNull View itemView) {
-            super(itemView);
-            title = itemView.findViewById(R.id.textBox_events_verNotas);
-            view = itemView;
-        }
-    }
-
     protected void onStart() {
         super.onStart();
-        System.out.println("EVERYTHING IS FINE");
         db = FirebaseFirestore.getInstance();
         auth = FirebaseAuth.getInstance();
         user = auth.getCurrentUser();
-        Query query = db.collection("collection");
-        AUNViewModel model = new ViewModelProvider(this).get(AUNViewModel.class);
-        FirestoreRecyclerOptions<Note> allNotes = new FirestoreRecyclerOptions.Builder<Note>()
-                .setQuery(query, Note.class)
-                .build();
-        adapter = new FirestoreRecyclerAdapter<Note, noteHolder>(allNotes) {
-            @NonNull
-            @Override
-            public noteHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_main, parent, false);
-                return new noteHolder(view);
-            }
-
-            @Override
-            protected void onBindViewHolder(@NonNull noteHolder holder, int position, @NonNull Note model) {
-                //holder.setItemId(adapter.getSnapshots().getSnapshot(position));
-            }
-        };
         onGroup();
-        //adapter.startListening();
     }
 
     protected void onStop() {

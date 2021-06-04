@@ -7,23 +7,12 @@ com/example/actuallyusefulnotes/NoteDAO.java
 com/example/actuallyusefulnotes/View/AddGroup.java
  com.example.actuallyusefulnotes.View.AddGroup
  com.example.actuallyusefulnotes.View.AddGroup$1
-com/example/actuallyusefulnotes/View/AddNotaTextoActivity.java
- com.example.actuallyusefulnotes.View.AddNotaTextoActivity
 com/example/actuallyusefulnotes/View/Settings.java
  com.example.actuallyusefulnotes.View.Settings
  com.example.actuallyusefulnotes.View.Settings$1
  com.example.actuallyusefulnotes.View.Settings$2
 com/example/actuallyusefulnotes/ViewModel/NoteViewModel.java
  com.example.actuallyusefulnotes.ViewModel.NoteViewModel
-com/example/actuallyusefulnotes/View/AddNotaAudioActivity.java
- com.example.actuallyusefulnotes.View.AddNotaAudioActivity
-com/example/actuallyusefulnotes/Model/User.java
- com.example.actuallyusefulnotes.Model.User
-com/example/actuallyusefulnotes/ViewModel/AUNViewModel.java
- com.example.actuallyusefulnotes.ViewModel.AUNViewModel
-com/example/actuallyusefulnotes/View/AddNotaImagenActivity.java
- com.example.actuallyusefulnotes.View.AddNotaImagenActivity
- com.example.actuallyusefulnotes.View.AddNotaImagenActivity$1
 com/example/actuallyusefulnotes/View/AddNote.java
  com.example.actuallyusefulnotes.View.AddNote
  com.example.actuallyusefulnotes.View.AddNote$1
@@ -61,5 +50,3 @@ com/example/actuallyusefulnotes/View/MainActivity.java
  com.example.actuallyusefulnotes.View.MainActivity$3$1
  com.example.actuallyusefulnotes.View.MainActivity$4
  com.example.actuallyusefulnotes.View.MainActivity$4$1
- com.example.actuallyusefulnotes.View.MainActivity$5
- com.example.actuallyusefulnotes.View.MainActivity$noteHolder
