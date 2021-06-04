@@ -19,6 +19,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.util.Calendar;
+
 public class AddNote extends AppCompatActivity {
     FirebaseFirestore db;
     FirebaseUser user;
@@ -50,9 +52,8 @@ public class AddNote extends AppCompatActivity {
 
                 note.setTitulo(noteTitle.getText().toString());
                 note.setText(noteText.getText().toString());
-
-                DocumentReference documentReference = db.collection("notes").document(user.getUid()).collection("myNotes").document();
-
+                note.setDate(Calendar.getInstance().getTime().toString());
+                DocumentReference documentReference = db.collection("notes").document(user.getUid()).collection("myNotes").document(user.getUid()+"_"+ note.getDate());
                 documentReference.set(note);
                 Toast.makeText(AddNote.this, "Guardado", Toast.LENGTH_SHORT).show();
                 finish();

@@ -17,6 +17,7 @@
         <activity android:name=".View.AddNote"></activity>
         <activity android:name=".View.OpenNote"></activity>
         <activity android:name=".View.AddGroup"></activity>
+        <activity android:name=".View.OpenGroup"></activity>
         <activity android:name=".View.Settings"></activity>
         <activity android:name=".View.MainActivity"></activity>
         <activity android:name=".View.Start_Up">

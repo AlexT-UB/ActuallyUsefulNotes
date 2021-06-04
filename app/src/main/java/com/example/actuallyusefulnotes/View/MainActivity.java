@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
     private AUNViewModel viewModel;
     private RecyclerView recyclerView;
 
+    FirestoreRecyclerAdapter<Note, noteHolder> adapter;
     FirebaseFirestore db;
     FirebaseUser user;
     FirebaseAuth auth;
@@ -152,13 +153,28 @@ public class MainActivity extends AppCompatActivity {
                 addGroup.setVisibility(View.VISIBLE);
                 addGroup.setOnClickListener((v -> {
                     Intent i = new Intent(MainActivity.this, AddGroup.class);
+                    i.putExtra("ADMIN", user.getUid());
                     startActivity(i);
                 }));
+                simpleList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, final View view,
+                                            int position, long id) {
+                        Intent i = new Intent(MainActivity.this, OpenGroup.class);
+                        i.putExtra("Group", groupList.get(position));
+                        i.putExtra("UID", user.getUid());
+                        System.out.println(groupList.get(position).getAdmin());
+                        startActivity(i);
+                        onGroup();
+                    }
+
+                });
             }
         });
     }
 
     private void displayNotes(Context con) {
+        System.out.println("NOTE");
         ArrayList<Note> noteList = new ArrayList<>();
         CollectionReference collectionReference = db.collection("notes").document(user.getUid()).collection("myNotes");
         collectionReference.get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
@@ -187,6 +203,8 @@ public class MainActivity extends AppCompatActivity {
                                             int position, long id) {
                         Intent i = new Intent(MainActivity.this, OpenNote.class);
                         i.putExtra("Note", noteList.get(position));
+                        i.putExtra("UID", user.getUid());
+                        System.out.println(noteList.get(position).getID());
                         startActivity(i);
                         onNote();
                     }
@@ -194,16 +212,6 @@ public class MainActivity extends AppCompatActivity {
                 });
             }
         });
-    }
-
-    private ArrayList<Group> getGroups() {
-        String[] protolist = new String[0];
-        ArrayList<Group> groupList = new ArrayList<Group>();
-        groupList.add(new Group("First", "First Title", protolist));
-        groupList.add(new Group("Second", "Second Title", protolist));
-        groupList.add(new Group("Third", "Third Title", protolist));
-        groupList.add(new Group("Fourth", "Fourth Title", protolist));
-        return groupList;
     }
 
     public class noteHolder extends RecyclerView.ViewHolder {
@@ -225,7 +233,7 @@ public class MainActivity extends AppCompatActivity {
         user = auth.getCurrentUser();
         Query query = db.collection("collection");
         AUNViewModel model = new ViewModelProvider(this).get(AUNViewModel.class);
-        /*FirestoreRecyclerOptions<Note> allNotes = new FirestoreRecyclerOptions.Builder<Note>()
+        FirestoreRecyclerOptions<Note> allNotes = new FirestoreRecyclerOptions.Builder<Note>()
                 .setQuery(query, Note.class)
                 .build();
         adapter = new FirestoreRecyclerAdapter<Note, noteHolder>(allNotes) {
@@ -238,13 +246,9 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             protected void onBindViewHolder(@NonNull noteHolder holder, int position, @NonNull Note model) {
-                holder.title.setText(model.getTitulo());
-                holder.view.setOnClickListener((v) -> {
-                    Intent i = new Intent(v.getContext(), Note.class);
-                    v.getContext().startActivity(i);
-                });
+                //holder.setItemId(adapter.getSnapshots().getSnapshot(position));
             }
-        };*/
+        };
         onGroup();
         //adapter.startListening();
     }

@@ -10,7 +10,7 @@ import java.util.Map;
 
 
 public class Note implements Serializable {
-    private long ID;
+    private Long ID;
     private String titulo;
     private String categoria;
     private String date;
@@ -47,11 +47,11 @@ public class Note implements Serializable {
         return this.eventList.get(event);
     }
 
-    public long getID() {
+    public Long getID() {
         return ID;
     }
 
-    public void setID(long ID) {
+    public void setID(Long ID) {
         this.ID = ID;
     }
 
@@ -118,6 +118,5 @@ public class Note implements Serializable {
     public long getAlarmTime() {
         return alarmTime;
     }
-
 }
 
