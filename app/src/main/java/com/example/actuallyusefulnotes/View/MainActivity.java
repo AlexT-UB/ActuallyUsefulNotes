@@ -3,7 +3,6 @@ package com.example.actuallyusefulnotes.View;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -28,15 +27,18 @@ import com.example.actuallyusefulnotes.R;
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
-import com.google.firebase.firestore.QueryDocumentSnapshot;
-import com.google.firebase.firestore.QuerySnapshot;
 
-import java.net.ConnectException;
 import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private Toolbar toolBar;
@@ -44,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
 
     FirebaseFirestore db;
+    FirestoreRecyclerAdapter<Note, noteHolder> adapter;
 
 
 
@@ -72,9 +75,12 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        System.out.println("EVERYTHING IS FINE");
         super.onCreate(savedInstanceState);
-        System.out.println("ONCREATE");
+        System.out.println("CREATED MAIN");
         setContentView(R.layout.activity_main);
+        System.out.println("IN MAIN");
+        onGroup();
         toolBar = findViewById(R.id.topAppBar);
         Button addNote = findViewById(R.id.addNote);
 
@@ -185,6 +191,16 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    private ArrayList<Group> getGroups() {
+        String[] protolist = new String[0];
+        ArrayList<Group> groupList = new ArrayList<Group>();
+        groupList.add(new Group("First", "First Title", protolist));
+        groupList.add(new Group("Second", "Second Title", protolist));
+        groupList.add(new Group("Third", "Third Title", protolist));
+        groupList.add(new Group("Fourth", "Fourth Title", protolist));
+        return groupList;
+    }
+
     public class noteHolder extends RecyclerView.ViewHolder {
         TextView title;
         View view;
@@ -198,6 +214,7 @@ public class MainActivity extends AppCompatActivity {
 
     protected void onStart() {
         super.onStart();
+        System.out.println("EVERYTHING IS FINE");
         db = FirebaseFirestore.getInstance();
         Query query = db.collection("collection");
         AUNViewModel model = new ViewModelProvider(this).get(AUNViewModel.class);
@@ -231,6 +248,4 @@ public class MainActivity extends AppCompatActivity {
         /*if (adapter != null)
             adapter.stopListening();*/
     }
-
-
 }

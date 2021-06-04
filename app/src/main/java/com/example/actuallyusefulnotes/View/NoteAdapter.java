@@ -11,6 +11,8 @@ import com.example.actuallyusefulnotes.Model.Note;
 import com.example.actuallyusefulnotes.R;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 
 import android.content.Context;
@@ -42,6 +44,22 @@ public class NoteAdapter extends ArrayAdapter<Note> {
         textAdmin.setText(NoteList.get(position).getDate());
         return v;
 
+    }
+    private int getRandomColor() {
+        List<Integer> color = new ArrayList<>();
+        color.add(R.color.blue);
+        color.add(R.color.lime);
+        color.add(R.color.purple);
+        color.add(R.color.white);
+        color.add(R.color.aqua);
+        color.add(R.color.gray);
+        color.add(R.color.maroon);
+        color.add(R.color.fuchsia);
+
+        Random randomColor = new Random();
+        int number = randomColor.nextInt(color.size());
+
+        return color.get(number);
     }
 }
 

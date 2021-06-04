@@ -1,18 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/note_list"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">
+    android:layout_height="250px"
+    android:background="@drawable/border"
+    android:orientation="horizontal"
+
+    android:layout_marginBottom="20dp">
+
+    <Space
+        android:layout_width="30px"
+        android:layout_height="match_parent"
+        android:background="#F63535"
+        android:visibility="visible"
+        tools:visibility="visible" />
 
     <TextView
         android:id="@+id/title_note"
         android:layout_width="300dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="15dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="20px"
+        android:layout_marginTop="20px"
         android:layout_marginLeft="15dp"
         android:text="Title"
-        android:textColor="@color/design_default_color_secondary_variant"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/black"
         android:textSize="25dp" />
 
     <TextView
@@ -22,6 +36,6 @@
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
         android:text="Date"
-        android:textColor="@color/design_default_color_secondary_variant" />
+        android:textColor="#727373" />
 
 </LinearLayout>
