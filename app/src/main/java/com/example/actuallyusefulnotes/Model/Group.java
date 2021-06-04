@@ -1,19 +1,20 @@
 package com.example.actuallyusefulnotes.Model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Group {;
+public class Group implements Serializable {
     private String admin;
     private String title;
     private String[] userList;
-    private List<Note> notes;
 
     public Group (String admin, String title, String[] userList){
         this.userList = userList;
         this.title = title;
         this.admin = admin;
-        notes = new ArrayList<Note>();
+    }
+    public Group(){
     }
 
     public void addUser(String username) throws Exception{
@@ -40,39 +41,12 @@ public class Group {;
         userList[legnthArray-1] = "NoUser";
     }
 
-    public void addNote(Note newNote){
-        notes.add(newNote);
-    }
-
-    public void deleteNote(int index) throws Exception{
-        if(index > notes.size() - 1)
-            throw new Exception("Index Out Of Range");
-        notes.remove(index);
-    }
-
-    public List<Note> seeNotesFromCategory(String category){
-        int lenghtNotes = notes.size() - 1;
-        List<Note> categoryList = new ArrayList<Note>();
-        for(int x = 0; x < lenghtNotes; x++)
-            if(notes.get(x).getCategoria().equals(category))
-                categoryList.add(notes.get(x));
-        return categoryList;
-    }
-
     public String getTitle() {
         return title;
     }
 
     public void setTitle(String title) {
         this.title = title;
-    }
-
-    public List<Note> getNotes() {
-        return notes;
-    }
-
-    public void setNotes(List<Note> notes) {
-        this.notes = notes;
     }
 
     public String getAdmin() {

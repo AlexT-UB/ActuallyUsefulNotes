@@ -2,8 +2,6 @@ com/example/actuallyusefulnotes/View/Start_Up.java
  com.example.actuallyusefulnotes.View.Start_Up
  com.example.actuallyusefulnotes.View.Start_Up$1
  com.example.actuallyusefulnotes.View.Start_Up$2
-com/example/actuallyusefulnotes/View/ElegirTipoNotaActivity.java
- com.example.actuallyusefulnotes.View.ElegirTipoNotaActivity
 com/example/actuallyusefulnotes/NoteDAO.java
  com.example.actuallyusefulnotes.NoteDAO
 com/example/actuallyusefulnotes/View/AddGroup.java
@@ -26,6 +24,8 @@ com/example/actuallyusefulnotes/View/AddNotaImagenActivity.java
 com/example/actuallyusefulnotes/View/AddNote.java
  com.example.actuallyusefulnotes.View.AddNote
  com.example.actuallyusefulnotes.View.AddNote$1
+com/example/actuallyusefulnotes/View/OpenGroup.java
+ com.example.actuallyusefulnotes.View.OpenGroup
 com/example/actuallyusefulnotes/View/SettingsAdapter.java
  com.example.actuallyusefulnotes.View.SettingsAdapter
 com/example/actuallyusefulnotes/NoteRepository.java
@@ -44,6 +44,8 @@ com/example/actuallyusefulnotes/Model/Group.java
  com.example.actuallyusefulnotes.Model.Group
 com/example/actuallyusefulnotes/View/NoteAdapter.java
  com.example.actuallyusefulnotes.View.NoteAdapter
+com/example/actuallyusefulnotes/View/OpenNote.java
+ com.example.actuallyusefulnotes.View.OpenNote
 com/example/actuallyusefulnotes/NoteDataBase.java
  com.example.actuallyusefulnotes.NoteDataBase
  com.example.actuallyusefulnotes.NoteDataBase$1
@@ -53,4 +55,6 @@ com/example/actuallyusefulnotes/View/MainActivity.java
  com.example.actuallyusefulnotes.View.MainActivity$1
  com.example.actuallyusefulnotes.View.MainActivity$2
  com.example.actuallyusefulnotes.View.MainActivity$3
+ com.example.actuallyusefulnotes.View.MainActivity$4
+ com.example.actuallyusefulnotes.View.MainActivity$4$1
  com.example.actuallyusefulnotes.View.MainActivity$noteHolder

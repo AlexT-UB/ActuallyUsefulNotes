@@ -31,18 +31,6 @@ public class Note implements Serializable {
         this.eventList = new HashMap<String, Date>();
     }
 
-    public Note(long ID, String titulo, String categoria, String date, String time, String author, String text, long alarmTime) {
-        this.ID = ID;
-        this.categoria = categoria;
-        this.time = time;
-        this.date = date;
-        this.titulo = titulo;
-        this.author = author;
-        this.text = text;
-        this.alarmTime = alarmTime;
-        this.eventList = new Hashtable();
-    }
-
     public Note(){
     }
 

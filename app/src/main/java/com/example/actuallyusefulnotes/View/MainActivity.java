@@ -3,11 +3,10 @@ package com.example.actuallyusefulnotes.View;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,15 +14,12 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 
 import androidx.fragment.app.Fragment;
 import androidx.appcompat.widget.Toolbar;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import com.example.actuallyusefulnotes.Model.Group;
 import com.example.actuallyusefulnotes.Model.Note;
@@ -31,14 +27,16 @@ import com.example.actuallyusefulnotes.ViewModel.AUNViewModel;
 import com.example.actuallyusefulnotes.R;
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.navigation.NavigationView;
-import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
+import java.net.ConnectException;
 import java.util.ArrayList;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private Toolbar toolBar;
@@ -46,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
 
     FirebaseFirestore db;
-    FirestoreRecyclerAdapter<Note, noteHolder> adapter;
 
 
 
@@ -75,12 +72,9 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        System.out.println("EVERYTHING IS FINE");
         super.onCreate(savedInstanceState);
-        System.out.println("CREATED MAIN");
+        System.out.println("ONCREATE");
         setContentView(R.layout.activity_main);
-        System.out.println("IN MAIN");
-        onGroup();
         toolBar = findViewById(R.id.topAppBar);
         Button addNote = findViewById(R.id.addNote);
 
@@ -91,35 +85,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onGroup(){
-        ListView simpleList = (ListView) findViewById(R.id.simpleListView);
-        simpleList.setVisibility(View.VISIBLE);
-        Button addGroup = findViewById(R.id.addNote);
-        addGroup.setVisibility(View.VISIBLE);
-        addGroup.setOnClickListener((v -> {
-            Intent i = new Intent(MainActivity.this, AddGroup.class);
-            startActivity(i);
-        }));
-        ArrayList<Group> groups = getGroups();
-        GroupAdapter myAdapter = new GroupAdapter(this, R.layout.group_list, groups);
-        simpleList.setAdapter(myAdapter);
-        System.out.println(groups.get(0).getTitle());
+        Context con = this;
+        displayGroups(con);
     }
 
     public void onNote(){
-        ListView simpleList = (ListView) findViewById(R.id.simpleListView);
-        simpleList.setVisibility(View.VISIBLE);
-        ArrayList<Note> notes = getNotes();
-        NoteAdapter myAdapter = new NoteAdapter(this, R.layout.note_list, notes);
-        simpleList.setAdapter(myAdapter);
-        Button addnote = findViewById(R.id.addNote);
-        addnote.setVisibility(View.VISIBLE);
-        addnote.setOnClickListener((v -> {
-            Intent i = new Intent(MainActivity.this, AddNote.class);
-            startActivity(i);
-        }));
+        Context con = this;
+        displayNotes(con);
     }
 
     public void onSettings(){
+        System.out.println("SETTINGS");
         ListView simpleList = (ListView) findViewById(R.id.simpleListView);
         ArrayList<String> SettingList= new ArrayList<>();
         SettingList.add("Modifica Nomre De Usuario");
@@ -132,7 +108,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, final View view,
                                     int position, long id) {
-                System.out.println(position);
                 Intent i = new Intent(MainActivity.this, Settings.class);
                 i.putExtra("Position", position);
                 startActivity(i);
@@ -142,24 +117,72 @@ public class MainActivity extends AppCompatActivity {
         addnote.setVisibility(View.GONE);
     }
 
-    private ArrayList<Note> getNotes() {
-        String[] protolist = new String[0];
-        ArrayList<Note> groupList = new ArrayList<Note>();
-        groupList.add(new Note("First", "A", "12/2/2021", "12:00:00", "First Author", "TEXT HERE", 0));
-        groupList.add(new Note("Second", "B", "12/2/2021", "12:00:00", "Second Author", "TEXT HERE", 0));
-        groupList.add(new Note("Third", "C", "12/2/2021", "12:00:00", "Third Author", "TEXT HERE", 0));
-        groupList.add(new Note("Fourth", "D", "12/2/2021", "12:00:00", "Fourth Author", "TEXT HERE", 0));
-        return groupList;
+    private void displayGroups(Context con) {
+        ArrayList<Group> groupList = new ArrayList<Group>();
+        CollectionReference collectionReference = db.collection("Groups");
+
+        collectionReference.get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+            @Override
+            public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                if (!queryDocumentSnapshots.isEmpty()){
+                    for(QueryDocumentSnapshot groups: queryDocumentSnapshots){
+                        Group group = groups.toObject(Group.class);
+                        System.out.println(groups.toObject(Group.class).getTitle());
+                        groupList.add(group);
+                    }
+                    System.out.println(groupList.get(0).getTitle());
+                }
+                System.out.println("ON TOP");
+                ListView simpleList = (ListView) findViewById(R.id.simpleListView);
+                simpleList.setVisibility(View.VISIBLE);
+                GroupAdapter myAdapter = new GroupAdapter(con, R.layout.group_list, groupList);
+                simpleList.setAdapter(myAdapter);
+                Button addGroup = findViewById(R.id.addNote);
+                addGroup.setVisibility(View.VISIBLE);
+                addGroup.setOnClickListener((v -> {
+                    Intent i = new Intent(MainActivity.this, AddGroup.class);
+                    startActivity(i);
+                }));
+            }
+        });
     }
 
-    private ArrayList<Group> getGroups() {
-        String[] protolist = new String[0];
-        ArrayList<Group> groupList = new ArrayList<Group>();
-        groupList.add(new Group("First", "First Title", protolist));
-        groupList.add(new Group("Second", "Second Title", protolist));
-        groupList.add(new Group("Third", "Third Title", protolist));
-        groupList.add(new Group("Fourth", "Fourth Title", protolist));
-        return groupList;
+    private void displayNotes(Context con) {
+        ArrayList<Note> noteList = new ArrayList<Note>();
+        CollectionReference collectionReference = db.collection("notes");
+        collectionReference.get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+            @Override
+            public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                if (!queryDocumentSnapshots.isEmpty()){
+                    for(QueryDocumentSnapshot notes: queryDocumentSnapshots){
+                        Note note = notes.toObject(Note.class);
+                        System.out.println("Titulo de la nota Firebase" + note.getTitulo());
+                        noteList.add(note);
+                    }
+                }
+                ListView simpleList = (ListView) findViewById(R.id.simpleListView);
+                simpleList.setVisibility(View.VISIBLE);
+                NoteAdapter myAdapter = new NoteAdapter(con, R.layout.note_list, noteList);
+                simpleList.setAdapter(myAdapter);
+                Button addnote = findViewById(R.id.addNote);
+                addnote.setVisibility(View.VISIBLE);
+                addnote.setOnClickListener((v -> {
+                    Intent i = new Intent(MainActivity.this, AddNote.class);
+                    startActivity(i);
+                }));
+                simpleList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, final View view,
+                                            int position, long id) {
+                        Intent i = new Intent(MainActivity.this, OpenNote.class);
+                        i.putExtra("Note", noteList.get(position));
+                        startActivity(i);
+                        onNote();
+                    }
+
+                });
+            }
+        });
     }
 
     public class noteHolder extends RecyclerView.ViewHolder {
@@ -175,11 +198,10 @@ public class MainActivity extends AppCompatActivity {
 
     protected void onStart() {
         super.onStart();
-        System.out.println("EVERYTHING IS FINE");
         db = FirebaseFirestore.getInstance();
         Query query = db.collection("collection");
         AUNViewModel model = new ViewModelProvider(this).get(AUNViewModel.class);
-        FirestoreRecyclerOptions<Note> allNotes = new FirestoreRecyclerOptions.Builder<Note>()
+        /*FirestoreRecyclerOptions<Note> allNotes = new FirestoreRecyclerOptions.Builder<Note>()
                 .setQuery(query, Note.class)
                 .build();
         adapter = new FirestoreRecyclerAdapter<Note, noteHolder>(allNotes) {
@@ -198,14 +220,17 @@ public class MainActivity extends AppCompatActivity {
                     v.getContext().startActivity(i);
                 });
             }
-        };
-        getGroups();
-        adapter.startListening();
+        };*/
+        Context con = this;
+        displayGroups(con);
+        //adapter.startListening();
     }
 
     protected void onStop() {
         super.onStop();
-        if (adapter != null)
-            adapter.stopListening();
+        /*if (adapter != null)
+            adapter.stopListening();*/
     }
+
+
 }
