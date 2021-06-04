@@ -42,6 +42,7 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -131,7 +132,9 @@ public class MainActivity extends AppCompatActivity {
                 if (!queryDocumentSnapshots.isEmpty()){
                     for(QueryDocumentSnapshot groups: queryDocumentSnapshots){
                         Group group = groups.toObject(Group.class);
-                        groupList.add(group);
+                        if(group.getUserList().contains(user.getUid())){
+                            groupList.add(group);
+                        }
                     }
                 }
                 ListView simpleList = (ListView) findViewById(R.id.simpleListView);

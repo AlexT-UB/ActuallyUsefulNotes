@@ -2,16 +2,15 @@ package com.example.actuallyusefulnotes.Model;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.List;
 
 public class Group implements Serializable {
     private String admin;
     private String title;
-    private String[] userList;
+    private ArrayList<String> userList;
     private String date_created;
     private String adminUID;
 
-    public Group (String admin, String title, String[] userList){
+    public Group (String admin, String title, ArrayList<String> userList){
         this.userList = userList;
         this.title = title;
         this.admin = admin;
@@ -20,27 +19,19 @@ public class Group implements Serializable {
     }
 
     public void addUser(String username) throws Exception{
-        int legnthList = userList.length;
-        for (int x = 0; x < legnthList - 1; x++)
-            if(userList[x].equals("NoUser")) {
-                userList[x] = username;
-                return;
-            }
-        throw new Exception("Maximum Number Of Users In Group Reached");
+        if(userList.size() < 20){
+            userList.add(username);
+        } else {
+            throw new Exception("Maximum Number Of Users In Group Reached");
+        }
     }
 
     public void deleteUser(String username) throws Exception{
-        int legnthArray = userList.length;
-        int index = 0;
-        for (int x = 0; x < legnthArray-1; x++)
-            if(userList[x].equals(username)){
-                index = x;
-                break;}
-            else
-                throw new Exception("User Not In Group");
-        for (int x = index; x <  legnthArray-1; x++)
-            userList[x] = userList[x+1];
-        userList[legnthArray-1] = "NoUser";
+        if(userList.contains(username)) {
+            userList.remove(username);
+        } else {
+            throw new Exception("User Not In Group");
+        }
     }
 
     public String getTitle() {
@@ -59,11 +50,11 @@ public class Group implements Serializable {
         this.admin = admin;
     }
 
-    public String[] getUserList() {
+    public ArrayList<String> getUserList() {
         return userList;
     }
 
-    public void setUserList(String[] userList) {
+    public void setUserList(ArrayList<String> userList) {
         this.userList = userList;
     }
 

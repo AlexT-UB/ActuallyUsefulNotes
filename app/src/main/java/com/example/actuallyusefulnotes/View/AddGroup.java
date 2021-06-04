@@ -18,6 +18,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 
 public class AddGroup extends AppCompatActivity {
@@ -47,9 +48,11 @@ public class AddGroup extends AppCompatActivity {
                 }
 
                 final Group group = new Group();
-
+                ArrayList<String> userUID = new ArrayList<String>();
+                userUID.add(admin.toString());
                 group.setTitle(groupTitle.getText().toString());
-                group.setAdminUID(admin);
+                group.setAdminUID(admin.toString());
+                group.setUserList(userUID);
                 group.setDate_created(Calendar.getInstance().getTime().toString());
                 group.setAdmin(user.getDisplayName());
 
