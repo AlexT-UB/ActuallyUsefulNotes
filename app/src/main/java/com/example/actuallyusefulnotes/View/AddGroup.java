@@ -13,11 +13,14 @@ import com.example.actuallyusefulnotes.Model.Group;
 import com.example.actuallyusefulnotes.Model.Note;
 import com.example.actuallyusefulnotes.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 public class AddGroup extends AppCompatActivity {
     FirebaseFirestore db;
+    FirebaseUser user;
     private EditText groupTitle;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +28,7 @@ public class AddGroup extends AppCompatActivity {
         setContentView(R.layout.editar_grupo);
 
         db = FirebaseFirestore.getInstance();
+        user = FirebaseAuth.getInstance().getCurrentUser();
 
         groupTitle = findViewById(R.id.editTextGroupName);
 
@@ -42,6 +46,7 @@ public class AddGroup extends AppCompatActivity {
                 final Group group = new Group();
 
                 group.setTitle(groupTitle.getText().toString());
+                group.setAdmin(user.getDisplayName());
 
                 DocumentReference documentReference = db.collection("Groups").document();
 

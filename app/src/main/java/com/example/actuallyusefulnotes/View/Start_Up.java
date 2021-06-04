@@ -23,12 +23,14 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.EmailAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserProfileChangeRequest;
 
 import static java.sql.Types.NULL;
 
 public class Start_Up extends AppCompatActivity {
     EditText usertext, emailtext, passtext, emaillogin, passlogin;
     FirebaseAuth auth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,7 +53,6 @@ public class Start_Up extends AppCompatActivity {
         }));
 
 
-
         bt_signin.setOnClickListener((v -> {
 
             sign_up();
@@ -66,15 +67,14 @@ public class Start_Up extends AppCompatActivity {
         Button go_login = findViewById(R.id.bt_lay_login);
 
 
-
-        String user = usertext.getText().toString();
+        String username = usertext.getText().toString();
         String email = emailtext.getText().toString();
         String pass = passtext.getText().toString();
 
         System.out.println("email" + email);
         System.out.println("pass" + pass);
 
-        if (user.isEmpty() || email.isEmpty() || pass.isEmpty()){
+        if (username.isEmpty() || email.isEmpty() || pass.isEmpty()) {
             Toast.makeText(Start_Up.this, "Todos los campos son necesarios.", Toast.LENGTH_SHORT).show();
         } else {
 
@@ -86,11 +86,12 @@ public class Start_Up extends AppCompatActivity {
                             if (task.isSuccessful()) {
                                 Log.d("TAG", "Success");
                                 FirebaseUser user = auth.getCurrentUser();
+                                UserProfileChangeRequest name = new UserProfileChangeRequest.Builder()
+                                        .setDisplayName(username).build();
+                                user.updateProfile(name);
                                 Toast.makeText(Start_Up.this, "Authentication successful.", Toast.LENGTH_SHORT).show();
-                                bt_signin.setOnClickListener((v -> {
-                                    Intent intent = new Intent(Start_Up.this, MainActivity.class);
-                                    startActivity(intent);
-                                }));
+                                Intent intent = new Intent(Start_Up.this, MainActivity.class);
+                                startActivity(intent);
 
                             } else {
                                 Log.w("Failed register", "failure", task.getException());
@@ -126,7 +127,7 @@ public class Start_Up extends AppCompatActivity {
         String email = emaillogin.getText().toString();
         String password = passlogin.getText().toString();
 
-        if(!email.isEmpty() && !password.isEmpty()) {
+        if (!email.isEmpty() && !password.isEmpty()) {
 
             auth.signInWithEmailAndPassword(email, password)
                     .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -136,10 +137,8 @@ public class Start_Up extends AppCompatActivity {
                                 // Sign in success, update UI with the signed-in user's information
                                 Log.d("Log in", "signInWithEmail:success");
                                 FirebaseUser user = auth.getCurrentUser();
-                                bt_login.setOnClickListener((v -> {
-                                    Intent intent = new Intent(Start_Up.this, MainActivity.class);
-                                    startActivity(intent);
-                                }));
+                                Intent intent = new Intent(Start_Up.this, MainActivity.class);
+                                startActivity(intent);
                             } else {
                                 // If sign in fails, display a message to the user.
                                 Log.w("Log in", "signInWithEmail:failure", task.getException());
