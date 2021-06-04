@@ -13,18 +13,22 @@ import android.widget.Toast;
 import com.example.actuallyusefulnotes.Model.Note;
 import com.example.actuallyusefulnotes.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 public class AddNote extends AppCompatActivity {
     FirebaseFirestore db;
+    FirebaseUser user;
     private EditText noteTitle, noteText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         db = FirebaseFirestore.getInstance();
+        user = FirebaseAuth.getInstance().getCurrentUser();
 
         setContentView(R.layout.editar_nota);
 
@@ -47,7 +51,7 @@ public class AddNote extends AppCompatActivity {
                 note.setTitulo(noteTitle.getText().toString());
                 note.setText(noteText.getText().toString());
 
-                DocumentReference documentReference = db.collection("notes").document();
+                DocumentReference documentReference = db.collection("notes").document(user.getUid()).collection("myNotes").document();
 
                 documentReference.set(note);
                 Toast.makeText(AddNote.this, "Guardado", Toast.LENGTH_SHORT).show();

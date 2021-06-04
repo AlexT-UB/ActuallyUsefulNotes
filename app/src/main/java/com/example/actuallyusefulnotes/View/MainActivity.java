@@ -31,6 +31,8 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.database.FirebaseDatabase;
@@ -49,7 +51,8 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
 
     FirebaseFirestore db;
-    FirestoreRecyclerAdapter<Note, noteHolder> adapter;
+    FirebaseUser user;
+    FirebaseAuth auth;
 
 
 
@@ -157,7 +160,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void displayNotes(Context con) {
         ArrayList<Note> noteList = new ArrayList<>();
-        CollectionReference collectionReference = db.collection("notes");
+        CollectionReference collectionReference = db.collection("notes").document(user.getUid()).collection("myNotes");
         collectionReference.get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
             @Override
             public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
@@ -218,6 +221,8 @@ public class MainActivity extends AppCompatActivity {
         super.onStart();
         System.out.println("EVERYTHING IS FINE");
         db = FirebaseFirestore.getInstance();
+        auth = FirebaseAuth.getInstance();
+        user = auth.getCurrentUser();
         Query query = db.collection("collection");
         AUNViewModel model = new ViewModelProvider(this).get(AUNViewModel.class);
         /*FirestoreRecyclerOptions<Note> allNotes = new FirestoreRecyclerOptions.Builder<Note>()
