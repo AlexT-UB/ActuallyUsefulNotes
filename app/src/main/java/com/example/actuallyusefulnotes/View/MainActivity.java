@@ -30,13 +30,18 @@ import com.example.actuallyusefulnotes.ViewModel.AUNViewModel;
 import com.example.actuallyusefulnotes.R;
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -48,9 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
     FirebaseFirestore db;
     FirestoreRecyclerAdapter<Note, noteHolder> adapter;
-    FirestoreRecyclerAdapter<Group, groupHolder> adapterGroup;
     FirebaseAuth auth;
-
 
 
     BottomNavigationView bottomNavigationView;
@@ -93,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
     }
 
-    public void onGroup(){
+    public void onGroup() {
         System.out.println("GROUPS");
         Button addGroup = findViewById(R.id.addNote);
         addGroup.setVisibility(View.VISIBLE);
@@ -108,10 +111,34 @@ public class MainActivity extends AppCompatActivity {
         System.out.println(groups.get(0).getTitle());
     }
 
-    public void onNote(){
+    public void onNote() {
         System.out.println("NOTES");
         ListView simpleList = (ListView) findViewById(R.id.simpleListView);
-        ArrayList<Note> notes = getNotes();
+        ArrayList<Note> notes = new ArrayList<>();
+        db = FirebaseFirestore.getInstance();
+        CollectionReference cr = db.collection("notes");
+
+
+        cr.get()
+                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                    @Override
+                    public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                        if (!queryDocumentSnapshots.isEmpty()) {
+                            for (QueryDocumentSnapshot note : queryDocumentSnapshots) {
+                                Note jobPost = note.toObject(Note.class);
+                                notes.add(jobPost);
+                            }
+                        }
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+
+                    }
+                });
+
+
         NoteAdapter myAdapter = new NoteAdapter(this, R.layout.note_list, notes);
         simpleList.setAdapter(myAdapter);
         Button addnote = findViewById(R.id.addNote);
@@ -129,7 +156,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);*/
     }
 
-    public void onSettings(){
+    public void onSettings() {
         System.out.println("SETTINGS");
         Button addnote = findViewById(R.id.addNote);
         addnote.setVisibility(View.GONE);
@@ -195,7 +222,6 @@ public class MainActivity extends AppCompatActivity {
         };
         getGroups();
         adapter.startListening();
-        adapterGroup.startListening();
     }
 
     protected void signUp() {
@@ -206,7 +232,5 @@ public class MainActivity extends AppCompatActivity {
         super.onStop();
         if (adapter != null)
             adapter.stopListening();
-        if (adapterGroup != null)
-            adapterGroup.stopListening();
     }
 }
